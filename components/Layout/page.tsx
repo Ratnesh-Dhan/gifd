@@ -1,0 +1,18 @@
+import React, { ReactNode } from 'react'
+import Navbar from './navbar'
+import Footer from './footer'
+
+async function getData() {
+    await new Promise(resolve => setTimeout(resolve, 400)); // 1.5 second delay
+    return { data: 'Hello World' };
+  }
+const Layout = async({children}: {children: ReactNode}) => {
+  await getData();
+  return (
+    <div><Navbar /> 
+    <div>{children}</div>
+    <Footer /> </div>
+  )
+}
+
+export default Layout;
