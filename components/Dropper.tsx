@@ -1,42 +1,81 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 
-const Dropper = ({ title, size = "" }: { title: string; size?: string }) => {
+interface items {
+  title: string;
+  href: string;
+  photo?: string;
+}
+const Dropper = ({
+  title,
+  size = "",
+  items,
+}: {
+  title: string;
+  size?: string;
+  items: items[];
+}) => {
+  const isBrowser = typeof window !== "undefined";
   const [makeActive, setMakeActive] = useState(false);
-  const leaveHandler = () => {
-    setMakeActive(false);
-  };
   const enterHandler = () => {
     setMakeActive(true);
   };
+  const leaveHandler = () => {
+    setMakeActive(false);
+  };
+
+  useEffect(() => {
+    console.log(items);
+  }, []);
   return (
     <div
+      className={`relative ${size === "" ? "" : `${size}`} hover-text-color`}
       onMouseOver={enterHandler}
       onMouseLeave={leaveHandler}
-      className={`relative ${size === "" ? "" : `${size}`}`}
     >
       <div className="cursor-pointer h-full flex items-center justify-center">
         {title}
       </div>
-      {createPortal(
-        <AnimatePresence>
-          {makeActive && (
-            <motion.div
-              id="dropper-menu"
-              className="absolute border flex left-0 items-center justify-center w-screen bg-slate-900 h-[600px] top-20 z-50"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ duration: 0.25, ease: "easeInOut" }}
-            >
-              {title}
-            </motion.div>
-          )}
-        </AnimatePresence>,
-        document.body
-      )}
+      {/* // Because now document.body is only touched AFTER mount in the browser, not during server render. */}
+      {isBrowser
+        ? createPortal(
+            <AnimatePresence>
+              {makeActive && (
+                <motion.div
+                  id="dropper-menu"
+                  className="absolute border flex left-0 items-wrap justify-center w-screen bg-slate-900 h-[600px] top-20 z-50"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.25, ease: "easeInOut" }}
+                >
+                  <div className="text-white text-2xl flex flex-wrap justify-center gap-4 mx-[200px] py-10">
+                    {items.map((items, index) => (
+                      <Link href={items.href} key={index}>
+                        {items.photo !== "" ? (
+                          <div className="w-60 h-30 bg-amber-300">photo</div>
+                        ) : (
+                          <Image
+                            src={items.photo || ""}
+                            alt={items.title}
+                            width={100}
+                            height={100}
+                          />
+                        )}
+                        <span>{items.title}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>,
+            document.body
+          )
+        : null}
     </div>
   );
 };
