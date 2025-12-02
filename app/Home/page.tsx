@@ -3,11 +3,15 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <Layout>
-    <div className='min-h-screen'> Home</div>
+    <div>
+        <Layout>
+        <div className='min-h-screen'>
 
-    </Layout>
+                Home
+        </ div>
+        </Layout>
+        </div>
   )
 }
 
-export default Home;
+export default Home
