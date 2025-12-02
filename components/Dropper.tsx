@@ -53,7 +53,7 @@ const Dropper = ({
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.25, ease: "easeInOut" }}
                 >
-                  <div className="text-white text-2xl flex flex-wrap justify-center gap-4 mx-[200px] py-10">
+                  <div className="text-white text-2xl flex flex-wrap justify-center gap-10 mx-[200px] py-10">
                     {items.map((items, index) => (
                       <Link href={items.href} key={index}>
                         {items.photo !== "" ? (

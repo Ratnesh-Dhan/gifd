@@ -3,7 +3,7 @@ import Navbar from "./navbar";
 import Footer from "./footer";
 
 async function getData() {
-  await new Promise((resolve) => setTimeout(resolve, 400)); // 1.5 second delay
+  await new Promise((resolve) => setTimeout(resolve, 4000)); // 1.5 second delay
 }
 const Layout = async ({ children }: { children: ReactNode }) => {
   await getData();
