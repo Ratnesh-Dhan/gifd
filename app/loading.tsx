@@ -13,7 +13,7 @@ export default function LoadingPage() {
       size: 10 + Math.random() * 20,
       left: Math.random() * 100,
       duration: 1 + Math.random() * 1,
-      delay: Math.random() * 1,
+      delay: Math.random() * 0.1,
     }))
   );
 
@@ -23,7 +23,7 @@ export default function LoadingPage() {
       left: Math.random() * 100,
       top: Math.random() * 100,
       duration: 3 + Math.random() * 4,
-      delay: Math.random() * 2,
+      delay: Math.random() * 0.1,
     }))
   );
 
