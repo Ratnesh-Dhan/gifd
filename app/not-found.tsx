@@ -4,16 +4,25 @@ import { AlertCircle } from "lucide-react";
 
 export default function ErrorPage() {
   const [glitchActive, setGlitchActive] = useState(false);
-  const [particles] = useState(() =>
-    [...Array(30)].map(() => ({
-      left: Math.random() * 100,
-      top: Math.random() * 100,
-      duration: 3 + Math.random() * 4,
-      delay: Math.random() * 2,
-    }))
-  );
+  // const [particles] = useState(() =>
+  //   [...Array(30)].map(() => ({
+  //     left: Math.random() * 100,
+  //     top: Math.random() * 100,
+  //     duration: 3 + Math.random() * 4,
+  //     delay: Math.random() * 2,
+  //   }))
+  // );
+  const [particles, setParticles] = useState([]);
 
   useEffect(() => {
+    const temp = new Array(20).fill(0).map(() => ({
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      delay: Math.random() * 2,
+      duration: 3 + Math.random() * 3,
+    }));
+    setParticles(temp);
+
     const interval = setInterval(() => {
       setGlitchActive(true);
       setTimeout(() => setGlitchActive(false), 200);

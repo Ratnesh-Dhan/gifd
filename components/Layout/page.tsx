@@ -1,15 +1,17 @@
 import React, { ReactNode } from "react";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import Socials from "../Socials/page";
 
 async function getData() {
-  await new Promise((resolve) => setTimeout(resolve, 4000)); // 1.5 second delay
+  await new Promise((resolve) => setTimeout(resolve, 400)); // 1.5 second delay
 }
 const Layout = async ({ children }: { children: ReactNode }) => {
   await getData();
   return (
     <div>
       <Navbar />
+      <Socials />
       <div>{children}</div>
       <Footer />{" "}
     </div>
