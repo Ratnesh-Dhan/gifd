@@ -3,13 +3,40 @@ import Links from "../Links/page";
 import DropMenu from "../DropMenu/page";
 import Dropper from "../Dropper";
 
+interface subLinks {
+  title: string;
+  links: string;
+}
 interface items {
   title: string;
   href: string;
   photo?: string;
+  sublinks?: subLinks[];
 }
 
 const Navbar = () => {
+  const aboutItems: items[] = [
+    {
+      title: "About GIFD",
+      href: "/about/gifd",
+      photo: "fake-link",
+    },
+    {
+      title: "Recognitions",
+      href: "/about/recognitions",
+      photo: "fake-link",
+    },
+    {
+      title: "Vision, Missions & Values",
+      href: "/about/vision",
+      photo: "fake-link",
+    },
+    {
+      title: "Faculties",
+      href: "/about/faculties",
+      photo: "fake-link",
+    },
+  ];
   const schoolItems: items[] = [
     {
       title: "first",
@@ -29,49 +56,73 @@ const Navbar = () => {
   ];
   const programsItems: items[] = [
     {
-      title: "first",
+      title: "Fashion",
       href: "/programs/first",
       photo: "/images/programs/first.jpg",
+      sublinks: [
+        {
+          title: "Bachelor's programe",
+          links: "fake-link",
+        },
+        {
+          title: "Master's programe",
+          links: "fake-link",
+        },
+        {
+          title: "Professional certification courses",
+          links: "fake-link",
+        },
+      ],
     },
     {
-      title: "second",
+      title: "Interior",
       href: "/programs/second",
       photo: "/images/programs/second.jpg",
+      sublinks: [
+        {
+          title: "Bachelor's programe",
+          links: "fake-link",
+        },
+        {
+          title: "Master's programe",
+          links: "fake-link",
+        },
+        {
+          title: "Professional certification courses",
+          links: "fake-link",
+        },
+      ],
     },
     {
-      title: "third",
+      title: "Modeling",
       href: "/programs/third",
       photo: "/images/programs/third.jpg",
-    },
-    {
-      title: "fourth",
-      href: "/programs/fourth",
-      photo: "/images/programs/fourth.jpg",
-    },
-    {
-      title: "fifth",
-      href: "/programs/fifth",
-      photo: "/images/programs/fifth.jpg",
-    },
-    {
-      title: "sixth",
-      href: "/programs/sixth",
-      photo: "/images/programs/sixth.jpg",
+      sublinks: [
+        {
+          title: "Professional certification courses",
+          links: "fake-link",
+        },
+      ],
     },
   ];
-  const resourcesItems: items[] = [
+  const admissionsItems: items[] = [
     {
-      title: "first",
+      title: "How to Apply",
       href: "/resources/first",
       photo: "/images/resources/first.jpg",
     },
     {
-      title: "second",
+      title: "Fee Structure",
       href: "/resources/second",
       photo: "/images/resources/second.jpg",
     },
     {
-      title: "third",
+      title: "Hostels",
+      href: "/resources/third",
+      photo: "/images/resources/third.jpg",
+    },
+    {
+      title: "FAQ",
       href: "/resources/third",
       photo: "/images/resources/third.jpg",
     },
@@ -81,18 +132,18 @@ const Navbar = () => {
       <h2 className="text-3xl text-amber-400 font-bold bg-amber-800 rounded-xl px-3">
         GIFD LOGO
       </h2>
-      <div className="flex gap-5 h-[100%]">
+      <div className="flex gap-8 h-[100%]">
         <Links href="/" size="text-xl" title="Home" />
-        <Links href="/about" title="About" size="text-xl" />
-        <Dropper size="text-xl" title="School" items={schoolItems} />
+        <Dropper size="text-xl" title="About" items={aboutItems} />
         <Dropper size="text-xl" title="Programs" items={programsItems} />
-        <Dropper size="text-xl" title="Resources" items={resourcesItems} />
+        <Dropper size="text-xl" title="Admissions" items={admissionsItems} />
+        <Links href="/campus" size="text-xl" title="Life@GIFD" />
+        <Links href="/jds" size="text-xl" title="JDS" />
+        <Links href="/facilities" size="text-xl" title="Facilities" />
         <Links href="/Contact" size="text-xl" title="Contact" />
-        <Links href="/Gallary" size="text-xl" title="Gallery" />
-        <Links href="/Login" size="text-xl" title="Login" />
       </div>
 
-      <div className="border rounded-sm p-3 font-bold shadow-[3px_3px_10px_rgba(0,0,0,0.70)] bg-amber-300">
+      <div className="border rounded-sm p-3 font-bold shadow-[3px_3px_10px_rgba(0,0,0,0.70)] bg-amber-300 hover:bg-pink-400">
         Registration
       </div>
     </div>

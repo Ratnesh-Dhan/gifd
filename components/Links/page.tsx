@@ -11,7 +11,7 @@ const Links = ({
   size?: string;
 }) => {
   return (
-    <div className="hover-text-color flex items-center justify-center">
+    <div className="hover-text-color flex items-center">
       {size === "" ? (
         <Link href={href}>{title}</Link>
       ) : (

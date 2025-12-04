@@ -4,11 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
+import Links from "./Links/page";
 
+interface subLinks {
+  title: string;
+  links: string;
+}
 interface items {
   title: string;
   href: string;
   photo?: string;
+  sublinks?: subLinks[];
 }
 const Dropper = ({
   title,
@@ -67,6 +73,20 @@ const Dropper = ({
                           />
                         )}
                         <span>{items.title}</span>
+                        <div id="sub-links">
+                          <ul className="text-lg mt-8 border-r mx-1 max-w-[25ch] break-words flex-col items-right">
+                            {items.sublinks === undefined
+                              ? null
+                              : items.sublinks.map((item, index) => (
+                                  <li key={index} className="mb-2">
+                                    <Links
+                                      href={item.links}
+                                      title={item.title}
+                                    />
+                                  </li>
+                                ))}
+                          </ul>
+                        </div>
                       </Link>
                     ))}
                   </div>
