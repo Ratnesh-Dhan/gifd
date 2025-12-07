@@ -5,9 +5,8 @@ import React from "react";
 const Contact = () => {
   return (
     <div className="min-h-screen">
-      <div className="w-full h-[70vh] bg-[url('/Jhantu_images/connecting3.jpg')] bg-cover bg-centerflex items-center"
+      <div className="w-full h-[70vh] bg-[url('/Jhantu_images/connecting3.jpg')] bg-cover bg-center flex items-center"
       >
-        <h3 className="text-6xl font-bold text-white ml-40">CONTACT US</h3>
       </div>
       <div className="flex justify-center mt-20">
         <div className="w-[20vw] h-[40vh] border">Map area</div>
@@ -36,12 +35,16 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className=" w-full bg-slate-300">
+      {/* <div className=" w-full bg-[url('/world-map.jpg')] bg-cover bg-center p-1"> */}
+      <div className="relative w-full p-1">
+        <div className="absolute inset-0 bg-lienar-to-b from-white to-transparent"></div>
+        <div className="w-full bg-[url('/world-map.jpg')] bg-cover bg-center p-6 relative z-10">
         <div className="flex my-20">
         <Image src="/Jhantu_images/col-bgimage-9.png" alt="phone" width={900} height={350} />
         <div className="mx-20">
           <h3 className="text-4xl my-4">Send an Inquiry</h3>
           <Enquiry />
+        </div>
         </div>
         </div>
       </div>

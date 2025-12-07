@@ -1,7 +1,7 @@
 import React from "react";
 import Links from "../Links/page";
-import DropMenu from "../DropMenu/page";
 import Dropper from "../Dropper";
+import Image from "next/image";
 // import AboutGIFD from "@/app/about/AboutGIFD";
 
 interface subLinks {
@@ -20,88 +20,90 @@ const Navbar = () => {
     {
       title: "About GIFD",
       href: "/about/AboutGIFD",
-      photo: "fake-link",
+      photo: "/about/main-about.jpg",
     },
     {
       title: "Recognitions",
       href: "/about/Recognitions",
-      photo: "fake-link",
+      photo: "/about/recognition.jpg",
     },
     {
-      title: "Vision, Missions & Values",
-      href: "/about/Visions",
-      photo: "fake-link",
+      title: "Vision & Missions",
+      href: "/about/Visions", 
+      photo: "/about/vision-mission.jpg",
     },
     {
       title: "Faculties",
       href: "/about/Faculties",
-      photo: "fake-link",
-    },
-  ];
-  const schoolItems: items[] = [
-    {
-      title: "first",
-      href: "/school/first",
-      photo: "/images/school/first.jpg",
-    },
-    {
-      title: "second",
-      href: "/school/second",
-      photo: "/images/school/second.jpg",
-    },
-    {
-      title: "third",
-      href: "/school/third",
-      photo: "/images/school/third.jpg",
+      photo: "/about/faculty.jpg",
     },
   ];
   const programsItems: items[] = [
     {
-      title: "Fashion",
-      href: "/programs/first",
-      photo: "/images/programs/first.jpg",
+      title: "Overview",
+      href: "/programs/overview",
+      photo: "",
       sublinks: [
         {
           title: "Bachelor's programe",
-          links: "fake-link",
+          links: "/Overview/Bachelor",
         },
         {
           title: "Master's programe",
-          links: "fake-link",
+          links: "",
+        },
+        {
+          title: "Professional certification programe",
+          links: "",
+        },
+      ],
+    },
+    {
+      title: "Fashion",
+      href: "/programs/first",
+      photo: "",
+      sublinks: [
+        {
+          title: "Bachelor's programe",
+          links: "",
+        },
+        {
+          title: "Master's programe",
+          links: "",
         },
         {
           title: "Professional certification courses",
-          links: "fake-link",
+          links: "",
         },
       ],
     },
     {
       title: "Interior",
       href: "/programs/second",
-      photo: "/images/programs/second.jpg",
+      photo: "",
       sublinks: [
         {
           title: "Bachelor's programe",
-          links: "fake-link",
+          links: "",
         },
         {
           title: "Master's programe",
-          links: "fake-link",
+          links: "",
         },
         {
           title: "Professional certification courses",
-          links: "fake-link",
+          links: "",
         },
       ],
     },
     {
       title: "Modeling",
       href: "/programs/third",
-      photo: "/images/programs/third.jpg",
+      photo: "",
       sublinks: [
         {
           title: "Professional certification courses",
-          links: "fake-link",
+          links: "",
         },
       ],
     },
@@ -129,11 +131,9 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className="border-b-1 flex justify-around px-68 items-center h-20">
-      <h2 className="text-3xl text-amber-400 font-bold bg-amber-800 rounded-xl px-3">
-        GIFD LOGO
-      </h2>
-      <div className="flex gap-8 h-[100%]">
+    <div className="border-b flex justify-around px-68 items-center h-20 bg-black text-white">
+        <Image src="/main-logo.png" alt="GIFD Logo" width={150} height={150} className="" />
+      <div className="flex gap-8 h-full">
         <Links href="/" size="text-xl" title="Home" />
         <Dropper size="text-xl" title="About" items={aboutItems} />
         <Dropper size="text-xl" title="Programs" items={programsItems} />

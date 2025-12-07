@@ -6,7 +6,7 @@ const FourParts = () => {
     <div className="flex justify-center gap-8 mb-16">
       <div className="text-center">
         <Image
-          src="/jhantu_images/part-1.png"
+          src="/Jhantu_images/part-1.png"
           alt={"part1"}
           width={250}
           height={250}
@@ -15,7 +15,7 @@ const FourParts = () => {
       </div>
       <div className="text-center">
         <Image
-          src="/jhantu_images/part-2.png"
+          src="/Jhantu_images/part-2.png"
           alt={"part1"}
           width={250}
           height={250}
@@ -24,7 +24,7 @@ const FourParts = () => {
       </div>
       <div className="text-center">
         <Image
-          src="/jhantu_images/part-3.png"
+          src="/Jhantu_images/part-3.png"
           alt={"part1"}
           width={250}
           height={250}
@@ -33,7 +33,7 @@ const FourParts = () => {
       </div>
       <div className="text-center">
         <Image
-          src="/jhantu_images/part-4.png"
+          src="/Jhantu_images/part-4.png"
           alt={"part1"}
           width={250}
           height={250}

@@ -62,14 +62,15 @@ const Dropper = ({
                   <div className="text-white text-2xl flex flex-wrap justify-center gap-10 mx-[200px] py-10">
                     {items.map((items, index) => (
                       <Link href={items.href} key={index}>
-                        {items.photo !== "" ? (
+                        {items.photo === "" ? (
                           <div className="w-60 h-30 bg-amber-300">photo</div>
                         ) : (
                           <Image
                             src={items.photo || ""}
                             alt={items.title}
-                            width={100}
-                            height={100}
+                            height={150}
+                            width={250}
+                            className="rounded-xl"
                           />
                         )}
                         <span>{items.title}</span>
