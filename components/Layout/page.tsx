@@ -13,7 +13,7 @@ const Layout = async ({ children }: { children: ReactNode }) => {
       <Navbar />
       <Socials />
       <div>{children}</div>
-      <Footer />{" "}
+      <Footer />
     </div>
   );
 };

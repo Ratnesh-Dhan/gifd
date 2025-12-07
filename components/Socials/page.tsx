@@ -4,7 +4,7 @@ import Buttons from "./Buttons";
 const Socials = () => {
   return (
     <div className="reative">
-      <div className="fixed top-[50%] flex-col">
+      <div className="fixed top-[50%] flex-col z-50">
         <Buttons
           href="https://www.whatsapp.com/?lang=en"
           image="/whatsapp.png"

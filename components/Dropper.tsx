@@ -4,11 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
+import Links from "./Links/page";
 
+interface subLinks {
+  title: string;
+  links: string;
+}
 interface items {
   title: string;
   href: string;
   photo?: string;
+  sublinks?: subLinks[];
 }
 const Dropper = ({
   title,
@@ -56,17 +62,32 @@ const Dropper = ({
                   <div className="text-white text-2xl flex flex-wrap justify-center gap-10 mx-[200px] py-10">
                     {items.map((items, index) => (
                       <Link href={items.href} key={index}>
-                        {items.photo !== "" ? (
+                        {items.photo === "" ? (
                           <div className="w-60 h-30 bg-amber-300">photo</div>
                         ) : (
                           <Image
                             src={items.photo || ""}
                             alt={items.title}
-                            width={100}
-                            height={100}
+                            height={150}
+                            width={250}
+                            className="rounded-xl"
                           />
                         )}
                         <span>{items.title}</span>
+                        <div id="sub-links">
+                          <ul className="text-lg mt-8 border-r mx-1 max-w-[25ch] break-words flex-col items-right">
+                            {items.sublinks === undefined
+                              ? null
+                              : items.sublinks.map((item, index) => (
+                                  <li key={index} className="mb-2">
+                                    <Links
+                                      href={item.links}
+                                      title={item.title}
+                                    />
+                                  </li>
+                                ))}
+                          </ul>
+                        </div>
                       </Link>
                     ))}
                   </div>

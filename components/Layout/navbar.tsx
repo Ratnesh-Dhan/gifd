@@ -1,98 +1,150 @@
 import React from "react";
 import Links from "../Links/page";
-import DropMenu from "../DropMenu/page";
 import Dropper from "../Dropper";
+import Image from "next/image";
+// import AboutGIFD from "@/app/about/AboutGIFD";
 
+interface subLinks {
+  title: string;
+  links: string;
+}
 interface items {
   title: string;
   href: string;
   photo?: string;
+  sublinks?: subLinks[];
 }
 
 const Navbar = () => {
-  const schoolItems: items[] = [
+  const aboutItems: items[] = [
     {
-      title: "first",
-      href: "/school/first",
-      photo: "/images/school/first.jpg",
+      title: "About GIFD",
+      href: "/about/AboutGIFD",
+      photo: "/about/main-about.jpg",
     },
     {
-      title: "second",
-      href: "/school/second",
-      photo: "/images/school/second.jpg",
+      title: "Recognitions",
+      href: "/about/Recognitions",
+      photo: "/about/recognition.jpg",
     },
     {
-      title: "third",
-      href: "/school/third",
-      photo: "/images/school/third.jpg",
+      title: "Vision & Missions",
+      href: "/about/Visions", 
+      photo: "/about/vision-mission.jpg",
+    },
+    {
+      title: "Faculties",
+      href: "/about/Faculties",
+      photo: "/about/faculty.jpg",
     },
   ];
   const programsItems: items[] = [
     {
-      title: "first",
+      title: "Overview",
+      href: "/programs/overview",
+      photo: "",
+      sublinks: [
+        {
+          title: "Bachelor's programe",
+          links: "/Overview/Bachelor",
+        },
+        {
+          title: "Master's programe",
+          links: "",
+        },
+        {
+          title: "Professional certification programe",
+          links: "",
+        },
+      ],
+    },
+    {
+      title: "Fashion",
       href: "/programs/first",
-      photo: "/images/programs/first.jpg",
+      photo: "",
+      sublinks: [
+        {
+          title: "Bachelor's programe",
+          links: "",
+        },
+        {
+          title: "Master's programe",
+          links: "",
+        },
+        {
+          title: "Professional certification courses",
+          links: "",
+        },
+      ],
     },
     {
-      title: "second",
+      title: "Interior",
       href: "/programs/second",
-      photo: "/images/programs/second.jpg",
+      photo: "",
+      sublinks: [
+        {
+          title: "Bachelor's programe",
+          links: "",
+        },
+        {
+          title: "Master's programe",
+          links: "",
+        },
+        {
+          title: "Professional certification courses",
+          links: "",
+        },
+      ],
     },
     {
-      title: "third",
+      title: "Modeling",
       href: "/programs/third",
-      photo: "/images/programs/third.jpg",
-    },
-    {
-      title: "fourth",
-      href: "/programs/fourth",
-      photo: "/images/programs/fourth.jpg",
-    },
-    {
-      title: "fifth",
-      href: "/programs/fifth",
-      photo: "/images/programs/fifth.jpg",
-    },
-    {
-      title: "sixth",
-      href: "/programs/sixth",
-      photo: "/images/programs/sixth.jpg",
+      photo: "",
+      sublinks: [
+        {
+          title: "Professional certification courses",
+          links: "",
+        },
+      ],
     },
   ];
-  const resourcesItems: items[] = [
+  const admissionsItems: items[] = [
     {
-      title: "first",
+      title: "How to Apply",
       href: "/resources/first",
       photo: "/images/resources/first.jpg",
     },
     {
-      title: "second",
+      title: "Fee Structure",
       href: "/resources/second",
       photo: "/images/resources/second.jpg",
     },
     {
-      title: "third",
+      title: "Hostels",
+      href: "/resources/third",
+      photo: "/images/resources/third.jpg",
+    },
+    {
+      title: "FAQ",
       href: "/resources/third",
       photo: "/images/resources/third.jpg",
     },
   ];
   return (
-    <div className="border-b-1 flex justify-around px-68 items-center h-20">
-      <h2 className="text-3xl text-amber-400 font-bold bg-amber-800 rounded-xl px-3">
-        GIFD LOGO
-      </h2>
-      <div className="flex gap-5 h-[100%]">
+    <div className="border-b flex justify-around px-68 items-center h-20 bg-black text-white">
+        <Image src="/main-logo.png" alt="GIFD Logo" width={150} height={150} className="" />
+      <div className="flex gap-8 h-full">
         <Links href="/" size="text-xl" title="Home" />
-        <Links href="/about" title="About" size="text-xl" />
-        <Dropper size="text-xl" title="School" items={schoolItems} />
+        <Dropper size="text-xl" title="About" items={aboutItems} />
         <Dropper size="text-xl" title="Programs" items={programsItems} />
-        <Dropper size="text-xl" title="Resources" items={resourcesItems} />
+        <Dropper size="text-xl" title="Admissions" items={admissionsItems} />
+        <Links href="/campus" size="text-xl" title="Life@GIFD" />
+        <Links href="/jds" size="text-xl" title="JDS" />
+        <Links href="/facilities" size="text-xl" title="Facilities" />
         <Links href="/Contact" size="text-xl" title="Contact" />
-        <Links href="/Gallary" size="text-xl" title="Gallery" />
-        <Links href="/Login" size="text-xl" title="Login" />
       </div>
 
-      <div className="border rounded-sm p-3 font-bold shadow-[3px_3px_10px_rgba(0,0,0,0.70)] bg-amber-300">
+      <div className="border rounded-sm p-3 font-bold shadow-[3px_3px_10px_rgba(0,0,0,0.70)] bg-amber-300 hover:bg-pink-400">
         Registration
       </div>
     </div>
