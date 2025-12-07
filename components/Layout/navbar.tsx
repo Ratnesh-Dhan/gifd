@@ -2,6 +2,7 @@ import React from "react";
 import Links from "../Links/page";
 import DropMenu from "../DropMenu/page";
 import Dropper from "../Dropper";
+// import AboutGIFD from "@/app/about/AboutGIFD";
 
 interface subLinks {
   title: string;
@@ -18,22 +19,22 @@ const Navbar = () => {
   const aboutItems: items[] = [
     {
       title: "About GIFD",
-      href: "/about/gifd",
+      href: "/about/AboutGIFD",
       photo: "fake-link",
     },
     {
       title: "Recognitions",
-      href: "/about/recognitions",
+      href: "/about/Recognitions",
       photo: "fake-link",
     },
     {
       title: "Vision, Missions & Values",
-      href: "/about/vision",
+      href: "/about/Visions",
       photo: "fake-link",
     },
     {
       title: "Faculties",
-      href: "/about/faculties",
+      href: "/about/Faculties",
       photo: "fake-link",
     },
   ];
