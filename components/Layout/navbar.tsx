@@ -29,7 +29,7 @@ const Navbar = () => {
     },
     {
       title: "Vision & Missions",
-      href: "/about/Visions", 
+      href: "/about/Visions",
       photo: "/about/vision-mission.jpg",
     },
     {
@@ -65,7 +65,7 @@ const Navbar = () => {
       sublinks: [
         {
           title: "Bachelor's programe",
-          links: "",
+          links: "/Fashion/Bachelor",
         },
         {
           title: "Master's programe",
@@ -132,7 +132,13 @@ const Navbar = () => {
   ];
   return (
     <div className="border-b flex justify-around px-68 items-center h-20 bg-black text-white">
-        <Image src="/main-logo.png" alt="GIFD Logo" width={150} height={150} className="" />
+      <Image
+        src="/main-logo.png"
+        alt="GIFD Logo"
+        width={150}
+        height={150}
+        className=""
+      />
       <div className="flex gap-8 h-full">
         <Links href="/" size="text-xl" title="Home" />
         <Dropper size="text-xl" title="About" items={aboutItems} />
