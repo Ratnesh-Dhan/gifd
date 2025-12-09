@@ -69,11 +69,11 @@ const Navbar = () => {
         },
         {
           title: "Master's programe",
-          links: "",
+          links: "/Fashion/Master",
         },
         {
           title: "Professional certification courses",
-          links: "",
+          links: "/Fashion/ProfessionalCertificate",
         },
       ],
     },
@@ -84,15 +84,15 @@ const Navbar = () => {
       sublinks: [
         {
           title: "Bachelor's programe",
-          links: "",
+          links: "/Interior/Bachelor",
         },
         {
           title: "Master's programe",
-          links: "",
+          links: "/Interior/Master",
         },
         {
           title: "Professional certification courses",
-          links: "",
+          links: "/Interior/Professional",
         },
       ],
     },

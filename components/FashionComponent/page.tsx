@@ -1,9 +1,17 @@
 "use client";
 import React from "react";
-import { FashionComponentProps } from "@/types";
+import { FashionComponentProps, TableContent } from "@/types";
 import ThreeHoverPhotoLinks from "../ThreeHoverPhotoLinks";
+import FeeStructureTable from "../Table_/page";
+import ScrollingShowcase from "../ScrollingShowcase";
 
-const FashionComponent = (properties: FashionComponentProps) => {
+const FashionComponent = ({
+  properties,
+  table_,
+}: {
+  properties: FashionComponentProps;
+  table_: TableContent;
+}) => {
   return (
     <div>
       <div
@@ -23,6 +31,44 @@ const FashionComponent = (properties: FashionComponentProps) => {
           {properties.b_para}
         </p> */}
       </div>
+      {/* offers / careers */}
+      <div className="flex justify-center items-center">
+        <div className="flex mx-60">
+          <div className="flex-1 text-center border-r-3 pr-30 ">
+            <h3 className="md:text-4xl font-bold">It Offers</h3>
+            <div>
+              <ul className="text-left space-y-3 mt-4 md:mt-6">
+                {properties.offer_para.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 text-gray-700 text-base md:text-xl text-lg leading-relaxed tracking-wide"
+                  >
+                    <span className="block min-w-3 min-h-3 rounded-full bg-gradient-to-r from-amber-500 to-slate-600 mt-1"></span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="flex-1 text-center pl-30">
+            <h3 className="md:text-4xl font-bold">Career</h3>
+            <div>
+              <ul className="text-left space-y-3 mt-4 md:mt-6">
+                {properties.career_para.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 text-gray-700 text-base md:text-xl text-lg leading-relaxed tracking-wide"
+                  >
+                    {/* <span className="block w-3 h-3 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 mt-1"></span> */}
+                    <span className="block min-w-3 min-h-3 rounded-full bg-gradient-to-r from-amber-500 to-slate-600 mt-1"></span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
       <ThreeHoverPhotoLinks
         tile_title={properties.tile_title}
         tiles={properties.tiles}
@@ -30,11 +76,27 @@ const FashionComponent = (properties: FashionComponentProps) => {
       <div id="eligibility-criteria" className="mx-60">
         <div className="mx-16">
           <h3 className="text-4xl font-bold">{properties.c_title}</h3>
-          <p className="text-lg md:text-xl leading-8 tracking-[0.5px] text-gray-700 my-10">
+          {/* <p className="text-lg md:text-xl leading-8 tracking-[0.5px] text-gray-700 my-10">
             {properties.c_content}
-          </p>
+          </p> */}
+          <ul className="space-y-3 mt-4 md:mt-6">
+            {properties.c_content.map((item, index) => (
+              <li
+                key={index}
+                className="flex items-start gap-3 text-gray-700 text-base md:text-lg leading-relaxed tracking-wide"
+              >
+                <span className="block min-w-3 min-h-3 rounded-full bg-gradient-to-r from-amber-500 to-slate-600 mt-1"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
+      <FeeStructureTable {...table_} />
+      <div className="mx-10 mt-20">
+        <h3 className="md:text-4xl font-bold mx-60">Placement Partners</h3>
+      </div>
+      <ScrollingShowcase />
     </div>
   );
 };
