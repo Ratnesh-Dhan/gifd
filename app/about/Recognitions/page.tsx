@@ -9,7 +9,7 @@ const Recognitions = () => {
       <FourParts />
 
       <Image
-        src="/about/banner.jpg"
+        src="/about/banner.png"
         alt="recognition"
         width={1200}
         height={600}

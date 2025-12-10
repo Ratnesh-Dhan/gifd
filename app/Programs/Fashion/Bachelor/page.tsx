@@ -3,17 +3,17 @@ import FashionComponent from "@/components/FashionComponent/page";
 import { FashionComponentProps, TableContent } from "@/types";
 import React, { useState } from "react";
 
-const ProfessionalCertificate = () => {
+const Bachelor = () => {
   const [properties] = useState<FashionComponentProps>({
-    top_image: "/about/banner.jpg",
-    b_title: "Professional Certification",
+    top_image: "/about/banner.png",
+    b_title: "Bachelor in Fashion Design",
     b_para: `The Fashion Design program provides an extensive and well-structured foundation in design development skills, ensuring that students understand every stage of the creative process from concept to creation. This course uniquely combines the scientific aspects of apparel studies with the expressive elements of art and aesthetics, giving learners a holistic perspective of the fashion industry.
-        
-        It trains students to translate abstract ideas into tangible designs with precision, creativity, and purpose. Throughout the program, learners gain exposure to garment construction, textile knowledge, illustration, trend research, and digital design tools, so they can professionally execute their concepts in a competitive industry environment.
-        
-        The curriculum also emphasizes understanding consumer behavior and market demands. Whether the goal is to create prêt-à-porter collections for everyday wear or venture into the exclusive world of haute couture, students are guided to develop a strong sense of style, commercial awareness, and adaptability to industry trends.
-        
-        In short, it prepares students to think, design, and produce like actual fashion professionals instead of hobbyists playing with fabric.`,
+
+It trains students to translate abstract ideas into tangible designs with precision, creativity, and purpose. Throughout the program, learners gain exposure to garment construction, textile knowledge, illustration, trend research, and digital design tools, so they can professionally execute their concepts in a competitive industry environment.
+
+The curriculum also emphasizes understanding consumer behavior and market demands. Whether the goal is to create prêt-à-porter collections for everyday wear or venture into the exclusive world of haute couture, students are guided to develop a strong sense of style, commercial awareness, and adaptability to industry trends.
+
+In short, it prepares students to think, design, and produce like actual fashion professionals instead of hobbyists playing with fabric.`,
     offer_para: [
       "Study of fashion trends & history",
       "Regional crafts and specialities of India",
@@ -38,35 +38,35 @@ const ProfessionalCertificate = () => {
     ],
     tiles: [
       {
-        title: "bachelor",
-        desc: "testing the texts",
+        title: "Bachelor's",
+        desc: "Fashion",
         link: "/Overview/Bachelor",
-        image: "/Jhantu_images/woman-with-tablet-phone.jpg",
+        image: "/images/fashion_design-1.jpg",
       },
       {
-        title: "master",
-        desc: "testing the texts",
+        title: "Bachelor's",
+        desc: "Interior Design",
         link: "/Overview/Master",
-        image: "/Jhantu_images/woman-with-tablet-phone.jpg",
+        image: "/images/interior-8.jpg",
       },
       {
-        title: "master",
-        desc: "testing the texts",
+        title: "Bachelor's",
+        desc: "Textile",
         link: "/Overview/Master",
-        image: "/Jhantu_images/woman-with-tablet-phone.jpg",
+        image: "/images/textile.jpg",
       },
     ],
     tile_title: "Bachelor's programe",
     c_title: "Eligibility Criteria & Duration ",
     c_content: [
       `The Fashion Design program is open to individuals who have successfully completed their higher secondary education (10+2) or an equivalent qualification from a recognized board. Applicants should possess a basic interest in art, fashion, trends, or creative expression. Prior design experience isn’t mandatory, but curiosity, visual imagination, and willingness to learn are strongly expected.
-        
-        The duration of the program typically spans 3 to 4 years, depending on the institution and academic structure. This time includes classroom instruction, practical sessions, workshops, studio work, internships, and project-based assessments. The final year often includes a major design project or portfolio submission, preparing students for professional entry into the fashion industry.`,
+
+The duration of the program typically spans 3 to 4 years, depending on the institution and academic structure. This time includes classroom instruction, practical sessions, workshops, studio work, internships, and project-based assessments. The final year often includes a major design project or portfolio submission, preparing students for professional entry into the fashion industry.`,
     ],
   });
   const [table] = useState<TableContent>({
     registrationFee: 8500,
-    table_title: "Master in Fashion Design",
+    table_title: "Bachelor in Fashion Design",
     course_duration: "3 years (6 sem)",
     feeData: [
       {
@@ -114,4 +114,4 @@ const ProfessionalCertificate = () => {
   );
 };
 
-export default ProfessionalCertificate;
+export default Bachelor;

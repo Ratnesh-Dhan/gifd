@@ -61,19 +61,21 @@ const Dropper = ({
                 >
                   <div className="text-white text-2xl flex flex-wrap justify-center gap-10 mx-[200px] py-10">
                     {items.map((items, index) => (
-                      <Link href={items.href} key={index}>
-                        {items.photo === "" ? (
-                          <div className="w-60 h-30 bg-amber-300">photo</div>
-                        ) : (
-                          <Image
-                            src={items.photo || ""}
-                            alt={items.title}
-                            height={150}
-                            width={250}
-                            className="rounded-xl"
-                          />
-                        )}
-                        <span>{items.title}</span>
+                      <Link href={items.href} key={index} className=" ">
+                        <div className="text-center">
+                          {items.photo === "" ? (
+                            <div className="w-60 h-30 bg-amber-300">photo</div>
+                          ) : (
+                            <Image
+                              src={items.photo || ""}
+                              alt={items.title}
+                              height={180}
+                              width={180}
+                              className="rounded-xl"
+                            />
+                          )}
+                          <span className="">{items.title}</span>
+                        </div>
                         <div id="sub-links">
                           <ul className="text-lg mt-8 border-r mx-1 max-w-[25ch] break-words flex-col items-right">
                             {items.sublinks === undefined

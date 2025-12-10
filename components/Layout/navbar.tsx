@@ -41,69 +41,65 @@ const Navbar = () => {
   const programsItems: items[] = [
     {
       title: "Overview",
-      href: "/programs/overview",
-      photo: "",
+      href: "",
+      photo: "/images/tailoring.jpg",
       sublinks: [
         {
           title: "Bachelor's programe",
-          links: "/Overview/Bachelor",
+          links: "/Programs/Overview/Bachelor",
         },
         {
           title: "Master's programe",
-          links: "",
+          links: "/Programs/Overview/Master",
         },
         {
           title: "Professional certification programe",
-          links: "",
+          links: "/Programs/Overview/Professional",
         },
       ],
     },
     {
       title: "Fashion",
-      href: "/programs/first",
-      photo: "",
+      href: "",
+      photo: "/images/fashion_design-2.jpg",
       sublinks: [
         {
           title: "Bachelor's programe",
-          links: "/Fashion/Bachelor",
+          links: "/Programs/Fashion/Bachelor",
         },
         {
           title: "Master's programe",
-          links: "/Fashion/Master",
+          links: "/Programs/Fashion/Master",
         },
         {
           title: "Professional certification courses",
-          links: "/Fashion/ProfessionalCertificate",
+          links: "/Programs/Fashion/ProfessionalCertificate",
         },
       ],
     },
     {
       title: "Interior",
-      href: "/programs/second",
-      photo: "",
+      href: "",
+      photo: "/images/interior-1.jpg",
       sublinks: [
         {
           title: "Bachelor's programe",
-          links: "/Interior/Bachelor",
+          links: "/Programs/Interior/Bachelor",
         },
         {
           title: "Master's programe",
-          links: "/Interior/Master",
-        },
-        {
-          title: "Professional certification courses",
-          links: "/Interior/Professional",
+          links: "/Programs/Interior/Master",
         },
       ],
     },
     {
       title: "Modeling",
-      href: "/programs/third",
-      photo: "",
+      href: "/Programs/Modeling",
+      photo: "/images/modeling-1.jpg",
       sublinks: [
         {
           title: "Professional certification courses",
-          links: "",
+          links: "/Programs/Modeling",
         },
       ],
     },
@@ -111,27 +107,27 @@ const Navbar = () => {
   const admissionsItems: items[] = [
     {
       title: "How to Apply",
-      href: "/resources/first",
-      photo: "/images/resources/first.jpg",
+      href: "/Admissions/HowToApply",
+      photo: "",
     },
     {
       title: "Fee Structure",
-      href: "/resources/second",
-      photo: "/images/resources/second.jpg",
+      href: "/Admissions/FeeStructure",
+      photo: "/images/Fees.jpg",
     },
     {
       title: "Hostels",
-      href: "/resources/third",
-      photo: "/images/resources/third.jpg",
+      href: "/Admissions/Hostels",
+      photo: "/images/Hostel.jpg",
     },
     {
       title: "FAQ",
-      href: "/resources/third",
-      photo: "/images/resources/third.jpg",
+      href: "/Admissions/Faq",
+      photo: "/images/Faq.jpg",
     },
   ];
   return (
-    <div className="border-b flex justify-around px-68 items-center h-20 bg-black text-white">
+    <div className=" w-full z-10 border-b flex justify-around px-68 items-center h-20 bg-black text-white">
       <Image
         src="/main-logo.png"
         alt="GIFD Logo"

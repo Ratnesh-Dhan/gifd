@@ -5,7 +5,7 @@ import React, { useState } from "react";
 
 const Bachelor = () => {
   const [properties] = useState<FashionComponentProps>({
-    top_image: "/about/banner.jpg",
+    top_image: "/images/interior-6.jpg",
     b_title: "Bachelor in Interior Design",
     b_para: `A Bachelor in Interior Design is crafted for individuals who think differently—those who notice details, question space, and imagine better possibilities. This program blends creativity with technical precision, transforming students into confident design thinkers capable of shaping meaningful and inspiring environments. Through immersive studio work, material exploration, space planning, and hands-on design exercises, learners master the art of balancing aesthetics, comfort, and functionality.
 
@@ -32,36 +32,34 @@ Students gain exposure to residential, commercial, retail, and hospitality inter
     ],
     tiles: [
       {
-        title: "bachelor",
-        desc: "testing the texts",
+        title: "Bachelor's",
+        desc: "Interior",
         link: "/Overview/Bachelor",
-        image: "/Jhantu_images/woman-with-tablet-phone.jpg",
+        image: "/images/interior-9.jpg",
       },
       {
-        title: "master",
-        desc: "testing the texts",
+        title: "Bachelor's",
+        desc: "Fashion",
         link: "/Overview/Master",
-        image: "/Jhantu_images/woman-with-tablet-phone.jpg",
+        image: "/images/fashion_design-3.jpg",
       },
       {
-        title: "master",
-        desc: "testing the texts",
+        title: "Bachelor's",
+        desc: "Textile",
         link: "/Overview/Master",
-        image: "/Jhantu_images/woman-with-tablet-phone.jpg",
+        image: "/images/textile-2.jpg",
       },
     ],
     tile_title: "Bachelor's programe",
     c_title: "Eligibility Criteria & Duration ",
     c_content: [
-      `Applicants must have a bachelor’s degree in Fashion Design or a related 
-    discipline such as Textile Design, Apparel Technology, 
-    Fine Arts OR B.A/B.Sc in any discipline from a recognized institution.`,
+      `Applicants must have completed 10+2 (or equivalent) from a recognized board, preferably with an interest in design, art, architecture, or creative studies. No prior design background is required; a basic aptitude for creativity and spatial understanding is sufficient.`,
       "Duration: 2 Years.",
     ],
   });
   const [table] = useState<TableContent>({
     registrationFee: 8500,
-    table_title: "Bachelor in Fashion Design",
+    table_title: "Bachelor's in Interior Design",
     course_duration: "2 years (4 sem)",
     feeData: [
       {

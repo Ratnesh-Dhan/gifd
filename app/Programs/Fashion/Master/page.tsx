@@ -3,13 +3,17 @@ import FashionComponent from "@/components/FashionComponent/page";
 import { FashionComponentProps, TableContent } from "@/types";
 import React, { useState } from "react";
 
-const Professional = () => {
+const Master = () => {
   const [properties] = useState<FashionComponentProps>({
-    top_image: "/about/banner.jpg",
-    b_title: "Bachelor in Interior Design",
-    b_para: `A Bachelor in Interior Design is crafted for individuals who think differently—those who notice details, question space, and imagine better possibilities. This program blends creativity with technical precision, transforming students into confident design thinkers capable of shaping meaningful and inspiring environments. Through immersive studio work, material exploration, space planning, and hands-on design exercises, learners master the art of balancing aesthetics, comfort, and functionality.
-
-Students gain exposure to residential, commercial, retail, and hospitality interiors while learning advanced digital tools such as CAD, 3D visualization, and rendering software. With industry-driven projects, workshops, and real-world experience, the program nurtures originality, innovation, and professional readiness. By graduation, students develop a strong design identity and a polished portfolio that reflects their vision, creativity, and mastery of spatial design.`,
+    top_image: "/about/banner.png",
+    b_title: "Master in Fashion Design",
+    b_para: `The Fashion Design program provides an extensive and well-structured foundation in design development skills, ensuring that students understand every stage of the creative process from concept to creation. This course uniquely combines the scientific aspects of apparel studies with the expressive elements of art and aesthetics, giving learners a holistic perspective of the fashion industry.
+    
+    It trains students to translate abstract ideas into tangible designs with precision, creativity, and purpose. Throughout the program, learners gain exposure to garment construction, textile knowledge, illustration, trend research, and digital design tools, so they can professionally execute their concepts in a competitive industry environment.
+    
+    The curriculum also emphasizes understanding consumer behavior and market demands. Whether the goal is to create prêt-à-porter collections for everyday wear or venture into the exclusive world of haute couture, students are guided to develop a strong sense of style, commercial awareness, and adaptability to industry trends.
+    
+    In short, it prepares students to think, design, and produce like actual fashion professionals instead of hobbyists playing with fabric.`,
     offer_para: [
       "A deeper understanding of global fashion systems, luxury markets, and evolving industry demands.",
       "Advanced design training focused on innovation, sustainability, and high-level creative direction.",
@@ -52,7 +56,7 @@ Students gain exposure to residential, commercial, retail, and hospitality inter
         image: "/Jhantu_images/woman-with-tablet-phone.jpg",
       },
     ],
-    tile_title: "Bachelor's programe",
+    tile_title: "Master's programe",
     c_title: "Eligibility Criteria & Duration ",
     c_content: [
       `Applicants must have a bachelor’s degree in Fashion Design or a related 
@@ -63,7 +67,7 @@ Students gain exposure to residential, commercial, retail, and hospitality inter
   });
   const [table] = useState<TableContent>({
     registrationFee: 8500,
-    table_title: "Bachelor in Fashion Design",
+    table_title: "Master in Fashion Design",
     course_duration: "2 years (4 sem)",
     feeData: [
       {
@@ -99,4 +103,4 @@ Students gain exposure to residential, commercial, retail, and hospitality inter
   );
 };
 
-export default Professional;
+export default Master;

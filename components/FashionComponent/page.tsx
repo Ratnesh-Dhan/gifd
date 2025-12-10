@@ -92,7 +92,12 @@ const FashionComponent = ({
           </ul>
         </div>
       </div>
-      <FeeStructureTable {...table_} />
+      <div className="min-h-screen p-4 md:p-8">
+        <h3 className="md:text-4xl font-bold mx-60 mb-10">
+          <span className="mx-10">Fee Structure</span>
+        </h3>
+        <FeeStructureTable {...table_} />
+      </div>
       <div className="mx-10 mt-20">
         <h3 className="md:text-4xl font-bold mx-60">Placement Partners</h3>
       </div>
