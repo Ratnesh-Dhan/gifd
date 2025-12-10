@@ -127,7 +127,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className=" w-full z-10 border-b flex justify-around px-68 items-center h-20 bg-black text-white">
+    <div className=" w-full z-10  flex justify-around px-68 items-center h-20 bg-black text-white py-2">
       <Image
         src="/main-logo.png"
         alt="GIFD Logo"
