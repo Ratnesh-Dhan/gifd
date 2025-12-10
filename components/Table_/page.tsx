@@ -46,14 +46,14 @@ export default function FeeStructureTable(table_: TableContent) {
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="bg-gradient-to-r from-gray-50 to-gray-100">
+              <tr className="bg-gradient-to-r from-gray-50 to-gray-200">
                 <th className="px-4 md:px-6 py-4 text-left text-xs md:text-sm font-semibold text-gray-700 uppercase tracking-wider">
                   Semester
                 </th>
-                <th className="px-4 md:px-6 py-4 text-left text-xs md:text-sm font-semibold text-gray-700 uppercase tracking-wider">
+                <th className="px-4 md:px-6 py-4 text-center text-xs md:text-sm font-semibold text-gray-700 uppercase tracking-wider">
                   Semester Fee
                 </th>
-                <th className="px-4 md:px-6 py-4 text-left text-xs md:text-sm font-semibold text-gray-700 uppercase tracking-wider">
+                <th className="px-4 md:px-6 py-4 text-right text-xs md:text-sm font-semibold text-gray-700 uppercase tracking-wider">
                   Yearly Fee
                 </th>
               </tr>
@@ -68,7 +68,7 @@ export default function FeeStructureTable(table_: TableContent) {
                       : "border-l-4 border-l-transparent"
                   }`}
                 >
-                  <td className="px-4 md:px-6 py-4 whitespace-nowrap">
+                  <td className="px-4 md:px-6 py-4 whitespace-nowrap ">
                     <div className="flex items-center">
                       <span className="text-sm md:text-base font-medium text-gray-900">
                         Semester {item.semester}
