@@ -1,10 +1,36 @@
+export interface FashionComponentProps {
+  top_image: string;
+  b_title: string;
+  b_para: string;
+  tile_title: string;
+  tiles: ThreeHoverPhotoLinksProps[];
+  c_title: string;
+  c_content: string[];
+  offer_para: string[];
+  career_para: string[];
+}
+
+export interface TableContent {
+  registrationFee: number;
+  table_title: string;
+  course_duration: string;
+  feeData: FeeData[];
+}
+
+export interface FeeData {
+  semester: number;
+  semesterFee: number;
+  year: number;
+  yearlyFee: number | null;
+}
+
 export interface OverviewProgrameProps {
-    top_image: string;
-    b_title: string;
-    b_para: string;
-    tile_title: string;
-    tiles: ThreeHoverPhotoLinksProps[];
-  }
+  top_image: string;
+  b_title: string;
+  b_para: string;
+  tile_title: string;
+  tiles: ThreeHoverPhotoLinksProps[];
+}
 
 export interface ThreeHoverPhotoLinksProps {
   image: string;
