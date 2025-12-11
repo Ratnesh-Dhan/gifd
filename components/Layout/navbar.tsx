@@ -108,7 +108,7 @@ const Navbar = () => {
     {
       title: "How to Apply",
       href: "/Admissions/HowToApply",
-      photo: "",
+      photo: "/images/how-to-apply.jpg",
     },
     {
       title: "Fee Structure",
@@ -140,9 +140,9 @@ const Navbar = () => {
         <Dropper size="text-xl" title="About" items={aboutItems} />
         <Dropper size="text-xl" title="Programs" items={programsItems} />
         <Dropper size="text-xl" title="Admissions" items={admissionsItems} />
-        <Links href="/campus" size="text-xl" title="Life@GIFD" />
+        <Links href="/campus/Campus" size="text-xl" title="Life@GIFD" />
         <Links href="/jds" size="text-xl" title="JDS" />
-        <Links href="/facilities" size="text-xl" title="Facilities" />
+        <Links href="/Facilities" size="text-xl" title="Facilities" />
         <Links href="/Contact" size="text-xl" title="Contact" />
       </div>
 

@@ -40,19 +40,19 @@ In short, it prepares students to think, design, and produce like actual fashion
       {
         title: "Bachelor's",
         desc: "Fashion",
-        link: "/Overview/Bachelor",
+        link: "/Programs/Overview/Bachelor",
         image: "/images/fashion_design-1.jpg",
       },
       {
         title: "Bachelor's",
         desc: "Interior Design",
-        link: "/Overview/Master",
+        link: "/Programs/Interior/Bachelor",
         image: "/images/interior-8.jpg",
       },
       {
         title: "Bachelor's",
         desc: "Textile",
-        link: "/Overview/Master",
+        link: "/Programs/Textile/Bachelor",
         image: "/images/textile.jpg",
       },
     ],

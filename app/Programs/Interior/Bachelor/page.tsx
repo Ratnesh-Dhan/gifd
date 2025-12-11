@@ -40,13 +40,13 @@ Students gain exposure to residential, commercial, retail, and hospitality inter
       {
         title: "Bachelor's",
         desc: "Fashion",
-        link: "/Overview/Master",
+        link: "/Programs/Fashion/Bachelor",
         image: "/images/fashion_design-3.jpg",
       },
       {
         title: "Bachelor's",
         desc: "Textile",
-        link: "/Overview/Master",
+        link: "/Programs/Textile/Bachelor",
         image: "/images/textile-2.jpg",
       },
     ],
