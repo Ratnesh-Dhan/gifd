@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import Links from "./Links/page";
+import { UndoIcon } from "lucide-react";
 
 interface subLinks {
   title: string;
@@ -59,25 +60,48 @@ const Dropper = ({
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.25, ease: "easeInOut" }}
                 >
-                  <div className="text-white text-2xl flex flex-wrap justify-center gap-10 mx-[200px] py-10">
+                  <div className="text-white text-2xl flex flex-wrap justify-center gap-20 mx-[200px] py-10">
                     {items.map((items, index) => (
-                      <Link href={items.href} key={index} className=" ">
-                        <div className="text-center">
-                          {items.photo === "" ? (
-                            <div className="w-60 h-30 bg-amber-300">photo</div>
-                          ) : (
-                            <Image
-                              src={items.photo || ""}
-                              alt={items.title}
-                              height={180}
-                              width={180}
-                              className="rounded-xl"
-                            />
-                          )}
-                          <span className="">{items.title}</span>
-                        </div>
+                      <div key={index}>
+                        {items.sublinks === undefined ? (
+                          <Link href={items.href} className=" ">
+                            <div className="text-center">
+                              {items.photo === "" ? (
+                                <div className="w-60 h-30 rounder-lg bg-amber-300">
+                                  photo
+                                </div>
+                              ) : (
+                                <Image
+                                  src={items.photo || ""}
+                                  alt={items.title}
+                                  height={180}
+                                  width={180}
+                                  className="rounded-xl"
+                                />
+                              )}
+                              <span className="">{items.title}</span>
+                            </div>
+                          </Link>
+                        ) : (
+                          <div className="text-center w-[180px]">
+                            {items.photo === "" ? (
+                              <div className="w-60 h-30 bg-amber-300">
+                                photo
+                              </div>
+                            ) : (
+                              <Image
+                                src={items.photo || ""}
+                                alt={items.title}
+                                height={180}
+                                width={180}
+                                className="rounded-xl"
+                              />
+                            )}
+                            <span className="">{items.title}</span>
+                          </div>
+                        )}
                         <div id="sub-links">
-                          <ul className="text-lg mt-8 border-r mx-1 max-w-[25ch] break-words flex-col items-right">
+                          <ul className="text-lg mt-8 mr-5   mx-1 max-w-[20ch] break-words flex-col items-right">
                             {items.sublinks === undefined
                               ? null
                               : items.sublinks.map((item, index) => (
@@ -90,7 +114,7 @@ const Dropper = ({
                                 ))}
                           </ul>
                         </div>
-                      </Link>
+                      </div>
                     ))}
                   </div>
                 </motion.div>

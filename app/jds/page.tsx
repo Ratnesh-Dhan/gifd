@@ -1,8 +1,8 @@
 import CommingSoon from "@/components/CommingSoon/page";
 import React from "react";
 
-const Hostels = () => {
+const Jds = () => {
   return <CommingSoon />;
 };
 
-export default Hostels;
+export default Jds;

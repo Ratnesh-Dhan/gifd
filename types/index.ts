@@ -38,3 +38,17 @@ export interface ThreeHoverPhotoLinksProps {
   desc: string;
   link: string;
 }
+
+export interface CardObjects {
+  imageLink: string;
+  aleternateText: string;
+  text: string;
+  link: string;
+}
+
+export interface MasonryItems {
+  id: number;
+  img: string;
+  url: string;
+  height: number;
+}
