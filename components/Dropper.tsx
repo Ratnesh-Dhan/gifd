@@ -54,7 +54,7 @@ const Dropper = ({
               {makeActive && (
                 <motion.div
                   id="dropper-menu"
-                  className="absolute border flex left-0 items-wrap justify-center w-screen bg-slate-900 h-[600px] top-20 z-50"
+                  className="absolute border flex left-0 items-wrap justify-center w-screen bg-slate-900 h-[600px] top-32 z-50"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}

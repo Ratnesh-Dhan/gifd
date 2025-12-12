@@ -16,7 +16,7 @@ const ThreeHoverPhotoLinks = ({
         <h3 className="text-4xl my-10">
           <span className="font-bold">{tile_title}</span>
         </h3>
-        <div className="flex gap-14 my-4">
+        <div className="flex gap-24 my-4">
           {tiles.map((tile, index) => (
             <div
               key={index}
