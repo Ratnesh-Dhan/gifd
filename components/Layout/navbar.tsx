@@ -118,7 +118,7 @@ const Navbar = () => {
     {
       title: "Hostels",
       href: "/Admissions/Hostels",
-      photo: "/images/Hostel.jpg",
+      photo: "/images/hostel.jpg",
     },
     {
       title: "FAQ",
@@ -127,29 +127,60 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className=" w-full z-10  flex justify-around px-68 items-center h-20 bg-black text-white py-2">
-      <Image
-        src="/main-logo.png"
-        alt="GIFD Logo"
-        width={150}
-        height={150}
-        className=""
-      />
-      <div className="flex gap-8 h-full">
-        <Links href="/" size="text-xl" title="Home" />
-        <Dropper size="text-xl" title="About" items={aboutItems} />
-        <Dropper size="text-xl" title="Programs" items={programsItems} />
-        <Dropper size="text-xl" title="Admissions" items={admissionsItems} />
-        <Links href="/campus/Campus" size="text-xl" title="Life@GIFD" />
-        <Links href="/jds" size="text-xl" title="JDS" />
-        <Links href="/Facilities" size="text-xl" title="Facilities" />
-        <Links href="/Contact" size="text-xl" title="Contact" />
+    <React.Fragment>
+      <div className="bg-amber-400 flex">
+        <div className=" w-[70vw] flex justify-between pl-100 pr-5 py-3">
+          <span className="font-bold">Best Fashion institute in Jharkhand</span>
+          <h3 className="flex items-center">
+            <Image
+              src="/extra_images/phone.png"
+              alt="Phone"
+              width={20}
+              height={20}
+            />
+            <span className="font-bold ml-3">Phone</span> : +91-810 261 1868
+          </h3>
+        </div>
+        <h3 className="pl-5 flex items-center">
+          <Image
+            src="/extra_images/email.png"
+            alt="Mail"
+            width={20}
+            height={20}
+          />
+          <span className="font-bold ml-3">Email</span> : info@gifdintitute.com
+        </h3>
       </div>
+      <div className=" w-full z-10  flex justify-around pr-68 pl-40 items-center h-22 bg-black text-white py-2">
+        <div className="flex items-center">
+          <Image
+            src="/main-logo.png"
+            alt="GIFD Logo"
+            width={150}
+            height={150}
+            className=""
+          />
+          <h1 className="font-bold text-2xl bg-gradient-to-b from-[#FFD479] to-[#B8860B] text-transparent bg-clip-text">
+            Glam Institute of
+            <br /> Fashion Designing
+          </h1>
+        </div>
+        <div className="flex gap-8 h-full">
+          <Links href="/" size="text-xl" title="Home" />
+          <Dropper size="text-xl" title="About" items={aboutItems} />
+          <Dropper size="text-xl" title="Programs" items={programsItems} />
+          <Dropper size="text-xl" title="Admissions" items={admissionsItems} />
+          <Links href="/campus/Campus" size="text-xl" title="Life@GIFD" />
+          <Links href="/jds" size="text-xl" title="JDS" />
+          <Links href="/Facilities" size="text-xl" title="Facilities" />
+          <Links href="/Contact" size="text-xl" title="Contact" />
+        </div>
 
-      <div className="border rounded-sm p-3 font-bold shadow-[3px_3px_10px_rgba(0,0,0,0.70)] bg-amber-300 hover:bg-pink-400">
-        Registration
+        <div className="border text-black rounded-sm p-3 font-bold shadow-[3px_3px_10px_rgba(0,0,0,0.70)] bg-amber-300 hover:bg-amber-500">
+          Registration
+        </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 

@@ -9,27 +9,6 @@ import React, {
 import { gsap } from "gsap";
 import { MasonryItems } from "@/types";
 
-// const useMedia = (
-//   queries: string[],
-//   values: number[],
-//   defaultValue: number
-// ): number => {
-//   const get = () =>
-//     values[queries.findIndex((q) => matchMedia(q).matches)] ?? defaultValue;
-
-//   const [value, setValue] = useState<number>(get);
-
-//   useEffect(() => {
-//     const handler = () => setValue(get);
-//     queries.forEach((q) => matchMedia(q).addEventListener("change", handler));
-//     return () =>
-//       queries.forEach((q) =>
-//         matchMedia(q).removeEventListener("change", handler)
-//       );
-//   }, [queries]);
-
-//   return value;
-// };
 const useMedia = (
   queries: string[],
   values: number[],
@@ -261,7 +240,7 @@ const Masonry: React.FC<MasonryProps> = ({
   };
 
   return (
-    <div ref={containerRef} className="relative w-full m-h-screen">
+    <div ref={containerRef} className="relative w-full h-full z-20">
       {grid.map((item) => (
         <div
           key={item.id}
