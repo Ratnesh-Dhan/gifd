@@ -53,6 +53,10 @@ const Navbar = () => {
           links: "/Programs/Overview/Master",
         },
         {
+          title: "Diploma programe",
+          links: "/Programs/Overview/Diploma",
+        },
+        {
           title: "Professional certification programe",
           links: "/Programs/Overview/Professional",
         },
@@ -72,6 +76,10 @@ const Navbar = () => {
           links: "/Programs/Fashion/Master",
         },
         {
+          title: "Diploma programe",
+          links: "/Programs/Fashion/Diploma",
+        },
+        {
           title: "Professional certification courses",
           links: "/Programs/Fashion/ProfessionalCertificate",
         },
@@ -89,6 +97,10 @@ const Navbar = () => {
         {
           title: "Master's programe",
           links: "/Programs/Interior/Master",
+        },
+        {
+          title: "Diploma programe",
+          links: "/Programs/Interior/Diploma",
         },
       ],
     },

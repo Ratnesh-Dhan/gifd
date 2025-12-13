@@ -6,9 +6,9 @@ const AboutGIFD = () => {
     <div className="min-h-screen bg-gray-50">
       <div>
         <section className="w-full pt-8 pb-16 px-5 md:px-60">
-          <h2 className="text-3xl md:text-5xl font-bold text-center text-amber-500 mb-12">
+          <h3 className="font-bold md:text-6xl text-4xl text-center md:py-5 py-3 bg-linear-to-b from-[#FFD479] to-[#B8860B] text-transparent bg-clip-text">
             Message From Leadership
-          </h2>
+          </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-1 gap-12 items-start">
             {/* Founder */}
@@ -119,8 +119,18 @@ const AboutGIFD = () => {
           </div>
         </section>
       </div>
-      <div className="flex justify-center mt-20 pb-20  gap-5">
-        <div>
+      <div className="flex justify-center mt-20 pb-20 ">
+        {/* <div className="md:mx-60 bg-[url('/main-logo.png')] bg-cover bg-center opacity-70"> */}
+        <div className="md:mx-60 relative">
+          <div className="absolute inset-0 left-50">
+            <Image
+              src="/main-logo.png"
+              alt="GIFD Logo"
+              width={1000}
+              height={1000}
+              className="z-[-1]"
+            />
+          </div>
           <span className="text-amber-500 font-bold">
             About Glam Institute of Fashion Designing{" "}
           </span>
@@ -129,7 +139,7 @@ const AboutGIFD = () => {
             <br />
             Fashion Designing Courses{" "}
           </h3>
-          <p className="max-w-2xl whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700 text-left">
+          <p className="whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700 text-left">
             A passionate impulse, determinacy of purpose and the knowledge are
             the basic traits which one must own to be a Winner. If you promise
             to invest with passion, perseverance and passion, we promise to
@@ -141,33 +151,29 @@ const AboutGIFD = () => {
             forth. With the spirit of managing volatile changes in the world of
             Fashion Technology, our well prepared and trained faculty invite you
             wholeheartedly to join the GIFD fraternity and make our journey
-            still beautiful and prosperous. Managing Director of Glam Institute
-            of Fashion Designing is here with a vision of taking Education and
-            Fashion to another level, she has come up with an educational
-            system, which is exceptional in every aspect. Together with nascency
-            and inventiveness, the students are also exposed to handicraft and
-            handloom patrimony which offers them with idiosyncratically
-            exclusive outlook which mingles conventional values with modern
-            thought processes by design. A passionate impulse, determinacy of
-            purpose and the knowledge are the basic traits which one must own to
-            be a Winner. If you promise to invest with passion, perseverance and
-            passion, we promise to convert your potential into a highly
-            rewarding career. It is our intense dream to make Glam Institute of
-            Fashion Designing a leader in the Fashion fraternity and this will
-            be achieved by inspiring arty expression and skilled exchange of
-            encounters which magnifies creation and newness in the industry and
-            enables trend to shine forth. With the spirit of managing volatile
-            changes in the world of Fashion Technology, our well prepared and
-            trained faculty invite you wholeheartedly to join the GIFD
-            fraternity and make our journey still beautiful and prosperous.
+            still beautiful and prosperous. <br />
+            <pre />
+            Managing Director of Glam Institute of Fashion Designing is here
+            with a vision of taking Education and Fashion to another level, she
+            has come up with an educational system, which is exceptional in
+            every aspect. Together with nascency and inventiveness, the students
+            are also exposed to handicraft and handloom patrimony which offers
+            them with idiosyncratically exclusive outlook which mingles
+            conventional values with modern thought processes by design. A
+            passionate impulse, determinacy of purpose and the knowledge are the
+            basic traits which one must own to be a Winner. If you promise to
+            invest with passion, perseverance and passion, we promise to convert
+            your potential into a highly rewarding career. It is our intense
+            dream to make Glam Institute of Fashion Designing a leader in the
+            Fashion fraternity and this will be achieved by inspiring arty
+            expression and skilled exchange of encounters which magnifies
+            creation and newness in the industry and enables trend to shine
+            forth. With the spirit of managing volatile changes in the world of
+            Fashion Technology, our well prepared and trained faculty invite you
+            wholeheartedly to join the GIFD fraternity and make our journey
+            still beautiful and prosperous.
           </p>
         </div>
-        <Image
-          src="/about/about-background.png"
-          alt="about"
-          width={500}
-          height={350}
-        />
       </div>
     </div>
   );
