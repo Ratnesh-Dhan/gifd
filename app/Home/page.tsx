@@ -1,7 +1,6 @@
 import FourParts from "@/components/FourParts";
 import HomeHovers from "@/components/HomeHovers/page";
-import Reviews from "@/components/Reviews/page";
-import ScrollingShowcase from "@/components/ScrollingShowcase";
+import ImageShowcase from "@/components/ImageShowcase/page";
 import { ThreeHoverPhotoLinksProps } from "@/types";
 import Image from "next/image";
 import React from "react";
@@ -102,7 +101,7 @@ const Home = () => {
           <HomeHovers tiles={interior_programs} />
         </div>
         <FourParts />
-        <Reviews />
+        <ImageShowcase />
         {/* <div className="bg-amber-50 md:py-20 py-10">
           <ScrollingShowcase />
         </div> */}
