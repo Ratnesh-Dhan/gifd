@@ -8,7 +8,7 @@ import Image from "next/image";
 //     <div className="flex justify-center gap-8 mb-16">
 //       <div className="text-center">
 //         <Image
-//           src="/Jhantu_images/part-1.png"
+//           src="/extra_images/part-1.png"
 //           alt={"part1"}
 //           width={250}
 //           height={250}
@@ -17,7 +17,7 @@ import Image from "next/image";
 //       </div>
 //       <div className="text-center">
 //         <Image
-//           src="/Jhantu_images/part-2.png"
+//           src="/extra_images/part-2.png"
 //           alt={"part1"}
 //           width={250}
 //           height={250}
@@ -26,7 +26,7 @@ import Image from "next/image";
 //       </div>
 //       <div className="text-center">
 //         <Image
-//           src="/Jhantu_images/part-3.png"
+//           src="/extra_images/part-3.png"
 //           alt={"part1"}
 //           width={250}
 //           height={250}
@@ -35,7 +35,7 @@ import Image from "next/image";
 //       </div>
 //       <div className="text-center">
 //         <Image
-//           src="/Jhantu_images/part-4.png"
+//           src="/extra_images/part-4.png"
 //           alt={"part1"}
 //           width={250}
 //           height={250}
@@ -50,11 +50,11 @@ import Image from "next/image";
 // components/Affiliations.tsx
 export default function Affiliations() {
   const partners = [
-    { name: "Partner One", logo: "/Jhantu_images/part-5.png" },
-    { name: "Partner Two", logo: "/Jhantu_images/part-2.png" },
-    { name: "Partner Three", logo: "/Jhantu_images/part-3.png" },
-    { name: "Partner Four", logo: "/Jhantu_images/part-4.png" },
-    { name: "Partner Five", logo: "/Jhantu_images/part-1.png" },
+    { name: "Partner One", logo: "/extra_images/part-5.png" },
+    { name: "Partner Two", logo: "/extra_images/part-2.png" },
+    { name: "Partner Three", logo: "/extra_images/part-3.png" },
+    { name: "Partner Four", logo: "/extra_images/part-4.png" },
+    { name: "Partner Five", logo: "/extra_images/part-1.png" },
   ];
 
   return (

@@ -5,7 +5,7 @@ import React from "react";
 const Contact = () => {
   return (
     <div className="min-h-screen">
-      <div className="w-full h-[70vh] bg-[url('/Jhantu_images/connecting3.jpg')] bg-cover bg-center flex items-center"></div>
+      <div className="w-full h-[70vh] bg-[url('/extra_images/connecting3.jpg')] bg-cover bg-center flex items-center"></div>
       <div className="flex justify-center mt-20">
         <div className="w-[20vw] h-[40vh] border">Map area</div>
         <div className="ml-10 mb-10">

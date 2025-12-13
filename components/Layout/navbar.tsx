@@ -118,7 +118,7 @@ const Navbar = () => {
     {
       title: "Hostels",
       href: "/Admissions/Hostels",
-      photo: "/images/Hostel.jpg",
+      photo: "/images/hostel.jpg",
     },
     {
       title: "FAQ",
@@ -133,7 +133,7 @@ const Navbar = () => {
           <span className="font-bold">Best Fashion institute in Jharkhand</span>
           <h3 className="flex items-center">
             <Image
-              src="/jhantu_images/phone.png"
+              src="/extra_images/phone.png"
               alt="Phone"
               width={20}
               height={20}
@@ -143,7 +143,7 @@ const Navbar = () => {
         </div>
         <h3 className="pl-5 flex items-center">
           <Image
-            src="/jhantu_images/email.png"
+            src="/extra_images/email.png"
             alt="Mail"
             width={20}
             height={20}

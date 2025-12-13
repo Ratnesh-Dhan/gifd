@@ -1,17 +1,17 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { AlertCircle } from "lucide-react";
 
 export default function ErrorPage() {
   const [glitchActive, setGlitchActive] = useState(false);
-  const [particles] = useState(() =>
-    [...Array(30)].map(() => ({
-      left: Math.random() * 100,
-      top: Math.random() * 100,
-      duration: 3 + Math.random() * 4,
-      delay: Math.random() * 2,
-    }))
-  );
+  // const [particles] = useState(() =>
+  //   [...Array(30)].map(() => ({
+  //     left: Math.random() * 100,
+  //     top: Math.random() * 100,
+  //     duration: 3 + Math.random() * 4,
+  //     delay: Math.random() * 2,
+  //   }))
+  // );
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -97,21 +97,21 @@ export default function ErrorPage() {
 
         {/* Floating particles */}
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
-          {/* {[...Array(6)].map((_, i) => (
+          {[...Array(30)].map((_, i) => (
             <div
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full opacity-30"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                left: `${(() => Math.random())() * 100}%`,
+                top: `${(() => Math.random())() * 100}%`,
                 animation: `float ${
-                  3 + Math.random() * 4
+                  3 + (() => Math.random())() * 4
                 }s ease-in-out infinite`,
-                animationDelay: `${Math.random() * 2}s`,
+                animationDelay: `${(() => Math.random())() * 2}s`,
               }}
             ></div>
-          ))} */}
-          {particles.map((p, i) => (
+          ))}
+          {/* {particles.map((p, i) => (
             <div
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full opacity-30"
@@ -122,7 +122,7 @@ export default function ErrorPage() {
                 animationDelay: `${p.delay}s`,
               }}
             ></div>
-          ))}
+          ))} */}
         </div>
       </div>
 

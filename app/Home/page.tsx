@@ -90,7 +90,7 @@ const Home = () => {
           <div className="flex-shrink-0  ">
             <Image
               className="rounded-xl border border-black shadow-[0px_0px_30px_rgba(255,200,40,1)]"
-              src={"/jhantu_images/about-imf.png"}
+              src={"/about/about-imf.png"}
               alt="about image"
               width={500}
               height={500}
