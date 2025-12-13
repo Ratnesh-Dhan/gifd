@@ -2,6 +2,12 @@
 import React, { useState, useEffect } from "react";
 import { AlertCircle } from "lucide-react";
 
+interface Particles {
+  left: number;
+  top: number;
+  delay: number;
+  duration: number;
+}
 export default function ErrorPage() {
   const [glitchActive, setGlitchActive] = useState(false);
   // const [particles] = useState(() =>
@@ -12,7 +18,7 @@ export default function ErrorPage() {
   //     delay: Math.random() * 2,
   //   }))
   // );
-  const [particles, setParticles] = useState([]);
+  const [particles, setParticles] = useState<Particles[]>([]);
 
   useEffect(() => {
     const temp = new Array(20).fill(0).map(() => ({
