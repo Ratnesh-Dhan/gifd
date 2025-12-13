@@ -9,8 +9,8 @@ const PulsingImageCard = ({
   imageUrl: string;
 }) => {
   return (
-    <div className=" p-3">
-      <Image src={imageUrl} alt="Student" width={400} height={300} />
+    <div className=" bg-red-300 p-3">
+      <Image src={imageUrl} alt="Student" width={400} height={0} />
     </div>
   );
 };

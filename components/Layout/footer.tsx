@@ -67,8 +67,8 @@ export default function Footer() {
       {/* Main Footer Content */}
       <div className="flex justify-center">
         <div className="text-white py-8 text-3xl border-gray-200 border-b-1 w-[90vw] flex justify-center text-center">
-        Admissions Open — Call Now and Secure Your Seat.<br /> @
-          +91-810 261 1868
+          Admissions Open — Call Now and Secure Your Seat.
+          <br /> @ +91-810 261 1868
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
@@ -82,13 +82,13 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.instagram.com/gifdfashioninstitute/"
                 className="w-10 h-10 border border-white flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300"
               >
                 <Instagram size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/Gifdinstitute"
                 className="w-10 h-10 border border-white flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300"
               >
                 <Facebook size={18} />
@@ -151,7 +151,7 @@ export default function Footer() {
               ].map((item) => (
                 <li key={item}>
                   <a
-                    href="#"
+                    href="/about/AboutGIFD"
                     className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
                     {item}
@@ -170,18 +170,20 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="mt-1 shrink-0" />
                 <span className="text-gray-400 text-sm">
-                  123 Fashion Avenue
+                  2nd Floor, Birenu Trade Center,
                   <br />
-                  New York, NY 10001
+                  Pennar Road, Avove ICIC Bank,
+                  <br />
+                  Sakchi, Jamshedpur
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={18} className="shrink-0" />
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+ 91810 261 1868"
                   className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
-                  +1 (234) 567-890
+                  +91 810 261 1868
                 </a>
               </li>
               <li className="flex items-center space-x-3">
