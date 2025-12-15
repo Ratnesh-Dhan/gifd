@@ -1,6 +1,7 @@
 import FourParts from "@/components/FourParts";
 import HomeHovers from "@/components/HomeHovers/page";
 import ImageShowcase from "@/components/ImageShowcase/page";
+import SmallIconComp from "@/components/SmallIconComp/page";
 import { ThreeHoverPhotoLinksProps } from "@/types";
 import Image from "next/image";
 import React from "react";
@@ -41,6 +42,17 @@ const interior_programs: ThreeHoverPhotoLinksProps[] = [
   },
 ];
 
+const why_choose = [
+  { image_link: "/icons/badge.png", text: "Certified Faculty" },
+  { image_link: "/icons/integration.png", text: "Cutting edge curriculum" },
+  { image_link: "/icons/partnership.png", text: "Industry Collaboration" },
+  { image_link: "/icons/fashion-week.png", text: "Annual Fashion Show" },
+  { image_link: "/icons/job-seeker.png", text: "Intership Oppurtunities" },
+  { image_link: "/icons/global-network.png", text: "Global Exposure" },
+  { image_link: "/icons/meetings.png", text: "Practical Labs" },
+  { image_link: "/icons/show.png", text: "Industries Visit" },
+];
+
 const Home = () => {
   return (
     <div>
@@ -55,35 +67,46 @@ const Home = () => {
             muted
           />
         </div>
-        <div id="about" className="flex px-60 py-30 gap-8 items-center">
+        <div id="about" className="flex px-60 pt-30 gap-8 items-center">
           <div className="flex-1">
             <span className="text-amber-400 text-xl">
               About Glam Institute of Fashion Designing...
             </span>
             <h3 className="text-4xl my-3 font-bold">
-              A Best Platform To Learn <br /> Fashion Designing Courses
+              GIFD: Shaping the Future of Design
             </h3>
             <p className="whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700 text-left">
-              Managing Director of Glam Institute of Fashion Designing is here
-              with a vision of taking Education and Fashion to another level,
-              she has come up with an educational system, which is exceptional
-              in every aspect. Together with nascency and inventiveness, the
-              students are also exposed to handicraft and handloom patrimony
-              which offers them with idiosyncratically exclusive outlook which
-              mingles conventional values with modern thought processes by
-              design. A passionate impulse, determinacy of purpose and the
-              knowledge are the basic traits which one must own to be a Winner.
-              If you promise to invest with passion, perseverance and passion,
-              we promise to convert your potential into a highly rewarding
-              career. It is our intense dream to make Glam Institute of Fashion
-              Designing a leader in the Fashion fraternity and this will be
-              achieved by inspiring arty expression and skilled exchange of
-              encounters which magnifies creation and newness in the industry
-              and enables trend to shine forth. With the spirit of managing
-              volatile changes in the world of Fashion Technology, our well
-              prepared and trained faculty invite you wholeheartedly to join the
-              GIFD fraternity and make our journey still beautiful and
-              prosperous
+              Glam Institute of Fashion Designing is a premier institute in
+              Jharkhand, dedicated to nurturing creativity and transforming
+              passion into profession. This is located in the heart of
+              Jamshedpur.
+              <br />
+              <br /> The institute offers comprehensive education in Fashion
+              Designing, Interior Designing, Modelling, and Beautician courses,
+              empowering students with industry-ready skills and global
+              exposure. <br />
+              {"\t"} We offer a wide range of Diploma, Bachelor’s, and Master’s
+              programs in Fashion and Interior Designing, along with
+              Certification Programs in Modelling and Beautician courses. Our
+              programs are designed to meet current industry standards while
+              encouraging innovation, creativity, and practical excellence.
+              <br />
+              <br />
+              Glam Institute believes in learning beyond classrooms. Students
+              regularly interact with industry experts, participate in
+              industrial training programs, and gain real-world exposure that
+              prepares them for successful careers in the fashion and design
+              industry.
+              <br />
+              <br />
+              The institute has proudly joined hands with Sanskaram University
+              as an industry partner, making quality design education more
+              efficient, accessible, and career-oriented. Our strong industry
+              connections ensure students receive valuable mentorship,
+              internships, and placement support. Our alumni are successfully
+              working in reputed companies, fashion houses, design studios, or
+              have launched their own start-ups, showcasing the institute’s
+              commitment to excellence and entrepreneurship.
             </p>
           </div>
           <div className="flex-shrink-0  ">
@@ -96,9 +119,57 @@ const Home = () => {
             />
           </div>
         </div>
+        <div
+          id="stats"
+          className="md:my-20 md:mx-60 flex justify-between items-center md:border-b-3 pb-10"
+        >
+          <div className="">
+            <h3 className="text-7xl mb-5">98%*</h3>
+            <span className="text-lg">Placements</span>
+          </div>
+          <div>
+            <h3 className="text-7xl mb-5">20+</h3>
+            <span className="text-lg">Industry Tie-ups</span>
+          </div>
+          <div>
+            <h3 className="text-7xl mb-5">500+</h3>
+            <span className="text-lg">Succesfull alumni</span>
+          </div>
+          <div className="-translate-y-2">
+            <Image
+              src={"/icons/infinity.png"}
+              alt="Life Time"
+              height={10}
+              width={120}
+            />
+            <span className="text-lg">Lifetime assistance</span>
+          </div>
+        </div>
         <div className="">
+          <h3 className="text-4xl mb-5 font-bold md:mx-60">Courses</h3>
           <HomeHovers tiles={fashion_programs} />
           <HomeHovers tiles={interior_programs} />
+        </div>
+        <div className=" flex">
+          <div className="md:pl-50 md:py-40 bg-red-400 md:w-1/4 w-full text-white">
+            <span className="text-3xl">
+              Why
+              <br />
+              choose
+            </span>
+            <br />
+            <h3 className="md:text-6xl font-bold font-sans">GIFD</h3>
+          </div>
+          <div className="md:pr-60 bg-black border-b border-t border-r w-full flex flex-wrap">
+            {why_choose.map((element, idx) => (
+              <div key={idx} className="w-1/4">
+                <SmallIconComp
+                  image_link={element.image_link}
+                  text={element.text}
+                />
+              </div>
+            ))}
+          </div>
         </div>
         <FourParts />
         <ImageShowcase />

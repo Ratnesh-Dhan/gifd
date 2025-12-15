@@ -140,7 +140,7 @@ const Navbar = () => {
   ];
   return (
     <React.Fragment>
-      <div className="bg-amber-400 flex">
+      <div className="bg-red-400 text-white flex">
         <div className=" w-[70vw] flex justify-between pl-100 pr-5 py-3">
           <span className="font-bold">Best Fashion institute in Jharkhand</span>
           <h3 className="flex items-center">
@@ -188,7 +188,7 @@ const Navbar = () => {
           <Links href="/Contact" size="text-xl" title="Contact" />
         </div>
 
-        <div className="border text-black rounded-sm p-3 font-bold shadow-[3px_3px_10px_rgba(0,0,0,0.70)] bg-amber-300 hover:bg-amber-500">
+        <div className="border text-black rounded-sm p-3 font-bold shadow-[3px_3px_10px_rgba(0,0,0,0.70)] bg-red-400 hover:bg-emerald-400">
           Registration
         </div>
       </div>
