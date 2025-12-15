@@ -20,7 +20,7 @@ const Classes = () => {
     { id: 13, img: "/images/student-1.jpg", url: "", height: 1000 },
   ]);
   return (
-    <div className="bg-slate-900">
+    <div className="">
       <Masonry
         items={items}
         ease="power3.out"

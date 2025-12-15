@@ -11,12 +11,12 @@ const Socials = () => {
           alt="whatsapp"
         />
         <Buttons
-          href="https://www.instagram.com/"
+          href="https://www.instagram.com/gifdfashioninstitute/"
           image="/instagram.png"
           alt="instagram"
         />
         <Buttons
-          href="https://www.facebook.com/"
+          href="https://www.facebook.com/Gifdinstitute"
           image="/facebook.png"
           alt="facebook"
         />

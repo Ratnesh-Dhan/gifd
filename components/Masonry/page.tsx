@@ -112,6 +112,7 @@ const Masonry: React.FC<MasonryProps> = ({
 
   const [containerRef, { width }] = useMeasure<HTMLDivElement>();
   const [imagesReady, setImagesReady] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const getInitialPosition = (item: GridItem) => {
     const containerRect = containerRef.current?.getBoundingClientRect();
@@ -148,14 +149,18 @@ const Masonry: React.FC<MasonryProps> = ({
     preloadImages(items.map((i) => i.img)).then(() => setImagesReady(true));
   }, [items]);
 
-  const grid = useMemo<GridItem[]>(() => {
-    if (!width) return [];
+  const { grid, containerHeight } = useMemo<{
+    grid: GridItem[];
+    containerHeight: number;
+  }>(() => {
+    if (!width) return { grid: [], containerHeight: 0 };
     const colHeights = new Array(columns).fill(0);
     const gap = 16;
+    const padding_y = 20;
     const totalGaps = (columns - 1) * gap;
     const columnWidth = (width - totalGaps) / columns;
 
-    return items.map((child) => {
+    const gridItems = items.map((child) => {
       const col = colHeights.indexOf(Math.min(...colHeights));
       const x = col * (columnWidth + gap);
       const height = child.height / 2;
@@ -164,7 +169,30 @@ const Masonry: React.FC<MasonryProps> = ({
       colHeights[col] += height + gap;
       return { ...child, x, y, w: columnWidth, h: height };
     });
+
+    // Calculate total height (tallest column)
+    const maxHeight = Math.max(...colHeights);
+
+    return { grid: gridItems, containerHeight: maxHeight + padding_y };
   }, [columns, items, width]);
+  // const grid = useMemo<GridItem[]>(() => {
+  //   if (!width) return [];
+  //   // if (!width) return { grid: [], containerHeight: 0 };
+  //   const colHeights = new Array(columns).fill(0);
+  //   const gap = 16;
+  //   const totalGaps = (columns - 1) * gap;
+  //   const columnWidth = (width - totalGaps) / columns;
+
+  //   return items.map((child) => {
+  //     const col = colHeights.indexOf(Math.min(...colHeights));
+  //     const x = col * (columnWidth + gap);
+  //     const height = child.height / 2;
+  //     const y = colHeights[col];
+
+  //     colHeights[col] += height + gap;
+  //     return { ...child, x, y, w: columnWidth, h: height };
+  //   });
+  // }, [columns, items, width]);
 
   const hasMounted = useRef(false);
 
@@ -238,16 +266,77 @@ const Masonry: React.FC<MasonryProps> = ({
       if (overlay) gsap.to(overlay, { opacity: 0, duration: 0.3 });
     }
   };
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    setMousePosition({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
+  };
+  const mouseLeaveLetsHandleIt = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return;
+    setMousePosition({
+      x: 0,
+      y: -1000,
+    });
+  };
 
   return (
-    <div ref={containerRef} className="relative w-full h-full z-20">
+    <div
+      ref={containerRef}
+      className="md:py-5 relative w-full px-5 bg-black opasity-10"
+      style={{
+        height: containerHeight || "auto",
+        // backgroundImage:
+        //   "linear-gradient(#303030 1px, transparent 1px), linear-gradient(90deg, #303030 1px, transparent 1px)",
+        backgroundImage: `
+  linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(255 ,255 ,255 , 0.1) 1px, transparent 1px)
+`,
+        backgroundSize: "50px 50px",
+      }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={mouseLeaveLetsHandleIt}
+    >
+      {/* Radial gradient spotlight that follows cursor */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `radial-gradient(
+            1000px circle at ${mousePosition.x}px ${mousePosition.y}px,
+            rgba(255, 255, 255, 0.3),
+            transparent 40%
+          )`,
+        }}
+      />
+
+      {/* Brighter grid overlay at cursor position */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          left: mousePosition.x - 300,
+          top: mousePosition.y - 300,
+          width: "600px",
+          height: "600px",
+          // backgroundImage: `
+          //   linear-gradient(to right, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+          //   linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 1px, transparent 1px)
+          // `,
+          // backgroundSize: "40px 40px",
+          maskImage: "radial-gradient(circle, black 20%, transparent 70%)",
+          WebkitMaskImage:
+            "radial-gradient(circle, black 20%, transparent 70%)",
+          opacity: 0.8,
+        }}
+      />
       {grid.map((item) => (
         <div
           key={item.id}
           data-key={item.id}
           className="absolute box-content"
           style={{ willChange: "transform, width, height, opacity" }}
-          onClick={() => window.open(item.url, "_blank", "noopener")}
+          // onClick={() => window.open(item.url, "_blank", "noopener")}
           onMouseEnter={(e) => handleMouseEnter(item.id, e.currentTarget)}
           onMouseLeave={(e) => handleMouseLeave(item.id, e.currentTarget)}
         >
