@@ -12,7 +12,7 @@ const OverviewPrograme = (properties: OverviewProgrameProps) => {
           backgroundImage: `url(${properties.top_image})`,
         }}
       ></div>
-      <div className="md:mx-60 mx-10 md:my-10 my-10">
+      <div className=" mx-10 md:my-10 my-10">
         <h3 className="text-2xl md:text-4xl font-bold my-4">
           {properties.b_title}
         </h3>

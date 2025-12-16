@@ -120,8 +120,8 @@ const AboutGIFD = () => {
         </section>
       </div>
       <div className="flex justify-center mt-20 pb-20 ">
-        {/* <div className="md:mx-60 bg-[url('/main-logo.png')] bg-cover bg-center opacity-70"> */}
-        <div className="md:mx-60 relative z-0">
+        {/* <div className=" bg-[url('/main-logo.png')] bg-cover bg-center opacity-70"> */}
+        <div className=" relative z-0">
           <div className="absolute inset-0 left-50 -z-10 opacity-35">
             <Image
               src="/main-logo.png"

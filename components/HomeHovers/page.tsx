@@ -7,7 +7,7 @@ const HomeHovers = ({ tiles }: { tiles: ThreeHoverPhotoLinksProps[] }) => {
   return (
     <div className="flex flex-col items-center">
       <div id="fancy" className="flex-col justify-center mb-8">
-        <div className="flex gap-24 my-4">
+        <div className="flex gap-10 my-4">
           {tiles.map((tile, index) => (
             <div
               key={index}

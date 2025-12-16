@@ -9,8 +9,15 @@ const PulsingImageCard = ({
   imageUrl: string;
 }) => {
   return (
-    <div className=" bg-red-300 p-3">
-      <Image src={imageUrl} alt="Student" width={400} height={0} />
+    <div className="">
+      <Image
+        src={imageUrl}
+        alt="Student"
+        width={400}
+        height={0}
+        style={{ objectFit: "fill" }}
+        className="object-fill p-2 bg-white/30 rounded-lg"
+      />
     </div>
   );
 };

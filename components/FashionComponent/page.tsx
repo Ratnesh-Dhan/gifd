@@ -14,13 +14,15 @@ const FashionComponent = ({
 }) => {
   return (
     <div>
-      <div
-        className="w-full h-[70vh] bg-cover bg-center flex items-center"
-        style={{
-          backgroundImage: `url(${properties.top_image})`,
-        }}
-      ></div>
-      <div className="md:mx-60 mx-10 md:my-10 my-10 text-center">
+      <div className="relative h-[70vh]">
+        <div
+          className="absolute w-[100vw] h-[70vh] left-1/2 -translate-x-1/2 bg-cover bg-center flex items-center"
+          style={{
+            backgroundImage: `url(${properties.top_image})`,
+          }}
+        ></div>
+      </div>
+      <div className=" mx-10 md:my-10 my-10 text-center">
         <h3 className="text-2xl md:text-4xl font-bold my-4">
           {properties.b_title}
         </h3>
@@ -33,7 +35,7 @@ const FashionComponent = ({
       </div>
       {/* offers / careers */}
       <div className="flex justify-center items-center">
-        <div className="flex mx-60">
+        <div className="flex ">
           <div className="flex-1 text-center border-r-3 pr-30 ">
             <h3 className="md:text-4xl font-bold">It Offers</h3>
             <div>
@@ -73,7 +75,7 @@ const FashionComponent = ({
         tile_title={properties.tile_title}
         tiles={properties.tiles}
       />
-      <div id="eligibility-criteria" className="mx-60">
+      <div id="eligibility-criteria" className="">
         <div className="mx-16">
           <h3 className="text-4xl font-bold">{properties.c_title}</h3>
           {/* <p className="text-lg md:text-xl leading-8 tracking-[0.5px] text-gray-700 my-10">
@@ -93,13 +95,13 @@ const FashionComponent = ({
         </div>
       </div>
       <div className="min-h-screen p-4 md:p-8">
-        <h3 className="md:text-4xl font-bold mx-60 mb-10">
+        <h3 className="md:text-4xl font-bold  mb-10">
           <span className="mx-10">Fee Structure</span>
         </h3>
         <FeeStructureTable {...table_} />
       </div>
       <div className="mx-10 mt-20">
-        <h3 className="md:text-4xl font-bold mx-60">Placement Partners</h3>
+        <h3 className="md:text-4xl font-bold ">Placement Partners</h3>
       </div>
       <ScrollingShowcase />
     </div>
