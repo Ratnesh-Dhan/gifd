@@ -5,7 +5,7 @@ import React, { useState } from "react";
 
 const Master = () => {
   const [properties] = useState<FashionComponentProps>({
-    top_image: "/about/banner.png",
+    top_image: "/images/banners/fashion-bachelor.jpg",
     b_title: "Master in Fashion Design",
     b_para: `The Fashion Design program provides an extensive and well-structured foundation in design development skills, ensuring that students understand every stage of the creative process from concept to creation. This course uniquely combines the scientific aspects of apparel studies with the expressive elements of art and aesthetics, giving learners a holistic perspective of the fashion industry.
     

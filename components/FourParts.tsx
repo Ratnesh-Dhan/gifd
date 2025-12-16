@@ -1,54 +1,6 @@
-// import Image from "next/image";
-// import React from "react";
-
 import Image from "next/image";
 
-// const FourParts = () => {
-//   return (
-//     <div className="flex justify-center gap-8 mb-16">
-//       <div className="text-center">
-//         <Image
-//           src="/extra_images/part-1.png"
-//           alt={"part1"}
-//           width={250}
-//           height={250}
-//         />
-//         <h3>Affiliated With NBVTE</h3>
-//       </div>
-//       <div className="text-center">
-//         <Image
-//           src="/extra_images/part-2.png"
-//           alt={"part1"}
-//           width={250}
-//           height={250}
-//         />
-//         <h3>Jharkhand Govt. Registered</h3>
-//       </div>
-//       <div className="text-center">
-//         <Image
-//           src="/extra_images/part-3.png"
-//           alt={"part1"}
-//           width={250}
-//           height={250}
-//         />
-//         <h3>An ISO Certified</h3>
-//       </div>
-//       <div className="text-center">
-//         <Image
-//           src="/extra_images/part-4.png"
-//           alt={"part1"}
-//           width={250}
-//           height={250}
-//         />
-//         <h3>MSME Registered</h3>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default FourParts;
-// components/Affiliations.tsx
-export default function Affiliations() {
+export default function FourParts() {
   const partners = [
     { name: "Partner One", logo: "/extra_images/part-5.png" },
     { name: "Partner Two", logo: "/extra_images/part-2.png" },
@@ -58,29 +10,34 @@ export default function Affiliations() {
   ];
 
   return (
-    <div className="w-full   py-20">
-      <div className="   px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-left">
-          Affiliations & Industry Partners
-        </h2>
+    <div className="relative">
+      <div className=" flex left-1/2 right-1/2 -ml-5 w-screen h-full">
+        {/* LEFT – white content (opposite of above) */}
+        <div className="bg-white w-full md:w-1/2 flex items-center justify-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 p-10">
+            {partners.map((p, i) => (
+              <div key={i} className="border border-black rounded-xl bg-white">
+                <Image
+                  src={p.logo}
+                  alt={p.name}
+                  width={180}
+                  height={180}
+                  className="rounded-xl"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mt-12 place-items-center">
-          {partners.map((p, i) => (
-            <div
-              key={i}
-              className="border border-black rounded-xl"
-              // className="opacity-70 hover:opacity-100 transition-all duration-300"
-            >
-              <Image
-                src={p.logo}
-                alt={p.name}
-                width={250}
-                height={250}
-                className="rounded-xl"
-                // className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition"
-              />
-            </div>
-          ))}
+        {/* RIGHT – red title block */}
+        <div className="bg-red-400 w-full md:w-1/2 flex items-center px-20 text-white">
+          <h2 className="text-4xl md:text-6xl font-bold leading-tight">
+            Affiliations
+            <br />
+            & Industry
+            <br />
+            Partners
+          </h2>
         </div>
       </div>
     </div>
