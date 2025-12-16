@@ -140,9 +140,9 @@ const Navbar = () => {
   ];
   return (
     <React.Fragment>
-      <div className="bg-red-400 text-white flex">
-        <div className=" w-[60vw] max-w-[1200px] flex justify-between pl-[25vw] pr-5 py-3">
-          <span className="font-bold">Best Fashion institute in Jharkhand</span>
+      <div className="bg-amber-400  flex">
+        <div className="w-[75vw]  flex justify-between pl-[10vw] pr-5 py-3 text-sm">
+          <span className=" text-sm ">Best Design institute in Jharkhand</span>
           <h3 className="flex items-center">
             <Image
               src="/extra_images/phone.png"
@@ -150,7 +150,7 @@ const Navbar = () => {
               width={20}
               height={20}
             />
-            <span className="font-bold ml-3">Phone</span> : +91-810 261 1868
+            <span className=" ml-3">Phone</span> : +91-810 261 1868
           </h3>
         </div>
         <h3 className="pl-5 flex items-center">
@@ -160,7 +160,7 @@ const Navbar = () => {
             width={20}
             height={20}
           />
-          <span className="font-bold ml-3">Email</span> : info@gifdintitute.com
+          <span className=" ml-3">Email</span> : info@gifdintitute.com
         </h3>
       </div>
       <div className=" w-full z-10  flex justify-around  items-center h-22 bg-black text-white py-2">
@@ -188,7 +188,7 @@ const Navbar = () => {
           <Links href="/Contact" size="text-lg" title="Contact" />
         </div>
 
-        <div className="border text-black rounded-sm p-3 font-bold shadow-[3px_3px_10px_rgba(0,0,0,0.70)] bg-red-400 hover:bg-emerald-400">
+        <div className="border text-black rounded-sm p-3 font-bold shadow-[3px_3px_10px_rgba(0,0,0,0.70)] bg-amber-400 hover:bg-emerald-400">
           Registration
         </div>
       </div>

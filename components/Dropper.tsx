@@ -60,7 +60,7 @@ const Dropper = ({
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.25, ease: "easeInOut" }}
                 >
-                  <div className="text-white text-2xl flex flex-wrap justify-center gap-20 mx-[200px] py-10">
+                  <div className="text-white text-2xl flex flex-wrap justify-center gap-10 mx-auto py-10">
                     {items.map((items, index) => (
                       <div key={index}>
                         {items.sublinks === undefined ? (

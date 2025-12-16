@@ -7,14 +7,7 @@ const ImageShowcase = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
   const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  //   const galleryImages = [
-  //     ["/extra_images/front-page/1.jpg", 300],
-  //     ["/extra_images/front-page/2.jpg", 300],
-  //     ["/extra_images/front-page/3.jpg", 300],
-  //     ["/extra_images/front-page/7.jpg", 300],
-  //     ["/extra_images/front-page/5.jpg", 300],
-  //     ["/extra_images/front-page/6.jpg", 300],
-  //   ];
+
   const galleryImages = [
     "/extra_images/front-page/1.jpg",
     "/extra_images/front-page/2.jpg",
@@ -23,81 +16,34 @@ const ImageShowcase = () => {
     "/extra_images/front-page/5.jpg",
     "/extra_images/front-page/6.jpg",
   ];
-  const reviews = [
-    {
-      id: 1,
-      name: "Sarah Johnson",
-      course: "Computer Science",
-      year: "Class of 2024",
-      review:
-        "The learning environment here is exceptional. The professors are knowledgeable and always willing to help. I've grown both academically and personally during my time here.",
-      rating: 5,
-      color: "from-gray-900 via-black to-gray-800",
-      image: "/images/student-2.jpg",
-    },
-    {
-      id: 2,
-      name: "Michael Chen",
-      course: "Business Administration",
-      year: "Class of 2023",
-      review:
-        "Outstanding program with real-world applications. The networking opportunities and career support have been invaluable to my professional development.",
-      rating: 5,
-      color: "from-black via-gray-900 to-black",
-      image: "/images/student-2.jpg",
-    },
-    {
-      id: 3,
-      name: "Emily Rodriguez",
-      course: "Engineering",
-      year: "Class of 2024",
-      review:
-        "The hands-on approach to learning and state-of-the-art facilities have prepared me well for my career. The collaborative culture among students is truly inspiring.",
-      rating: 5,
-      color: "from-gray-800 via-black to-gray-900",
-      image: "/images/student-2.jpg",
-    },
-    {
-      id: 4,
-      name: "David Patel",
-      course: "Data Science",
-      year: "Class of 2023",
-      review:
-        "Challenging curriculum that pushes you to excel. The research opportunities and industry connections have opened many doors for me.",
-      rating: 5,
-      color: "from-gray-900 via-gray-800 to-black",
-      image: "/images/student-2.jpg",
-    },
-  ];
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const section = sectionRef.current;
+  //     if (!section) return;
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const section = sectionRef.current;
-      if (!section) return;
+  //     const rect = section.getBoundingClientRect();
+  //     const inView = rect.top < window.innerHeight && rect.bottom > 0;
 
-      const rect = section.getBoundingClientRect();
-      const inView = rect.top < window.innerHeight && rect.bottom > 0;
+  //     if (inView) {
+  //       if (scrollTimeoutRef.current) {
+  //         clearTimeout(scrollTimeoutRef.current);
+  //       }
 
-      if (inView) {
-        if (scrollTimeoutRef.current) {
-          clearTimeout(scrollTimeoutRef.current);
-        }
+  //       scrollTimeoutRef.current = setTimeout(() => {
+  //         setActiveIndex((prev) => (prev + 1) % reviews.length);
+  //       }, 100);
+  //     }
+  //   };
 
-        scrollTimeoutRef.current = setTimeout(() => {
-          setActiveIndex((prev) => (prev + 1) % reviews.length);
-        }, 100);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      //   document.body.style.overflow = "auto";
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
-      }
-    };
-  }, [reviews.length]);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //     //   document.body.style.overflow = "auto";
+  //     if (scrollTimeoutRef.current) {
+  //       clearTimeout(scrollTimeoutRef.current);
+  //     }
+  //   };
+  // }, [reviews.length]);
 
   return (
     <div
@@ -146,7 +92,7 @@ const ImageShowcase = () => {
         <div className=" mb-16">
           <div
             id="gallery"
-            className="mx-30 flex flex-wrap gap-4 justify-center"
+            className=" flex flex-wrap gap-4 justify-center items-center"
           >
             {" "}
             {/*"flex flex-nowrap gap-4 overflow-x-auto w-full"*/}
