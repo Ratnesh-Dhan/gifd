@@ -59,7 +59,7 @@ export default function Affiliations() {
 
   return (
     <div className="w-full   py-20">
-      <div className="  mx-60 px-6">
+      <div className="   px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-left">
           Affiliations & Industry Partners
         </h2>

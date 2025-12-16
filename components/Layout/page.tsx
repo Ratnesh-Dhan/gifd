@@ -9,10 +9,10 @@ async function getData() {
 const Layout = async ({ children }: { children: ReactNode }) => {
   await getData();
   return (
-    <div>
+    <div className="">
       <Navbar />
       <Socials />
-      <div>{children}</div>
+      <div className="max-w-[1400px] mx-auto">{children}</div>
       <Footer />
     </div>
   );

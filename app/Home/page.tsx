@@ -57,17 +57,20 @@ const Home = () => {
   return (
     <div>
       <div className="min-h-screen">
-        <div id="video" className=" h-[95vh] bg-black overflow-hidden">
+        <div
+          id="video"
+          className="relative left-1/2 right-1/2 -mx-[50vw] w-screen h-[95vh] overflow-hidden bg-black"
+        >
           <video
             src="/video/front-video-1.mp4"
-            className="w-full object-cover h-[93vh] translate-y-[-30px]"
+            className="absolute inset-0 w-screen h-full object-cover -translate-y-[30px]"
             autoPlay
             loop
-            playsInline
             muted
+            playsInline
           />
         </div>
-        <div id="about" className="flex px-60 pt-30 gap-8 items-center">
+        <div id="about" className="flex mx-10 pt-10 gap-8 items-center">
           <div className="flex-1">
             <span className="text-amber-400 text-xl">
               About Glam Institute of Fashion Designing...
@@ -114,14 +117,14 @@ const Home = () => {
               className="rounded-xl border border-black shadow-[0px_0px_30px_rgba(255,200,40,1)]"
               src={"/about/about-imf.png"}
               alt="about image"
-              width={500}
-              height={500}
+              width={400}
+              height={400}
             />
           </div>
         </div>
         <div
           id="stats"
-          className="md:my-20 md:mx-60 flex justify-between items-center md:border-b-3 pb-10"
+          className="md:my-20 md:mx-10 mx-5 flex justify-between items-center md:border-b-3 pb-10"
         >
           <div className="">
             <h3 className="text-7xl mb-5">98%*</h3>
@@ -146,29 +149,31 @@ const Home = () => {
           </div>
         </div>
         <div className="">
-          <h3 className="text-4xl mb-5 font-bold md:mx-60">Courses</h3>
+          <h3 className="text-4xl mb-5 font-bold ">Courses</h3>
           <HomeHovers tiles={fashion_programs} />
           <HomeHovers tiles={interior_programs} />
         </div>
-        <div className=" flex">
-          <div className="md:pl-50 md:py-40 bg-red-400 md:w-1/4 w-full text-white">
-            <span className="text-3xl">
-              Why
+        <div className="relative">
+          <div className="absolute flex w-1/2 right-1/2 -mx-[50vw] w-screen">
+            <div className="text-center md:py-40 bg-red-400 md:w-1/2 w-full text-white">
+              <span className="text-3xl">
+                Why
+                <br />
+                choose
+              </span>
               <br />
-              choose
-            </span>
-            <br />
-            <h3 className="md:text-6xl font-bold font-sans">GIFD</h3>
-          </div>
-          <div className="md:pr-60 bg-black border-b border-t border-r w-full flex flex-wrap">
-            {why_choose.map((element, idx) => (
-              <div key={idx} className="w-1/4">
-                <SmallIconComp
-                  image_link={element.image_link}
-                  text={element.text}
-                />
-              </div>
-            ))}
+              <h3 className="md:text-6xl font-bold font-sans">GIFD</h3>
+            </div>
+            <div className="md:pr-40 bg-black border-b border-t border-r w-full flex flex-wrap">
+              {why_choose.map((element, idx) => (
+                <div key={idx} className="w-1/4">
+                  <SmallIconComp
+                    image_link={element.image_link}
+                    text={element.text}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         <FourParts />

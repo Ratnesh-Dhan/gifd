@@ -291,9 +291,9 @@ const Masonry: React.FC<MasonryProps> = ({
         // backgroundImage:
         //   "linear-gradient(#303030 1px, transparent 1px), linear-gradient(90deg, #303030 1px, transparent 1px)",
         backgroundImage: `
-  linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-  linear-gradient(to bottom, rgba(255 ,255 ,255 , 0.1) 1px, transparent 1px)
-`,
+      linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255 ,255 ,255 , 0.1) 1px, transparent 1px)
+    `,
         backgroundSize: "50px 50px",
       }}
       onMouseMove={handleMouseMove}

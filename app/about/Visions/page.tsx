@@ -3,7 +3,7 @@ import React from "react";
 
 const Vision = () => {
   return (
-    <div className="md:mx-60 mx-0">
+    <div className=" mx-0">
       <div id="missions" className="md:mx-10 mx-10 my-20">
         <div id="our-vision" className="mt-10">
           <h3 className="text-4xl font-bold text-amber-400 mb-4 text-center md:text-left">
