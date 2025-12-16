@@ -72,9 +72,9 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand Section */}
-          <div className="space-y-6">
+          <div className="space-y-6 md:pr-3">
             <h2 className="text-3xl font-bold tracking-wider">GIFD</h2>
             <p className="text-gray-400 text-sm leading-relaxed">
               Crafting the future of fashion through innovative design education
@@ -109,25 +109,25 @@ export default function Footer() {
           </div>
 
           {/* Programs */}
-          <div>
+          <div className="">
             <h3 className="text-lg font-semibold mb-6 tracking-wide">
               PROGRAMS
             </h3>
             <ul className="space-y-3">
               {[
-                "Fashion Design",
-                "Textile Design",
-                "Fashion Marketing",
-                "Styling & Coordination",
-                "Pattern Making",
-                "Fashion Business",
-              ].map((item) => (
-                <li key={item}>
+                ["Fashion Design", "/Programs/Fashion/Bachelor"],
+                ["Interior Design", "/Programs/Interior/Bachelor"],
+                ["Textile Design", "/Programs/Textile/Bachelor"],
+                ["Modeling", "/Programs/Modeling"],
+                ["Boutique", "/Programs/Fashion/ProfessionalCertificate"],
+                ["Beautician", "/Programs/Textile/Bachelor"],
+              ].map((item, idx) => (
+                <li key={idx}>
                   <a
-                    href="#"
+                    href={item[1]}
                     className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
-                    {item}
+                    {item[0]}
                   </a>
                 </li>
               ))}
@@ -141,20 +141,20 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               {[
-                "About Us",
-                "Admissions",
-                "Gallery",
-                "Student Work",
-                "Faculty",
-                "Alumni Network",
-                "Career Services",
-              ].map((item) => (
-                <li key={item}>
+                ["About Us", "/about/AboutGIFD"],
+                ["Admissions", "/Admissions/HowToApply"],
+                ["Gallery", "/campus/Campus"],
+                ["Student Work", "/jds"],
+                ["Facilities", "/Facilities"],
+                ["Enquiry", "/Contact"],
+                ["Recognitions", "/about/Recognitions"],
+              ].map((item, idx) => (
+                <li key={idx}>
                   <a
-                    href="/about/AboutGIFD"
+                    href={item[1]}
                     className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
-                    {item}
+                    {item[0]}
                   </a>
                 </li>
               ))}
@@ -192,13 +192,13 @@ export default function Footer() {
                   href="mailto:info@gifd.edu"
                   className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
-                  info@gifd.edu
+                  info@gifdinstitute.com
                 </a>
               </li>
             </ul>
 
             {/* Newsletter */}
-            <div className="mt-8">
+            <div className="mt-8 md:mr-3">
               <h4 className="text-sm font-semibold mb-3">NEWSLETTER</h4>
               <div className="flex">
                 <input

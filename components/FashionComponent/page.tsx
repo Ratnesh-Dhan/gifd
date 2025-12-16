@@ -14,7 +14,7 @@ const FashionComponent = ({
 }) => {
   return (
     <div>
-      <div className="relative h-[70vh]">
+      <div className="relative h-[70vh] md:mx-10 mx-5">
         <div
           className="absolute w-[100vw] h-[70vh] left-1/2 -translate-x-1/2 bg-cover bg-center flex items-center"
           style={{
