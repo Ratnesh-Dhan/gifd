@@ -56,7 +56,7 @@ const why_choose = [
 const Home = () => {
   return (
     <div>
-      <div className="min-h-screen">
+      <div>
         <div
           id="video"
           className="relative left-1/2 right-1/2 -mx-[50vw] w-screen h-[80vh] overflow-hidden bg-black"
@@ -112,7 +112,7 @@ const Home = () => {
               commitment to excellence and entrepreneurship.
             </p>
           </div>
-          <div className="flex-shrink-0  ">
+          <div className="shrink-0  ">
             <Image
               className="rounded-xl border border-black shadow-[0px_0px_30px_rgba(255,200,40,1)]"
               src={"/about/about-imf.png"}
@@ -154,7 +154,8 @@ const Home = () => {
           <HomeHovers tiles={interior_programs} />
         </div>
         <div className="relative">
-          <div className="absolute flex w-1/2 right-1/2 -mx-[50vw] w-screen">
+          <div className="flex w-1/2 right-1/2 -ml-5 w-screen">
+            {/*-mx-[50vw]*/}
             <div className="text-center md:py-40 bg-red-400 md:w-1/2 w-full text-white">
               <span className="text-3xl">
                 Why
@@ -177,7 +178,9 @@ const Home = () => {
           </div>
         </div>
         <FourParts />
-        <ImageShowcase />
+        <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen">
+          <ImageShowcase />
+        </div>
         {/* <div className="bg-amber-50 md:py-20 py-10">
           <ScrollingShowcase />
         </div> */}
