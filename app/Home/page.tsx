@@ -59,11 +59,11 @@ const Home = () => {
       <div className="min-h-screen">
         <div
           id="video"
-          className="relative left-1/2 right-1/2 -mx-[50vw] w-screen h-[95vh] overflow-hidden bg-black"
+          className="relative left-1/2 right-1/2 -mx-[50vw] w-screen h-[80vh] overflow-hidden bg-black"
         >
           <video
             src="/video/front-video-1.mp4"
-            className="absolute inset-0 w-screen h-full object-cover -translate-y-[30px]"
+            className="absolute inset-0 w-screen h-[80vh] object-cover -translate-y-[30px]"
             autoPlay
             loop
             muted
@@ -124,7 +124,7 @@ const Home = () => {
         </div>
         <div
           id="stats"
-          className="md:my-20 md:mx-10 mx-5 flex justify-between items-center md:border-b-3 pb-10"
+          className="md:my-20 md:mx-10 mx-5 flex justify-around items-center md:border-b-3 pb-10"
         >
           <div className="">
             <h3 className="text-7xl mb-5">98%*</h3>
@@ -149,7 +149,7 @@ const Home = () => {
           </div>
         </div>
         <div className="">
-          <h3 className="text-4xl mb-5 font-bold ">Courses</h3>
+          <h3 className="text-4xl mb-5 font-bold md:mx-10">Courses</h3>
           <HomeHovers tiles={fashion_programs} />
           <HomeHovers tiles={interior_programs} />
         </div>
