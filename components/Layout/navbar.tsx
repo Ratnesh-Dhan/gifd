@@ -115,6 +115,17 @@ const Navbar = () => {
         },
       ],
     },
+    {
+      title: "Beautician",
+      href: "/Programs/Modeling",
+      photo: "/images/modeling-1.jpg",
+      sublinks: [
+        {
+          title: "Professional certification courses",
+          links: "/Programs/Beautician",
+        },
+      ],
+    },
   ];
   const admissionsItems: items[] = [
     {

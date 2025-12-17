@@ -35,8 +35,8 @@ const FashionComponent = ({
       </div>
       {/* offers / careers */}
       <div className="flex justify-center items-center">
-        <div className="flex ">
-          <div className="flex-1 text-center border-r-3 pr-30 ">
+        <div className="flex md:flex-row ">
+          <div className="flex-1 text-center border-r-3 pr-[10vw] ">
             <h3 className="md:text-4xl font-bold">It Offers</h3>
             <div>
               <ul className="text-left space-y-3 mt-4 md:mt-6">
@@ -52,7 +52,7 @@ const FashionComponent = ({
               </ul>
             </div>
           </div>
-          <div className="flex-1 text-center pl-30">
+          <div className="flex-1 text-center pl-[10vw]">
             <h3 className="md:text-4xl font-bold">Career</h3>
             <div>
               <ul className="text-left space-y-3 mt-4 md:mt-6">

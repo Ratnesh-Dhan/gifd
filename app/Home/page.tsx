@@ -153,8 +153,8 @@ const Home = () => {
           <HomeHovers tiles={fashion_programs} />
           <HomeHovers tiles={interior_programs} />
         </div>
-        <div className="relative">
-          <div className="flex w-1/2 right-1/2 -ml-5 w-screen">
+        <div className="relative left-1/2 -translate-x-1/2 w-screen">
+          <div className="flex">
             {/*-mx-[50vw]*/}
             <div className="text-center md:py-40 bg-red-400 md:w-1/2 w-full text-white">
               <span className="text-3xl">
