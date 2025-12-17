@@ -7,7 +7,7 @@ const OverviewPrograme = (properties: OverviewProgrameProps) => {
   return (
     <div>
       <div
-        className="w-full h-[70vh] bg-cover bg-center flex items-center"
+        className="relative w-screen left-1/2 -translate-x-1/2 min-h-[70vh] bg-cover bg-center flex items-center"
         style={{
           backgroundImage: `url(${properties.top_image})`,
         }}

@@ -5,7 +5,6 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import Links from "./Links/page";
-import { UndoIcon } from "lucide-react";
 
 interface subLinks {
   title: string;
@@ -64,7 +63,11 @@ const Dropper = ({
                     {items.map((items, index) => (
                       <div key={index}>
                         {items.sublinks === undefined ? (
-                          <Link href={items.href} className=" ">
+                          <Link
+                            href={items.href}
+                            className=" "
+                            onClick={leaveHandler}
+                          >
                             <div className="text-center">
                               {items.photo === "" ? (
                                 <div className="w-60 h-30 rounder-lg bg-amber-300">
@@ -105,7 +108,11 @@ const Dropper = ({
                             {items.sublinks === undefined
                               ? null
                               : items.sublinks.map((item, index) => (
-                                  <li key={index} className="mb-2">
+                                  <li
+                                    key={index}
+                                    className="mb-2"
+                                    onClick={leaveHandler}
+                                  >
                                     <Links
                                       href={item.links}
                                       title={item.title}

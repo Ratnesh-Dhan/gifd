@@ -5,7 +5,7 @@ import React, { useState } from "react";
 
 const Bachelor = () => {
   const [properties] = useState<OverviewProgrameProps>({
-    top_image: "/extra_images/connecting3.jpg",
+    top_image: "/images/banners/bachelor.jpg",
     b_title:
       "Become a Skilled Fashion Professional with Glam Institute of Fashion Designing's Bachelor Program!",
     b_para: `Glam Institute’s bachelor program is built to shape individuals into confident, industry-ready fashion professionals. The curriculum focuses on both design and technical mastery, allowing students to explore areas such as Fashion Illustration, Textile Understanding, Pattern Making, Garment Construction, and Fashion Presentation.

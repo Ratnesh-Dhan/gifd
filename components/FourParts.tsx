@@ -10,10 +10,10 @@ export default function FourParts() {
   ];
 
   return (
-    <div className="relative">
-      <div className=" flex left-1/2 right-1/2 -ml-5 w-screen h-full">
+    <div className="relative  left-1/2 -translate-x-1/2 w-screen">
+      <div className=" flex h-full">
         {/* LEFT – white content (opposite of above) */}
-        <div className="bg-white w-full md:w-1/2 flex items-center justify-center">
+        <div className="bg-white w-full md:w-full flex items-center justify-center">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 p-10">
             {partners.map((p, i) => (
               <div key={i} className="border border-black rounded-xl bg-white">
@@ -30,7 +30,7 @@ export default function FourParts() {
         </div>
 
         {/* RIGHT – red title block */}
-        <div className="bg-red-400 w-full md:w-1/2 flex items-center px-20 text-white">
+        <div className="bg-red-400 w-full md:w-1/3 flex items-center px-20 text-white">
           <h2 className="text-4xl md:text-6xl font-bold leading-tight">
             Affiliations
             <br />
