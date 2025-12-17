@@ -177,6 +177,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+
         <FourParts />
         <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen">
           <ImageShowcase />
