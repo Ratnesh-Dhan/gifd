@@ -2,18 +2,6 @@ import { TableContent } from "@/types";
 import React from "react";
 
 export default function FeeStructureTable(table_: TableContent) {
-  // const registrationFee = 8500;
-  // const table_title = "Bachelor of Fashion design";
-  // const course_duration = "3 years (6 sem)";
-  // const feeData = [
-  //   { semester: 1, semesterFee: 34000, year: 1, yearlyFee: 68000 },
-  //   { semester: 2, semesterFee: 34000, year: 1, yearlyFee: null },
-  //   { semester: 3, semesterFee: 34000, year: 2, yearlyFee: 68000 },
-  //   { semester: 4, semesterFee: 34000, year: 2, yearlyFee: null },
-  //   { semester: 5, semesterFee: 34000, year: 3, yearlyFee: 68000 },
-  //   { semester: 6, semesterFee: 34000, year: 3, yearlyFee: null },
-  // ];
-
   const totalFee =
     table_.registrationFee +
     table_.feeData.reduce((sum, item) => sum + item.semesterFee, 0);
@@ -61,7 +49,7 @@ export default function FeeStructureTable(table_: TableContent) {
             <tbody>
               {table_.feeData.map((item, index) => (
                 <tr
-                  key={item.semester}
+                  key={index}
                   className={`border-b border-gray-200 hover:bg-amber-100 transition-colors ${
                     item.yearlyFee
                       ? "border-l-4 border-l-amber-400"

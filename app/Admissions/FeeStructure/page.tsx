@@ -242,7 +242,7 @@ const FeeStructure = () => {
   return (
     <div>
       <div
-        className="w-full h-[70vh] bg-cover bg-center flex items-center"
+        className="relative w-screen -translate-x-1/2 left-1/2 h-[70vh] bg-cover bg-center flex items-center"
         style={{
           backgroundImage: 'url("/images/fees_banner-2.jpg")',
         }}
@@ -250,49 +250,57 @@ const FeeStructure = () => {
       <h3 className="text-4xl text-center md:my-10">
         <span className="font-bold">Fee</span> Structure
       </h3>
-      <div className="flex mb-16" id="first">
-        <div className="flex-1">
-          <h3 className="text-3xl text-center mb-8">
-            <span className="font-bold">Bachelor&apos;s</span> in Fashion Design
-          </h3>
-          <FeeStructureTable {...BachelorOfFashion} />
+      <div className="mx-4">
+        <div className="flex mb-16 md:gap-6 gap-2" id="first">
+          <div className="flex-1">
+            <h3 className="text-3xl text-center mb-8">
+              <span className="font-bold">Bachelor&apos;s</span> in Fashion
+              Design
+            </h3>
+            <FeeStructureTable {...BachelorOfFashion} />
+          </div>
+          <div className="flex-1">
+            <h3 className="text-3xl text-center mb-8">
+              <span className="font-bold">Bachelor&apos;s</span> in Interior
+              Design
+            </h3>
+            <FeeStructureTable {...BachelorOfInterior} />
+          </div>
         </div>
-        <div className="flex-1">
-          <h3 className="text-3xl text-center mb-8">
-            <span className="font-bold">Bachelor&apos;s</span> in Interior
-            Design
-          </h3>
-          <FeeStructureTable {...BachelorOfInterior} />
+        <div className="flex mb-16 gap-6" id="second">
+          <div className="flex-1">
+            <h3 className="text-3xl text-center mb-8">
+              <span className="font-bold">Master&apos;s</span> in Fashion Design
+            </h3>
+            <FeeStructureTable {...MasterOfFashion} />
+          </div>
+          <div className="flex-1">
+            <h3 className="text-3xl text-center mb-8">
+              <span className="font-bold">Master&apos;s</span> in Interior
+              Design
+            </h3>
+            <FeeStructureTable {...MasterOfInterior} />
+          </div>
         </div>
-      </div>
-      <div className="flex mb-16" id="second">
-        <div className="flex-1">
-          <h3 className="text-3xl text-center mb-8">
-            <span className="font-bold">Master&apos;s</span> in Fashion Design
-          </h3>
-          <FeeStructureTable {...MasterOfFashion} />
-        </div>
-        <div className="flex-1">
-          <h3 className="text-3xl text-center mb-8">
-            <span className="font-bold">Master&apos;s</span> in Interior Design
-          </h3>
-          <FeeStructureTable {...MasterOfInterior} />
-        </div>
-      </div>
-      <div className="flex mb-16" id="third">
-        <div className="flex-1">
-          <h3 className="text-3xl text-center mb-8">
-            <span className="font-bold">Professional Certification&apos;s</span>{" "}
-            in Fashion Design
-          </h3>
-          <FeeStructureTable {...ProfessionalFashion} />
-        </div>
-        <div className="flex-1">
-          <h3 className="text-3xl text-center mb-8">
-            <span className="font-bold">Professional Certificatoin&apos;s</span>{" "}
-            in Modeling
-          </h3>
-          <FeeStructureTable {...ProfessionalModeling} />
+        <div className="flex mb-16 gap-6" id="third">
+          <div className="flex-1">
+            <h3 className="text-3xl text-center mb-8">
+              <span className="font-bold">
+                Professional Certification&apos;s
+              </span>{" "}
+              in Fashion Design
+            </h3>
+            <FeeStructureTable {...ProfessionalFashion} />
+          </div>
+          <div className="flex-1">
+            <h3 className="text-3xl text-center mb-8">
+              <span className="font-bold">
+                Professional Certificatoin&apos;s
+              </span>{" "}
+              in Modeling
+            </h3>
+            <FeeStructureTable {...ProfessionalModeling} />
+          </div>
         </div>
       </div>
     </div>

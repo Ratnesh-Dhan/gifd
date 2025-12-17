@@ -5,9 +5,9 @@ import React, { useState } from "react";
 
 const Diploma = () => {
   const [properties] = useState<OverviewProgrameProps>({
-    top_image: "/extra_images/connecting3.jpg",
+    top_image: "/images/banners/certification.jpg",
     b_title:
-      "Become a Skilled Fashion Professional with Glam Institute of Fashion Designing's Bachelor Program!",
+      "Become a Skilled Fashion Professional with Glam Institute of Fashion Designing's Diploma Program!",
     b_para: `Glam Institute’s bachelor program is built to shape individuals into confident, industry-ready fashion professionals. The curriculum focuses on both design and technical mastery, allowing students to explore areas such as Fashion Illustration, Textile Understanding, Pattern Making, Garment Construction, and Fashion Presentation.
 
 Instead of just theory, students learn through real-world exposure—projects, workshops, runway participation, industrial visits, and hands-on assignments. Anyone who has completed 10+2 or equivalent and meets the eligibility requirements can pursue this program.
@@ -37,7 +37,7 @@ With well-equipped labs, studios, and creative spaces, students get continuous o
         image: "/extra_images/woman-with-tablet-phone.jpg",
       },
     ],
-    tile_title: "Bachelor's programe",
+    tile_title: "Diploma programe",
   });
   return (
     <div>
