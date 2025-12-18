@@ -4,8 +4,11 @@ import { AlertCircle } from "lucide-react";
 
 export default function ErrorPage() {
   const [glitchActive, setGlitchActive] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+
     const interval = setInterval(() => {
       setGlitchActive(true);
       setTimeout(() => setGlitchActive(false), 200);
@@ -14,6 +17,7 @@ export default function ErrorPage() {
     return () => clearInterval(interval);
   }, []);
 
+  if (!mounted) return null;
   return (
     <div className="min-h-screen bg-black text-white flex items-center justify-center p-4 w-screen left-1/2 -translate-x-1/2 overflow-hidden relative">
       {/* Animated grid background */}

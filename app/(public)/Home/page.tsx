@@ -9,19 +9,19 @@ import React from "react";
 
 const fashion_programs: ThreeHoverPhotoLinksProps[] = [
   {
-    image: "/home/bachelors-1.jpg",
+    image: "/images/fashion_design-1.jpg",
     title: "",
     desc: "Fashion Design",
     link: "/Programs/Overview/Bachelor",
   },
   {
-    image: "/images/fashion_design-1.jpg",
+    image: "/images/interior-3.jpg",
     title: "",
     desc: "Interior Design",
     link: "/Programs/Overview/Master",
   },
   {
-    image: "/images/fashion_design-5.jpg",
+    image: "/images/textile.jpg",
     title: "",
     desc: "Textile Design",
     link: "/Programs/Overview/Diploma",
@@ -30,13 +30,13 @@ const fashion_programs: ThreeHoverPhotoLinksProps[] = [
 
 const interior_programs: ThreeHoverPhotoLinksProps[] = [
   {
-    image: "/home/bachelors-1.jpg",
+    image: "/images/modeling-3.jpg",
     title: "",
     desc: "Modeling",
     link: "/Programs/Overview/Bachelor",
   },
   {
-    image: "/images/fashion_design-1.jpg",
+    image: "/images/beautician-1.jpg",
     title: "",
     desc: "Beautician",
     link: "/Programs/Overview/Master",

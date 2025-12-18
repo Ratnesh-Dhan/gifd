@@ -42,7 +42,7 @@ const Navbar = () => {
     {
       title: "Overview",
       href: "",
-      photo: "/images/tailoring.jpg",
+      photo: "/images/overview-1.jpg",
       sublinks: [
         {
           title: "Bachelor's programe",
@@ -118,7 +118,7 @@ const Navbar = () => {
     {
       title: "Beautician",
       href: "/Programs/Modeling",
-      photo: "/images/modeling-1.jpg",
+      photo: "/images/beautician-1.jpg",
       sublinks: [
         {
           title: "Professional certification courses",
