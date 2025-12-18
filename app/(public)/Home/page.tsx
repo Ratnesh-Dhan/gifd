@@ -154,10 +154,10 @@ const Home = () => {
           <HomeHovers tiles={fashion_programs} />
           <HomeHovers tiles={interior_programs} />
         </div>
-        <div className="relative left-1/2 -translate-x-1/2 w-screen">
+        <div className="relative left-1/2 -translate-x-1/2 w-screen mb-20">
           <div className="flex">
             {/*-mx-[50vw]*/}
-            <div className="text-center md:py-40 bg-red-400 md:w-1/2 w-full text-white">
+            <div className="text-center md:py-40 bg-[#f59e0b] md:w-1/2 w-full text-white">
               <span className="text-3xl">
                 Why
                 <br />
@@ -179,8 +179,8 @@ const Home = () => {
           </div>
         </div>
 
-        <FourParts />
         <StudentReviews />
+        <FourParts />
         <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen">
           <ImageShowcase />
         </div>

@@ -1,6 +1,6 @@
 import FourParts from "@/components/FourParts";
 import React from "react";
-import ScrollingShowcase from "../../../components/ScrollingShowcase";
+import ScrollingShowcase from "../../../../components/ScrollingShowcase";
 import Image from "next/image";
 
 const Recognitions = () => {

@@ -23,7 +23,7 @@ export default function ErrorPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center p-4 overflow-hidden relative">
+    <div className="min-h-screen bg-black text-white flex items-center justify-center p-4 w-screen left-1/2 -translate-x-1/2 overflow-hidden relative">
       {/* Animated grid background */}
       <div className="absolute inset-0 opacity-10">
         <div
