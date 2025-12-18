@@ -140,7 +140,7 @@ export default function CommingSoon() {
               width: `${(() => Math.random())() * 8 + 4}px`,
               height: `${(() => Math.random())() * 8 + 4}px`,
               backgroundColor: i % 2 === 0 ? "#000" : "#666",
-              left: `${(() => Math.random())() * 100}%`,
+              left: `${(() => Math.random())() * 95}%`,
               top: `${(() => Math.random())() * 100}%`,
               animationDelay: `${(() => Math.random())() * 5}s`,
               animationDuration: `${(() => Math.random())() * 6 + 4}s`,

@@ -13,7 +13,7 @@ const Card = (properties: CardObjects) => {
         transition: { duration: 0.3 },
       }}
     >
-      <div className=" border bg-black rounded-3xl w-[350px] h-120 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-[0px_0px_20px_rgba(0,0,0,0.50)]">
+      <div className=" border bg-black rounded-3xl w-[300px] h-100 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-[0px_0px_20px_rgba(0,0,0,0.50)]">
         <Link href={properties.link}>
           <div className="relative w-full h-[70%] rounded-t-3xl overflow-hidden">
             <Image

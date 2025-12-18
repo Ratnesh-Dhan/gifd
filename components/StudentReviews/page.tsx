@@ -83,10 +83,10 @@ export default function StudentReviews() {
   };
 
   return (
-    <div className="min-h-screen bg-white py-20 px-6">
+    <div className="min-h-screen py-20 px-6  bg-[linear-gradient(to_bottom,#f59e0b_40%,#ffffff_40%)]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 ">
           <h2 className="text-5xl font-bold text-black mb-4 tracking-tight">
             STUDENT TESTIMONIALS
           </h2>

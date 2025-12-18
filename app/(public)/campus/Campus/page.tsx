@@ -31,7 +31,7 @@ const Campus = () => {
   return (
     <div className="">
       <div
-        className="relative w-full h-[70vh] bg-cover bg-center "
+        className="relative w-screen left-1/2 -translate-x-1/2 h-[70vh] bg-cover bg-center"
         style={{
           backgroundImage: `url(/images/gallery-banner-2.png)`,
         }}
@@ -41,8 +41,8 @@ const Campus = () => {
           <span className="[text-shadow:5px_5px_0px_#FFCA28]">Life</span>
         </h3>
       </div>
-      <div id="fancy" className="flex justify-center mb-8">
-        <div className="flex gap-14 my-20 ">
+      <div id="fancy" className="flex justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-20 ">
           <Card {...cardobjects1} />
           <Card {...cardobjects2} />
           <Card {...cardobjects3} />

@@ -1,34 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { AlertCircle } from "lucide-react";
 
-interface Particles {
-  left: number;
-  top: number;
-  delay: number;
-  duration: number;
-}
 export default function ErrorPage() {
   const [glitchActive, setGlitchActive] = useState(false);
-  // const [particles] = useState(() =>
-  //   [...Array(30)].map(() => ({
-  //     left: Math.random() * 100,
-  //     top: Math.random() * 100,
-  //     duration: 3 + Math.random() * 4,
-  //     delay: Math.random() * 2,
-  //   }))
-  // );
-  const [particles, setParticles] = useState<Particles[]>([]);
 
   useEffect(() => {
-    const temp = new Array(20).fill(0).map(() => ({
-      left: Math.random() * 100,
-      top: Math.random() * 100,
-      delay: Math.random() * 2,
-      duration: 3 + Math.random() * 3,
-    }));
-    setParticles(temp);
-
     const interval = setInterval(() => {
       setGlitchActive(true);
       setTimeout(() => setGlitchActive(false), 200);
@@ -38,7 +15,7 @@ export default function ErrorPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center p-4 overflow-hidden relative">
+    <div className="min-h-screen bg-black text-white flex items-center justify-center p-4 w-screen left-1/2 -translate-x-1/2 overflow-hidden relative">
       {/* Animated grid background */}
       <div className="absolute inset-0 opacity-10">
         <div
@@ -112,21 +89,21 @@ export default function ErrorPage() {
 
         {/* Floating particles */}
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
-          {/* {[...Array(6)].map((_, i) => (
+          {[...Array(6)].map((_, i) => (
             <div
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full opacity-30"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                left: `${(() => Math.random())() * 95}%`,
+                top: `${(() => Math.random())() * 100}%`,
                 animation: `float ${
-                  3 + Math.random() * 4
+                  3 + (() => Math.random())() * 4
                 }s ease-in-out infinite`,
-                animationDelay: `${Math.random() * 2}s`,
+                animationDelay: `${(() => Math.random())() * 2}s`,
               }}
             ></div>
-          ))} */}
-          {particles.map((p, i) => (
+          ))}
+          {/* {particles.map((p, i) => (
             <div
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full opacity-30"
@@ -137,7 +114,7 @@ export default function ErrorPage() {
                 animationDelay: `${p.delay}s`,
               }}
             ></div>
-          ))}
+          ))} */}
         </div>
       </div>
 

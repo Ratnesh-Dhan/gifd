@@ -1,5 +1,3 @@
-"use client";
-import React, { useEffect, useState } from "react";
 import {
   Instagram,
   Facebook,
@@ -9,46 +7,31 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
+import { useMemo } from "react";
 
 export default function Footer() {
-  const [stars, setStars] = useState<
-    Array<{
-      id: number;
-      left: number;
-      top: number;
-      animationDelay: number;
-      animationDuration: number;
-      size: number;
-    }>
-  >([]);
-  useEffect(() => {
-    // Generate stars only on client side after mount
-    const generatedStars = Array.from({ length: 50 }, (_, i) => ({
-      id: i,
-      left: Math.random() * 100,
-      top: Math.random() * 100,
-      animationDelay: Math.random() * 2,
-      animationDuration: 2 + Math.random() * 2,
-      size: 1 + Math.random() * 3,
-    }));
-    setStars(generatedStars);
-  }, []);
-  // const [stars] = useState(() =>
-  //   Array.from({ length: 50 }, (_, i) => ({
-  //     id: i,
-  //     left: Math.random() * 100,
-  //     top: Math.random() * 100,
-  //     animationDelay: Math.random() * 3,
-  //     animationDuration: 2 + Math.random() * 2,
-  //     size: 1 + Math.random() * 2
-  //   }))
-  // );
+  const randomSize = useMemo(() => 3 + Math.random() * 3, []);
 
   return (
     <footer className="bg-black text-white relative overflow-hidden">
       {/* Animated Stars Background */}
       <div className="absolute inset-0 pointer-events-none">
-        {stars.map((star) => (
+        {[...Array(50)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full bg-white animate-pulse"
+            style={{
+              left: `${(() => Math.random())() * 95}%`,
+              top: `${(() => Math.random())() * 100}%`,
+              width: `${randomSize}px`,
+              height: `${randomSize}px`,
+              animationDelay: `${(() => Math.random())() * 2}s`,
+              animationDuration: `${2 + (() => Math.random())() * 2}s`,
+              opacity: 0.3,
+            }}
+          ></div>
+        ))}
+        {/* {stars.map((star) => (
           <div
             key={star.id}
             className="absolute rounded-full bg-white animate-pulse"
@@ -62,11 +45,11 @@ export default function Footer() {
               opacity: 0.3,
             }}
           />
-        ))}
+        ))} */}
       </div>
       {/* Main Footer Content */}
       <div className="flex justify-center">
-        <div className="text-white py-8 text-3xl border-gray-200 border-b-1 w-[90vw] flex justify-center text-center">
+        <div className="text-white py-8 text-3xl border-[#f59e0b] border-b-1 w-[90vw] flex justify-center text-center">
           Admissions Open — Call Now and Secure Your Seat.
           <br /> @ +91-810 261 1868
         </div>
@@ -218,26 +201,26 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800 relative z-10">
         <div className="max-w-7xl mx-auto px-6 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm">
+          <div className="flex flex-col md:flex-row max-w-[1200px] justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-[#f59e0b] text-sm">
               © 2022 Gifd Fashion Institute. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a
                 href="#"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
+                className="text-[#f59e0b] hover:text-white text-sm transition-colors"
               >
                 Privacy Policy
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
+                className="text-[#f59e0b] hover:text-white text-sm transition-colors"
               >
                 Terms of Service
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
+                className="text-[#f59e0b] hover:text-white text-sm transition-colors"
               >
                 Accessibility
               </a>

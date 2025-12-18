@@ -1,22 +1,36 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Vision = () => {
   return (
-    <div className=" mx-0">
+    <div className="mx-0">
+      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen overflow-x-hidden">
+        <div className=" bg-[url('/images/banners/vision-mission-banner-2.png')] h-[70vh] bg-cover bg-center" />
+      </div>
       <div id="missions" className="md:mx-10 mx-10 my-20">
         <div id="our-vision" className="mt-10">
           <h3 className="text-4xl font-bold text-amber-400 mb-4 text-center md:text-left">
             VISSION
           </h3>
           <div className="flex items-center">
-            <Image
-              src="/about/vision.png"
-              alt="our-vision"
-              width={300}
-              height={200}
-              className="rounded-xl"
-            />
+            <motion.div
+              initial={{ y: 0, rotate: 0 }}
+              whileHover={{
+                y: [0, -5, 5, -5, 5, 0],
+                rotate: [0, -5, 5, -5, 5, 0],
+                transition: { duration: 0.3 },
+              }}
+            >
+              <Image
+                src="/about/vision.png"
+                alt="our-vision"
+                width={300}
+                height={200}
+                className="rounded-xl h-50 w-300 shadow-xl/30"
+              />
+            </motion.div>
             <p className="md:ml-8 ml-0  whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700 text-left">
               It is our rare vision to infuse artistic & academic potential in
               the budding designers. The GIFD team is highly committed to offer
@@ -43,13 +57,22 @@ const Vision = () => {
               professional excellence and personal integrity will also be
               brought forth.{" "}
             </p>
-            <Image
-              src="/about/mission.png"
-              alt="our-vision"
-              width={300}
-              height={200}
-              className="rounded-xl"
-            />
+            <motion.div
+              initial={{ y: 0, rotate: 0 }}
+              whileHover={{
+                y: [0, -5, 5, -5, 5, 0],
+                rotate: [0, -5, 5, -5, 5, 0],
+                transition: { duration: 0.3 },
+              }}
+            >
+              <Image
+                src="/about/mission.png"
+                alt="our-vision"
+                width={300}
+                height={200}
+                className="rounded-xl h-50 w-350 shadow-xl/30"
+              />
+            </motion.div>
           </div>
         </div>
         <div id="our-commitment" className="mt-10">
@@ -57,13 +80,22 @@ const Vision = () => {
             COMMITMENT
           </h3>
           <div className="flex items-center">
-            <Image
-              src="/about/commitment.png"
-              alt="our-vision"
-              width={300}
-              height={200}
-              className="rounded-xl"
-            />
+            <motion.div
+              initial={{ y: 0, rotate: 0 }}
+              whileHover={{
+                y: [0, -5, 5, -5, 5, 0],
+                rotate: [0, -5, 5, -5, 5, 0],
+                transition: { duration: 0.3 },
+              }}
+            >
+              <Image
+                src="/about/commitment.png"
+                alt="our-vision"
+                width={300}
+                height={200}
+                className="rounded-xl h-50 w-150 shadow-xl/30"
+              />
+            </motion.div>
             <p className="md:ml-8 ml-0 whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700 text-left">
               Honing and bringing up the inventiveness of budding minds to raise
               the brilliant style statements by offering them industry oriented
