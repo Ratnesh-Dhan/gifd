@@ -6,7 +6,7 @@ export default function ErrorPage() {
   const [glitchActive, setGlitchActive] = useState(false);
   // const [particles] = useState(() =>
   //   [...Array(30)].map(() => ({
-  //     left: Math.random() * 100,
+  //     left: Math.random() * 95,
   //     top: Math.random() * 100,
   //     duration: 3 + Math.random() * 4,
   //     delay: Math.random() * 2,
@@ -102,7 +102,7 @@ export default function ErrorPage() {
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full opacity-30"
               style={{
-                left: `${(() => Math.random())() * 100}%`,
+                left: `${(() => Math.random())() * 95}%`,
                 top: `${(() => Math.random())() * 100}%`,
                 animation: `float ${
                   3 + (() => Math.random())() * 4

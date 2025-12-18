@@ -56,7 +56,7 @@ const why_choose = [
 
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <div>
         <div
           id="video"

@@ -21,7 +21,7 @@ export default function Footer() {
             key={i}
             className="absolute rounded-full bg-white animate-pulse"
             style={{
-              left: `${(() => Math.random())() * 100}%`,
+              left: `${(() => Math.random())() * 95}%`,
               top: `${(() => Math.random())() * 100}%`,
               width: `${randomSize}px`,
               height: `${randomSize}px`,
@@ -201,7 +201,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800 relative z-10">
         <div className="max-w-7xl mx-auto px-6 py-6">
-          <div className="flex flex-col md:flex-row max-w-[1260px] justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex flex-col md:flex-row max-w-[1200px] justify-between items-center space-y-4 md:space-y-0">
             <p className="text-[#f59e0b] text-sm">
               © 2022 Gifd Fashion Institute. All rights reserved.
             </p>

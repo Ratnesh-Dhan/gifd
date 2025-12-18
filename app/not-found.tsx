@@ -94,7 +94,7 @@ export default function ErrorPage() {
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full opacity-30"
               style={{
-                left: `${(() => Math.random())() * 100}%`,
+                left: `${(() => Math.random())() * 95}%`,
                 top: `${(() => Math.random())() * 100}%`,
                 animation: `float ${
                   3 + (() => Math.random())() * 4

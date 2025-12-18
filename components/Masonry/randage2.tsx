@@ -261,7 +261,7 @@ const Masonry: React.FC<MasonryProps> = ({
   };
 
   return (
-    <div ref={containerRef} className="list">
+    <div ref={containerRef} className="list overflow-hidden">
       {grid.map((item) => {
         return (
           <div

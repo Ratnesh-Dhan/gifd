@@ -11,7 +11,7 @@ export default function LoadingPage() {
     [...Array(8)].map((_, i) => ({
       id: i,
       size: 10 + Math.random() * 20,
-      left: Math.random() * 100,
+      left: Math.random() * 95,
       duration: 1 + Math.random() * 1,
       delay: Math.random() * 0.1,
     }))
@@ -20,7 +20,7 @@ export default function LoadingPage() {
   const [particles] = useState(() =>
     [...Array(6)].map((_, i) => ({
       id: i,
-      left: Math.random() * 100,
+      left: Math.random() * 95,
       top: Math.random() * 100,
       duration: 3 + Math.random() * 4,
       delay: Math.random() * 0.1,

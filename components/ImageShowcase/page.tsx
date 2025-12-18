@@ -13,7 +13,7 @@ const ImageShowcase = () => {
   ];
 
   return (
-    <div className="min-h-screen  bg-black flex items-center justify-center py-20 w-full  relative overflow-hidden">
+    <div className="min-h-screen  bg-black flex items-center justify-center py-20 min-w-screen  relative overflow-hidden">
       {/* Animated background grid */}
       <div className="absolute inset-0 opacity-10">
         <div
