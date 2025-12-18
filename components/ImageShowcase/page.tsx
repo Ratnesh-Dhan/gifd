@@ -3,8 +3,6 @@ import React, { useRef } from "react";
 import PulsingImageCard from "@/components/PulsingImageCard";
 
 const ImageShowcase = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
   const galleryImages = [
     "/extra_images/front-page/1.jpg",
     "/extra_images/front-page/2.jpg",
@@ -15,10 +13,7 @@ const ImageShowcase = () => {
   ];
 
   return (
-    <div
-      // ref={sectionRef}
-      className="min-h-screen bg-black flex items-center justify-center py-20 w-full  relative overflow-hidden"
-    >
+    <div className="min-h-screen  bg-black flex items-center justify-center py-20 w-full  relative overflow-hidden">
       {/* Animated background grid */}
       <div className="absolute inset-0 opacity-10">
         <div
@@ -38,7 +33,7 @@ const ImageShowcase = () => {
         style={{ animationDelay: "2s" }}
       ></div>
 
-      <div className=" w-full relative z-10">
+      <div className=" w-full relative z-10 max-w-[1260px]">
         {/* Header */}
         <div className="text-center mb-20 ">
           <div className="inline-block relative">

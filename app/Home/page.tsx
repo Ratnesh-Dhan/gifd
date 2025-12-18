@@ -2,6 +2,7 @@ import FourParts from "@/components/FourParts";
 import HomeHovers from "@/components/HomeHovers/page";
 import ImageShowcase from "@/components/ImageShowcase/page";
 import SmallIconComp from "@/components/SmallIconComp/page";
+import StudentReviews from "@/components/StudentReviews/page";
 import { ThreeHoverPhotoLinksProps } from "@/types";
 import Image from "next/image";
 import React from "react";
@@ -177,7 +178,9 @@ const Home = () => {
             </div>
           </div>
         </div>
+
         <FourParts />
+        <StudentReviews />
         <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen">
           <ImageShowcase />
         </div>
