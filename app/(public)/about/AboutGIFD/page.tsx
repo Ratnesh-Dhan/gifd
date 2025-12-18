@@ -3,9 +3,9 @@ import React from "react";
 
 const AboutGIFD = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen px-5">
       <div>
-        <section className="w-full pt-8 pb-16 px-5 md:px-60">
+        <section className="w-full pt-8 pb-16">
           <h3 className="font-bold md:text-6xl text-4xl text-center md:py-5 py-3 bg-linear-to-b from-[#FFD479] to-[#B8860B] text-transparent bg-clip-text">
             Message From Leadership
           </h3>

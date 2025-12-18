@@ -5,8 +5,11 @@ import Image from "next/image";
 
 const Recognitions = () => {
   return (
-    <div className="flex flex-col items-center mt-20">
-      <FourParts />
+    <div className="flex flex-col items-center">
+      <div className="w-[99vw] bg-[url('/images/banners/recognition.jpg')] h-[70vh] bg-cover bg-center" />
+      <div className="max-w-[1260px] flex items-center">
+        <FourParts />
+      </div>
 
       <Image
         src="/about/banner.png"
