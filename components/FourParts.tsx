@@ -10,10 +10,10 @@ export default function FourParts() {
   ];
 
   return (
-    <div className="relative  left-1/2 -translate-x-1/2 w-screen mt-20">
+    <div className="relative  left-1/2 -translate-x-1/2 w-screen mb-10">
       <div className=" flex h-full">
         {/* LEFT – white content (opposite of above) */}
-        <div className="bg-white w-full md:w-full flex items-center justify-center">
+        <div className="bg-white w-full md:w-full flex items-center justify-center border">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 p-10">
             {partners.map((p, i) => (
               <div key={i} className="border border-black rounded-xl bg-white">

@@ -7,7 +7,7 @@ const Vision = () => {
   return (
     <div className="mx-0">
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen overflow-x-hidden">
-        <div className=" bg-[url('/images/banners/vision-mission-banner-2.png')] h-[70vh] bg-cover bg-center" />
+        <div className=" bg-[url('/images/banners/vision.jpg')] h-[70vh] bg-cover bg-center" />
       </div>
       <div id="missions" className="md:mx-10 mx-10 my-20">
         <div id="our-vision" className="mt-10">
