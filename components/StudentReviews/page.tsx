@@ -55,18 +55,31 @@ export default function StudentReviews() {
         "The business side of fashion can be challenging, but this school made it accessible and exciting. I learned about brand management, marketing, and entrepreneurship. Now I run my own fashion consultancy.",
       image: "/images/student-2.jpg",
     },
+    {
+      id: 7,
+      name: "Oliver Hansen",
+      program: "Fashion Business Graduate",
+      review:
+        "The business side of fashion can be challenging, but this school made it accessible and exciting. I learned about brand management, marketing, and entrepreneurship. Now I run my own fashion consultancy.",
+      image: "/images/student-2.jpg",
+    },
   ];
 
   const currentReviews = reviews.slice(currentIndex, currentIndex + 3);
   const totalPages = Math.ceil(reviews.length / 3);
   const currentPage = Math.floor(currentIndex / 3) + 1;
+  // Calculate the maximum valid starting index (largest multiple of 3 <= reviews.length)
+  const maxIndex = Math.floor((reviews.length - 1) / 3) * 3;
 
   const handlePrev = () => {
     setCurrentIndex((prev) => Math.max(0, prev - 3));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => Math.min(reviews.length - 3, prev + 3));
+    setCurrentIndex((prev) => {
+      const nextIndex = prev + 3;
+      return Math.min(maxIndex, nextIndex);
+    });
   };
 
   return (
@@ -132,7 +145,8 @@ export default function StudentReviews() {
 
           <button
             onClick={handleNext}
-            disabled={currentIndex >= reviews.length - 3}
+            disabled={currentIndex >= maxIndex}
+            // disabled={currentIndex >= reviews.length - 3}
             className="bg-black text-white p-3 hover:bg-gray-800 transition-colors duration-300 disabled:bg-gray-300 disabled:cursor-not-allowed"
             aria-label="Next reviews"
           >
