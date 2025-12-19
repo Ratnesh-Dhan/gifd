@@ -2,6 +2,7 @@ import React from "react";
 import Links from "../Links/page";
 import Dropper from "../Dropper";
 import Image from "next/image";
+import { useDevice } from "@/app/provideres/Devicecontext";
 // import AboutGIFD from "@/app/about/AboutGIFD";
 
 interface subLinks {
@@ -16,6 +17,7 @@ interface items {
 }
 
 const Navbar = () => {
+  const { isMobile } = useDevice();
   const aboutItems: items[] = [
     {
       title: "About GIFD",
@@ -151,7 +153,7 @@ const Navbar = () => {
   ];
   return (
     <React.Fragment>
-      <div className="bg-amber-400  flex">
+      {/* <div className="bg-amber-400  flex">
         <div className="w-[75vw]  flex justify-between pl-[10vw] pr-5 py-3 text-sm">
           <span className=" text-sm ">Best Design institute in Jharkhand</span>
           <h3 className="flex items-center">
@@ -173,7 +175,7 @@ const Navbar = () => {
           />
           <span className=" ml-3">Email</span> : info@gifdintitute.com
         </h3>
-      </div>
+      </div> */}
       <div className=" w-full z-10  flex justify-around  items-center h-22 bg-black text-white py-2">
         <div className="flex items-center">
           <Image

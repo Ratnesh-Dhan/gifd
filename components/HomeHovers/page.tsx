@@ -7,11 +7,11 @@ const HomeHovers = ({ tiles }: { tiles: ThreeHoverPhotoLinksProps[] }) => {
   return (
     <div className="flex flex-col items-center">
       <div id="fancy" className="flex-col justify-center mb-8">
-        <div className="flex gap-10 my-4">
+        <div className="flex md:flex-row flex-col gap-10 my-4">
           {tiles.map((tile, index) => (
             <div
               key={index}
-              className=" bg-black rounded-3xl w-90 h-130 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-[0px_0px_20px_rgba(0,0,0,0.50)]"
+              className=" bg-black rounded-3xl md:w-90 md:h-130 w-70 h-100 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-[0px_0px_20px_rgba(0,0,0,0.50)]"
             >
               <Link href={tile.link}>
                 <div className="relative w-full h-[80%] rounded-t-3xl overflow-hidden">

@@ -71,7 +71,10 @@ const Home = () => {
             playsInline
           />
         </div>
-        <div id="about" className="flex mx-10 pt-10 gap-8 items-center">
+        <div
+          id="about"
+          className="flex md:flex-row flex-col mx-10 pt-10 md:gap-8 items-center"
+        >
           <div className="flex-1">
             <span className="text-amber-400 text-xl">
               About Glam Institute of Fashion Designing...
@@ -125,7 +128,7 @@ const Home = () => {
         </div>
         <div
           id="stats"
-          className="md:my-20 md:mx-10 mx-5 flex justify-around items-center md:border-b-3 pb-10"
+          className="md:my-20 md:mx-10 mx-5 flex md:flex-row flex-col justify-around items-center md:border-b-3 pb-10"
         >
           <div className="">
             <h3 className="text-7xl mb-5">98%*</h3>
