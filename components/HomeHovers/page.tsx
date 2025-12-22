@@ -23,11 +23,13 @@ const HomeHovers = ({ tiles }: { tiles: ThreeHoverPhotoLinksProps[] }) => {
                   />
                 </div>
                 <div className="px-10 pt-4 font-bold">
-                  <h3 className="text-xl mt-4 text-amber-400">{tile.title}</h3>
-                  <p className="text-3xl text-white">{tile.desc}</p>
+                  <h3 className="md:text-xl mt-4 text-amber-400">
+                    {tile.title}
+                  </h3>
+                  <p className="md:text-3xl text-xl text-white">{tile.desc}</p>
                 </div>
                 <span
-                  className="opacity-0 translate-x-[-6px] transition-all duration-200
+                  className="opacity-0 -translate-x-6px transition-all duration-200
            hover:opacity-100 hover:translate-x-20
            text-amber-500 text-2xl font-semibold"
                 >

@@ -2,19 +2,12 @@ import React from "react";
 import Links from "../Links/page";
 import Dropper from "../Dropper";
 import Image from "next/image";
+import MobileMenu from "../MobileMenu";
+import { items } from "@/types";
 // import { useDevice } from "@/app/provideres/Devicecontext";
 // import AboutGIFD from "@/app/about/AboutGIFD";
 
-interface subLinks {
-  title: string;
-  links: string;
-}
-interface items {
-  title: string;
-  href: string;
-  photo?: string;
-  sublinks?: subLinks[];
-}
+
 
 const Navbar = () => {
   // const { isMobile } = useDevice();
@@ -182,16 +175,16 @@ const Navbar = () => {
           </h3>
         </div>
       </div>
-      <div className=" w-full z-10  flex justify-around  items-center h-10 md:h-22 bg-black text-white py-2">
+      <div className="w-full z-10  flex justify-around  items-center h-20 md:h-22 bg-black text-white py-2">
         <div className="flex items-center">
           <Image
             src="/main-logo.png"
             alt="GIFD Logo"
             width={150}
             height={150}
-            className=""
+            className="w-24 h-20 md:w-[150px] md:h-[120px]"
           />
-          <h1 className="font-bold md:text-2xl text-xl bg-gradient-to-b from-[#FFD479] to-[#B8860B] text-transparent bg-clip-text">
+          <h1 className="font-bold md:text-2xl text-lg bg-linear-to-b from-[#FFD479] to-[#B8860B] text-transparent bg-clip-text">
             Glam Institute of
             <br /> Fashion Designing
           </h1>
@@ -206,7 +199,9 @@ const Navbar = () => {
           <Links href="/Facilities" size="text-lg" title="Facilities" />
           <Links href="/Contact" size="text-lg" title="Contact" />
         </div>
-
+        <div id="Mobile view" className="md:hidden">
+          <MobileMenu about={aboutItems} programs={programsItems} admissions={admissionsItems} life={"/campus/Campus"} jds={"/jds"} facilities={"/Facilities"} contact={"/Contact"} />
+        </div>
         <div className="hidden md:inline border text-black rounded-sm p-3 font-bold shadow-[3px_3px_10px_rgba(0,0,0,0.70)] bg-amber-400 hover:bg-emerald-400">
           Registration
         </div>

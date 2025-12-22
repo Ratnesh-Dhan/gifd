@@ -153,7 +153,7 @@ const Home = () => {
           </div>
         </div>
         <div className="">
-          <h3 className="text-4xl mb-5 font-bold md:mx-10">Courses</h3>
+          <h3 className="text-4xl mb-5 font-bold mx-10 ">Courses</h3>
           <HomeHovers tiles={fashion_programs} />
           <HomeHovers tiles={interior_programs} />
         </div>
