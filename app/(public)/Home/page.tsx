@@ -158,16 +158,15 @@ const Home = () => {
           <HomeHovers tiles={interior_programs} />
         </div>
         <div className="relative left-1/2 -translate-x-1/2 w-screen mb-20">
-          <div className="flex">
-            {/*-mx-[50vw]*/}
-            <div className="text-center md:py-40 bg-[#f59e0b] md:w-1/2 w-full text-white">
-              <span className="text-3xl">
+          <div className="flex flex-col md:flex-row">
+            <div className="text-center py-5 md:py-40 bg-[#f59e0b] md:w-1/2 w-full text-white">
+              <span className="md:text-3xl text-2xl">
                 Why
                 <br />
                 choose
               </span>
               <br />
-              <h3 className="md:text-6xl font-bold font-sans">GIFD</h3>
+              <h3 className="md:text-6xl text-3xl font-bold font-sans">GIFD</h3>
             </div>
             <div className="md:pr-40 bg-black border-b border-t border-r w-full flex flex-wrap">
               {why_choose.map((element, idx) => (

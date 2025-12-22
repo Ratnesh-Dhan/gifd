@@ -49,7 +49,7 @@ export default function Footer() {
       </div>
       {/* Main Footer Content */}
       <div className="flex justify-center">
-        <div className="text-white py-8 text-3xl border-[#f59e0b] border-b-1 w-[90vw] flex justify-center text-center">
+        <div className="text-white py-4 md:py-8 text-xl md:text-3xl border-[#f59e0b] border-b-1 w-[90vw] flex justify-center text-center">
           Admissions Open — Call Now and Secure Your Seat.
           <br /> @ +91-810 261 1868
         </div>

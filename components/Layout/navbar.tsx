@@ -2,7 +2,7 @@ import React from "react";
 import Links from "../Links/page";
 import Dropper from "../Dropper";
 import Image from "next/image";
-import { useDevice } from "@/app/provideres/Devicecontext";
+// import { useDevice } from "@/app/provideres/Devicecontext";
 // import AboutGIFD from "@/app/about/AboutGIFD";
 
 interface subLinks {
@@ -17,7 +17,7 @@ interface items {
 }
 
 const Navbar = () => {
-  const { isMobile } = useDevice();
+  // const { isMobile } = useDevice();
   const aboutItems: items[] = [
     {
       title: "About GIFD",
@@ -153,30 +153,36 @@ const Navbar = () => {
   ];
   return (
     <React.Fragment>
-      {/* <div className="bg-amber-400  flex">
-        <div className="w-[75vw]  flex justify-between pl-[10vw] pr-5 py-3 text-sm">
-          <span className=" text-sm ">Best Design institute in Jharkhand</span>
-          <h3 className="flex items-center">
+      <div className="bg-amber-400  flex">
+        <div className="md:w-[75vw]  flex justify-between pl-[10vw] pr-5 py-3 text-xs md:text-sm">
+          <span className=" text-sm hidden md:inline">
+            Best Design institute in Jharkhand
+          </span>
+          <div className="flex items-center">
             <Image
               src="/extra_images/phone.png"
               alt="Phone"
               width={20}
               height={20}
             />
-            <span className=" ml-3">Phone</span> : +91-810 261 1868
-          </h3>
+            <h3 className="flex flex-col md:flex-row">
+              <span className=" ml-3 ">Phone</span> : +91-810 261 1868
+            </h3>
+          </div>
         </div>
-        <h3 className="pl-5 flex items-center">
+        <div className="pl-5 flex items-center">
           <Image
             src="/extra_images/email.png"
             alt="Mail"
             width={20}
             height={20}
           />
-          <span className=" ml-3">Email</span> : info@gifdintitute.com
-        </h3>
-      </div> */}
-      <div className=" w-full z-10  flex justify-around  items-center h-22 bg-black text-white py-2">
+          <h3 className="flex flex-col md:flex-row md:text-sm text-xs">
+            <span className=" ml-3">Email</span> : info@gifdintitute.com
+          </h3>
+        </div>
+      </div>
+      <div className=" w-full z-10  flex justify-around  items-center h-10 md:h-22 bg-black text-white py-2">
         <div className="flex items-center">
           <Image
             src="/main-logo.png"
@@ -190,7 +196,7 @@ const Navbar = () => {
             <br /> Fashion Designing
           </h1>
         </div>
-        <div className="flex md:gap-4 gap-2 h-full">
+        <div className="md:flex md:gap-4 gap-2 h-full hidden">
           <Links href="/" size="text-lg" title="Home" />
           <Dropper size="text-lg" title="About" items={aboutItems} />
           <Dropper size="text-lg" title="Programs" items={programsItems} />
@@ -201,7 +207,7 @@ const Navbar = () => {
           <Links href="/Contact" size="text-lg" title="Contact" />
         </div>
 
-        <div className="border text-black rounded-sm p-3 font-bold shadow-[3px_3px_10px_rgba(0,0,0,0.70)] bg-amber-400 hover:bg-emerald-400">
+        <div className="hidden md:inline border text-black rounded-sm p-3 font-bold shadow-[3px_3px_10px_rgba(0,0,0,0.70)] bg-amber-400 hover:bg-emerald-400">
           Registration
         </div>
       </div>

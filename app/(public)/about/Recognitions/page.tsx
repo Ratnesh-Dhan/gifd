@@ -10,7 +10,6 @@ const Recognitions = () => {
       <div className="max-w-[1260px] flex items-center">
         <FourParts />
       </div>
-
       <Image
         src="/about/banner.png"
         alt="recognition"
