@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import HamburgerMenu from "./HamburgerMenu";
 import { items } from "@/types";
 import Links from "./Links/page";
-import Dropper from "./Dropper";
+import MobileMenuChildrens from "./MobileMenuChildrens";
 
 const MobileMenu = ({
   about,
@@ -23,6 +23,7 @@ const MobileMenu = ({
   contact: string;
 }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [whichMenu, setWhichMenu] = useState<number>(-1);
 
   //   useEffect(() => {
   //     document.body.style.overflow = isOpen ? "hidden" : "auto";
@@ -49,9 +50,30 @@ const MobileMenu = ({
         {/* Menu items */}
         <nav className="mt-20 flex flex-col gap-6 pl-10 text-lg">
           <Links href="/" size="text-lg" title="Home" />
-          <Dropper size="text-lg" title="About" items={about} />
-          <Dropper size="text-lg" title="Programs" items={programs} />
-          <Dropper size="text-lg" title="Admissions" items={admissions} />
+          <MobileMenuChildrens
+            size="text-lg"
+            title="About"
+            items={about}
+            whichMenu={whichMenu}
+            setWhichMenu={setWhichMenu}
+            myIndex={0}
+          />
+          <MobileMenuChildrens
+            size="text-lg"
+            title="Programs"
+            items={programs}
+            whichMenu={whichMenu}
+            setWhichMenu={setWhichMenu}
+            myIndex={1}
+          />
+          <MobileMenuChildrens
+            size="text-lg"
+            title="Admissions"
+            items={admissions}
+            whichMenu={whichMenu}
+            setWhichMenu={setWhichMenu}
+            myIndex={2}
+          />
           <Links href={life} size="text-lg" title="Life@GIFD" />
           <Links href={jds} size="text-lg" title="JDS" />
           <Links href={facilities} size="text-lg" title="Facilities" />
