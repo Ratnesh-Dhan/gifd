@@ -33,6 +33,9 @@ const Dropper = ({
   const leaveHandler = () => {
     setMakeActive(false);
   };
+  const clickHandler = () => {
+    setMakeActive(!makeActive);
+  };
 
   useEffect(() => {
     console.log(items);
@@ -42,8 +45,9 @@ const Dropper = ({
       className={`relative ${size === "" ? "" : `${size}`} hover-text-color`}
       onMouseOver={enterHandler}
       onMouseLeave={leaveHandler}
+      onClick={clickHandler}
     >
-      <div className="cursor-pointer h-full flex items-center justify-center">
+      <div className="cursor-pointer h-full flex justify-left items-center md:justify-center">
         {title}
       </div>
       {/* // Because now document.body is only touched AFTER mount in the browser, not during server render. */}
@@ -53,7 +57,7 @@ const Dropper = ({
               {makeActive && (
                 <motion.div
                   id="dropper-menu"
-                  className="absolute border flex left-0 items-wrap justify-center w-screen bg-slate-900 h-[600px] top-32 z-50"
+                  className="absolute border flex left-0 items-wrap justify-center w-screen bg-slate-900 h-full md:h-[600px] top-32 z-50"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}

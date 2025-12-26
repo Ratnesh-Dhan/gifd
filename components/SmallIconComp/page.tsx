@@ -9,7 +9,7 @@ const SmallIconComp = ({
   text: string;
 }) => {
   return (
-    <div className="p-10 text-lg flex flex-col items-center text-white">
+    <div className="p-5 md:p-10 text-xs md:text-lg flex flex-col items-center text-white">
       <Image src={image_link} alt={text} height={80} width={80} />
       <p className="mt-2">{text}</p>
     </div>

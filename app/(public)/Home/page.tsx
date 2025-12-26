@@ -1,3 +1,4 @@
+"use client";
 import FourParts from "@/components/FourParts";
 import HomeHovers from "@/components/HomeHovers/page";
 import ImageShowcase from "@/components/ImageShowcase/page";
@@ -5,7 +6,7 @@ import SmallIconComp from "@/components/SmallIconComp/page";
 import StudentReviews from "@/components/StudentReviews/page";
 import { ThreeHoverPhotoLinksProps } from "@/types";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 const fashion_programs: ThreeHoverPhotoLinksProps[] = [
   {
@@ -55,23 +56,27 @@ const why_choose = [
 ];
 
 const Home = () => {
+  const [readmoreAbout, setReadmoreAbout] = useState<boolean>(false);
   return (
     <div className="">
       <div>
         <div
           id="video"
-          className="relative left-1/2 right-1/2 -mx-[50vw] w-screen h-[80vh] overflow-hidden bg-black"
+          className="relative left-1/2 right-1/2 -mx-[50vw] w-screen h-[35vh] md:h-[80vh] overflow-hidden bg-black"
         >
           <video
             src="/video/front-video-1.mp4"
-            className="absolute inset-0 w-screen h-[80vh] object-cover -translate-y-[30px]"
+            className="absolute inset-0 w-screen h-[45vh] md:h-[80vh] object-cover -translate-y-[30px]"
             autoPlay
             loop
             muted
             playsInline
           />
         </div>
-        <div id="about" className="flex mx-10 pt-10 gap-8 items-center">
+        <div
+          id="about"
+          className="flex md:flex-row flex-col mx-10 pt-10 md:gap-8 items-center"
+        >
           <div className="flex-1">
             <span className="text-amber-400 text-xl">
               About Glam Institute of Fashion Designing...
@@ -79,7 +84,7 @@ const Home = () => {
             <h3 className="text-4xl my-3 font-bold">
               GIFD: Shaping the Future of Design
             </h3>
-            <p className="whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700 text-left">
+            <div className="mb-5 md:mb-0 whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700 text-left">
               Glam Institute of Fashion Designing is a premier institute in
               Jharkhand, dedicated to nurturing creativity and transforming
               passion into profession. This is located in the heart of
@@ -89,29 +94,67 @@ const Home = () => {
               Designing, Interior Designing, Modelling, and Beautician courses,
               empowering students with industry-ready skills and global
               exposure. <br />
-              {"\t"} We offer a wide range of Diploma, Bachelor’s, and Master’s
-              programs in Fashion and Interior Designing, along with
-              Certification Programs in Modelling and Beautician courses. Our
-              programs are designed to meet current industry standards while
-              encouraging innovation, creativity, and practical excellence.
-              <br />
-              <br />
-              Glam Institute believes in learning beyond classrooms. Students
-              regularly interact with industry experts, participate in
-              industrial training programs, and gain real-world exposure that
-              prepares them for successful careers in the fashion and design
-              industry.
-              <br />
-              <br />
-              The institute has proudly joined hands with Sanskaram University
-              as an industry partner, making quality design education more
-              efficient, accessible, and career-oriented. Our strong industry
-              connections ensure students receive valuable mentorship,
-              internships, and placement support. Our alumni are successfully
-              working in reputed companies, fashion houses, design studios, or
-              have launched their own start-ups, showcasing the institute’s
-              commitment to excellence and entrepreneurship.
-            </p>
+              <span className="hidden md:inline">
+                {"\t"} We offer a wide range of Diploma, Bachelor’s, and
+                Master’s programs in Fashion and Interior Designing, along with
+                Certification Programs in Modelling and Beautician courses. Our
+                programs are designed to meet current industry standards while
+                encouraging innovation, creativity, and practical excellence.
+                <br />
+                <br />
+                Glam Institute believes in learning beyond classrooms. Students
+                regularly interact with industry experts, participate in
+                industrial training programs, and gain real-world exposure that
+                prepares them for successful careers in the fashion and design
+                industry.
+                <br />
+              </span>
+              {!readmoreAbout ? (
+                <button
+                  onClick={() => setReadmoreAbout(true)}
+                  className="text-sm text-amber-500"
+                >
+                  read more...
+                </button>
+              ) : (
+                <p>
+                  <span className="inline md:hidden">
+                    {"\t"} We offer a wide range of Diploma, Bachelor’s, and
+                    Master’s programs in Fashion and Interior Designing, along
+                    with Certification Programs in Modelling and Beautician
+                    courses. Our programs are designed to meet current industry
+                    standards while encouraging innovation, creativity, and
+                    practical excellence.
+                    <br />
+                    <br />
+                    Glam Institute believes in learning beyond classrooms.
+                    Students regularly interact with industry experts,
+                    participate in industrial training programs, and gain
+                    real-world exposure that prepares them for successful
+                    careers in the fashion and design industry.
+                    <br />
+                  </span>
+                  <span>
+                    <br />
+                    The institute has proudly joined hands with Sanskaram
+                    University as an industry partner, making quality design
+                    education more efficient, accessible, and career-oriented.
+                    Our strong industry connections ensure students receive
+                    valuable mentorship, internships, and placement support. Our
+                    alumni are successfully working in reputed companies,
+                    fashion houses, design studios, or have launched their own
+                    start-ups, showcasing the institute’s commitment to
+                    excellence and entrepreneurship.
+                    <button
+                      onClick={() => setReadmoreAbout(false)}
+                      className="text-sm text-amber-500 ml-2"
+                    >
+                      read less.
+                    </button>
+                  </span>
+                </p>
+              )}
+            </div>
           </div>
           <div className="shrink-0  ">
             <Image
@@ -125,7 +168,7 @@ const Home = () => {
         </div>
         <div
           id="stats"
-          className="md:my-20 md:mx-10 mx-5 flex justify-around items-center md:border-b-3 pb-10"
+          className="md:my-20 md:mx-10 mx-5 flex md:flex-row flex-col justify-around items-center md:border-b-3 pb-10"
         >
           <div className="">
             <h3 className="text-7xl mb-5">98%*</h3>
@@ -150,21 +193,20 @@ const Home = () => {
           </div>
         </div>
         <div className="">
-          <h3 className="text-4xl mb-5 font-bold md:mx-10">Courses</h3>
+          <h3 className="text-4xl mb-5 font-bold mx-10 ">Courses</h3>
           <HomeHovers tiles={fashion_programs} />
           <HomeHovers tiles={interior_programs} />
         </div>
         <div className="relative left-1/2 -translate-x-1/2 w-screen mb-20">
-          <div className="flex">
-            {/*-mx-[50vw]*/}
-            <div className="text-center md:py-40 bg-[#f59e0b] md:w-1/2 w-full text-white">
-              <span className="text-3xl">
+          <div className="flex flex-col md:flex-row">
+            <div className="text-center py-5 md:py-40 bg-[#f59e0b] md:w-1/2 w-full text-white">
+              <span className="md:text-3xl text-2xl">
                 Why
                 <br />
                 choose
               </span>
               <br />
-              <h3 className="md:text-6xl font-bold font-sans">GIFD</h3>
+              <h3 className="md:text-6xl text-3xl font-bold font-sans">GIFD</h3>
             </div>
             <div className="md:pr-40 bg-black border-b border-t border-r w-full flex flex-wrap">
               {why_choose.map((element, idx) => (

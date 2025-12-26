@@ -2,18 +2,25 @@ import React, { ReactNode } from "react";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import Socials from "../Socials/page";
+import { DeviceProvider } from "@/app/provideres/Devicecontext";
+import { headers } from "next/headers";
+import { userAgent } from "next/server";
 
 async function getData() {
   await new Promise((resolve) => setTimeout(resolve, 400)); // 1.5 second delay
 }
 const Layout = async ({ children }: { children: ReactNode }) => {
+  const { device } = userAgent({ headers: await headers() });
+  const isMobile = device.type === "mobile";
   await getData();
   return (
     <div>
-      <Navbar />
-      <Socials />
-      <div className="max-w-[1300px] mx-auto">{children}</div>
-      <Footer />
+      <DeviceProvider isMobile={isMobile}>
+        <Navbar />
+        <Socials />
+        <div className="max-w-[1300px] mx-auto">{children}</div>
+        <Footer />
+      </DeviceProvider>
     </div>
   );
 };

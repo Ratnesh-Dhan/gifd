@@ -52,3 +52,14 @@ export interface MasonryItems {
   url: string;
   height: number;
 }
+
+export interface subLinks {
+  title: string;
+  links: string;
+}
+export interface items {
+  title: string;
+  href: string;
+  photo?: string;
+  sublinks?: subLinks[];
+}

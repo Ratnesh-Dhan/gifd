@@ -10,7 +10,7 @@ export default function FourParts() {
   ];
 
   return (
-    <div className="relative  left-1/2 -translate-x-1/2 w-screen mb-10">
+    <div className="relative  left-1/2 -translate-x-1/2 w-screen mb-10 border">
       <div className=" flex h-full">
         {/* LEFT – white content (opposite of above) */}
         <div className="bg-white w-full md:w-full flex items-center justify-center border">
@@ -30,8 +30,8 @@ export default function FourParts() {
         </div>
 
         {/* RIGHT – red title block */}
-        <div className="bg-[#f59e0b] w-full md:w-1/3 flex items-center px-20 text-white">
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight">
+        <div className="bg-[#f59e0b] md:w-1/3 flex items-center md:px-20 text-white">
+          <h2 className="text-2xl md:text-6xl font-bold leading-tight">
             Affiliations
             <br />
             & Industry

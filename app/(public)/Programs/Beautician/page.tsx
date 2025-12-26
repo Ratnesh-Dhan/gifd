@@ -6,61 +6,66 @@ import React, { useState } from "react";
 const Beautician = () => {
   const [properties] = useState<FashionComponentProps>({
     top_image: "/images/modeling_cover.jpg",
-    b_title: "Professional Certification in Modeling",
-    b_para: `Modeling is a dynamic and influential profession that brings fashion, creativity, and visual storytelling to life. From runways to magazine covers and digital campaigns, models play a central role in shaping trends, representing brands, and communicating style with confidence and precision. It’s a field that demands presence, versatility, discipline, and the ability to express a concept without saying a word.
+    b_title: "Professional Beautician Certification Course",
+    b_para: `Professional beauty services are a skill-driven profession focused on enhancing appearance, confidence, and personal care through precise techniques and industry knowledge. Beauticians play a key role across salons, studios, fashion, wellness, and personal grooming sectors, delivering services that demand accuracy, hygiene, creativity, and consistency—not guesswork.
 
-A comprehensive modeling program equips aspiring models with essential skills such as posture, runway techniques, facial expressions, posing, and camera awareness. Students also receive training in grooming, styling, body language, and maintaining a professional portfolio—key elements that define a strong industry-ready profile. With hands-on sessions, photoshoots, and guided practice, learners build the confidence to handle diverse creative directions and high-pressure environments.
+A comprehensive professional beautician certification course trains learners in core areas such as skincare, hair care, makeup application, nail services, spa therapies, and client consultation. The program emphasizes practical expertise, proper product usage, hygiene standards, and understanding different skin and hair types. Students receive hands-on training to ensure they can confidently perform services in real-world professional settings.
 
-In addition to technique, the program focuses on understanding industry expectations—ranging from fashion and editorial modeling to commercial, advertising, and digital influencer roles. This prepares individuals to adapt to multiple segments of the fast-growing fashion ecosystem.
+Beyond technical skills, the course covers industry standards, client management, service ethics, and salon professionalism. Learners are exposed to current beauty trends, tools, and techniques, preparing them to work across salons, freelance assignments, bridal services, wellness centers, and beauty brands.
 
-Ultimately, the aim is to transform raw talent into polished, confident professionals who can captivate audiences, represent designers, and stand out in a competitive global industry.`,
+The objective is simple: convert learners into certified, skilled beauticians who can deliver professional results, build client trust, and compete effectively in the fast-growing beauty and wellness industry.`,
     offer_para: [
-      "Training in runway walk, posture, posing, and movement",
-      "Grooming, styling, and personal presentation sessions",
-      "Camera-facing techniques for photoshoots and video shoots",
-      "Portfolio development with professional guidance",
-      "Industry etiquette and confidence-building workshops",
-      "Exposure to fashion, editorial, and commercial modeling styles",
-      "Practice sessions, mock shoots, and constructive feedback",
+      "Professional training in skincare, hair care, and makeup techniques",
+      "Hands-on practice with industry-standard tools, products, and equipment",
+      "Skin and hair analysis for personalized client treatments",
+      "Hygiene, safety, and sanitation protocols as per industry standards",
+      "Bridal, party, and occasion-based makeup training",
+      "Salon etiquette, client consultation, and service professionalism",
+      "Live practice sessions, demos, and expert feedback",
     ],
     career_para: [
-      "Fashion / Runway Model",
-      "Editorial / Magazine Model",
-      "Commercial / Advertising Model",
-      "E-commerce Model",
-      "Print Media Model",
-      "Fitness Model",
-      "Catalog Model",
-      "TVC / Brand Campaign Model",
-      "Social Media / Influencer Model",
-      "Event & Promotional Model",
+      "Professional Beautician",
+      "Salon Beauty Therapist",
+      "Makeup Artist",
+      "Bridal Makeup Specialist",
+      "Skin Care Specialist",
+      "Hair Stylist",
+      "Nail Technician",
+      "Spa Therapist",
+      "Freelance Beautician",
+      "Beauty Consultant / Trainer",
     ],
     tiles: [
       {
-        title: "bachelor",
-        desc: "testing the texts",
+        title: "",
+        desc: "Fundamentals of Makeup & Hair Trends",
         link: "/Overview/Bachelor",
         image: "/extra_images/woman-with-tablet-phone.jpg",
       },
       {
-        title: "master",
-        desc: "testing the texts",
+        title: "",
+        desc: "Advance Pro Makeup & Hair Design",
         link: "/Overview/Master",
         image: "/extra_images/woman-with-tablet-phone.jpg",
       },
       {
-        title: "master",
-        desc: "testing the texts",
+        title: "",
+        desc: "Specialization in Makeup & Hair Artistry",
+        link: "/Overview/Master",
+        image: "/extra_images/woman-with-tablet-phone.jpg",
+      },
+      {
+        title: "",
+        desc: "Diploma in Beauty and Hair Design",
         link: "/Overview/Master",
         image: "/extra_images/woman-with-tablet-phone.jpg",
       },
     ],
-    tile_title: "Modeling certificatoin programe",
+    tile_title: "Beautician certificatoin programe",
     c_title: "Eligibility Criteria & Duration ",
     c_content: [
       `Candidates must have completed 8th or 10th grade from a recognized board.`,
-      "No prior modeling or fashion-related education is required.",
-      "Duration: 3 months.",
+      "Duration: 3 / 4 / 5 / 6 months.",
     ],
   });
   const [table] = useState<TableContent>({
