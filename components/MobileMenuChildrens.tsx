@@ -29,6 +29,15 @@ const MobileMenuChildrens = ({
     }
   }, [isOpen]);
 
+  const subMenuUpdate = (index: number)=> {
+    if (index === subMenu){
+      setSubMenu(-1);
+    }
+    else{
+      setSubMenu(index);
+    }
+  }
+
   return (
     <div className="flex flex-col">
       <button
@@ -85,19 +94,19 @@ const MobileMenuChildrens = ({
               ) : (
                 <div className="flex flex-col">
                   <button
-                    onClick={() => setIsOpen(!isOpen)}
+                    onClick={() => subMenuUpdate(index)}
                     className={`${size} flex items-center gap-2 hover:text-gray-600 transition-colors text-left`}
                   >
                     <span>{item.title}</span>
                     <svg
                       className={`w-4 h-4 transition-transform duration-300 ${
-                        whichMenu === myIndex ? "rotate-0" : "rotate-0"
+                        subMenu === index ? "rotate-0" : "rotate-0"
                       }`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      {whichMenu === myIndex ? (
+                      {subMenu === index ? (
                         // Cross icon
                         <>
                           <path
@@ -118,6 +127,23 @@ const MobileMenuChildrens = ({
                       )}
                     </svg>
                   </button>
+                  <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          subMenu === index
+            ? "max-h-96 opacity-100 mt-3"
+            : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="flex flex-col gap-2 pl-4">
+          {item.sublinks.map((element_, element_index)=>(
+            <Links key={element_index} 
+            title={element_.title}
+            href={element_.links}
+            size="text-gray-400 font-sans"
+            />
+          ))}
+        </div>
+      </div>
                 </div>
               )}
             </div>
