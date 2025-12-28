@@ -10,6 +10,7 @@ const MobileMenuChildrens = ({
   whichMenu,
   setWhichMenu,
   myIndex,
+  setIsOpen,
 }: {
   size: string;
   title: string;
@@ -17,18 +18,23 @@ const MobileMenuChildrens = ({
   whichMenu: number;
   setWhichMenu: React.Dispatch<React.SetStateAction<number>>;
   myIndex: number;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpenInner, setIsOpenInner] = useState<boolean>(false);
   const [subMenu, setSubMenu] = useState<number>(-1);
 
   useEffect(() => {
-    if (isOpen) {
+    if (isOpenInner) {
       setWhichMenu(myIndex);
     } else {
       setWhichMenu(-1);
     }
-  }, [isOpen]);
-
+  }, [isOpenInner]);
+  
+  const closingSidePane=()=> {
+    setIsOpen(false);
+    setIsOpenInner(!isOpenInner);
+  }
   const subMenuUpdate = (index: number)=> {
     if (index === subMenu){
       setSubMenu(-1);
@@ -41,7 +47,7 @@ const MobileMenuChildrens = ({
   return (
     <div className="flex flex-col">
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpenInner(!isOpenInner)}
         className={`${size} flex items-center gap-2 hover:text-gray-600 transition-colors text-left`}
       >
         <span>{title}</span>
@@ -87,6 +93,7 @@ const MobileMenuChildrens = ({
             <div key={index}>
               {item.sublinks === undefined ? (
                 <Links
+                onClick={closingSidePane}
                   href={item.href}
                   title={item.title}
                   size="text-gray-400 font-sans"
@@ -136,7 +143,9 @@ const MobileMenuChildrens = ({
       >
         <div className="flex flex-col gap-2 pl-4">
           {item.sublinks.map((element_, element_index)=>(
-            <Links key={element_index} 
+
+            <Links
+            key={element_index} onClick={closingSidePane}
             title={element_.title}
             href={element_.links}
             size="text-gray-400 font-sans"

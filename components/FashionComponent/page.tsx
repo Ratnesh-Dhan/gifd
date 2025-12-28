@@ -14,9 +14,9 @@ const FashionComponent = ({
 }) => {
   return (
     <div>
-      <div className="relative h-[70vh] md:mx-10 mx-5">
+      <div className="relative h-[35vh] md:h-[70vh] md:mx-10 mx-5">
         <div
-          className="absolute w-[100vw] h-[70vh] left-1/2 -translate-x-1/2 bg-cover bg-center flex items-center"
+          className="absolute w-[100vw] h-[35vh] md:h-[70vh] left-1/2 -translate-x-1/2 bg-cover bg-center flex items-center"
           style={{
             backgroundImage: `url(${properties.top_image})`,
           }}
@@ -35,11 +35,11 @@ const FashionComponent = ({
       </div>
       {/* offers / careers */}
       <div className="flex justify-center items-center">
-        <div className="flex md:flex-row ">
-          <div className="flex-1 text-center border-r-3 pr-[10vw] ">
+        <div className="flex flex-col md:flex-row ">
+          <div className="flex-1 text-center border-r-3  md:pr-[10vw] ">
             <h3 className="md:text-4xl font-bold">It Offers</h3>
             <div>
-              <ul className="text-left space-y-3 mt-4 md:mt-6">
+              <ul className="text-left space-y-3 mt-4 md:mt-6 pl-[10vw] md:pl-0">
                 {properties.offer_para.map((item, index) => (
                   <li
                     key={index}
@@ -52,10 +52,10 @@ const FashionComponent = ({
               </ul>
             </div>
           </div>
-          <div className="flex-1 text-center pl-[10vw]">
+          <div className="flex-1 text-center">
             <h3 className="md:text-4xl font-bold">Career</h3>
             <div>
-              <ul className="text-left space-y-3 mt-4 md:mt-6">
+              <ul className="text-left pl-[10vw] space-y-3 mt-4 md:mt-6">
                 {properties.career_para.map((item, index) => (
                   <li
                     key={index}
@@ -76,7 +76,7 @@ const FashionComponent = ({
         tiles={properties.tiles}
       />
       <div id="eligibility-criteria" className="">
-        <div className="mx-16">
+        <div className="mx-5 md:mx-16">
           <h3 className="text-4xl font-bold">{properties.c_title}</h3>
           {/* <p className="text-lg md:text-xl leading-8 tracking-[0.5px] text-gray-700 my-10">
             {properties.c_content}

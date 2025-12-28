@@ -35,13 +35,13 @@ export default function FeeStructureTable(table_: TableContent) {
           <table className="w-full">
             <thead>
               <tr className="bg-gradient-to-r from-gray-50 to-gray-200">
-                <th className="px-4 md:px-6 py-4 text-left text-xs md:text-sm font-semibold text-gray-700 uppercase tracking-wider">
+                <th className="px-4 md:px-6 py-4 text-center text-xs md:text-sm font-semibold text-gray-700 uppercase tracking-wider">
                   Semester
                 </th>
                 <th className="px-4 md:px-6 py-4 text-center text-xs md:text-sm font-semibold text-gray-700 uppercase tracking-wider">
                   Semester Fee
                 </th>
-                <th className="px-4 md:px-6 py-4 text-right text-xs md:text-sm font-semibold text-gray-700 uppercase tracking-wider">
+                <th className="px-4 md:px-6 py-4 text-center text-xs md:text-sm font-semibold text-gray-700 uppercase tracking-wider">
                   Yearly Fee
                 </th>
               </tr>
@@ -56,7 +56,7 @@ export default function FeeStructureTable(table_: TableContent) {
                       : "border-l-4 border-l-transparent"
                   }`}
                 >
-                  <td className="px-4 md:px-6 py-4 whitespace-nowrap ">
+                  <td className="px-4 md:px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
                       <span className="text-sm md:text-base font-medium text-gray-900">
                         Semester {item.semester}
@@ -66,12 +66,12 @@ export default function FeeStructureTable(table_: TableContent) {
                       </span>
                     </div>
                   </td>
-                  <td className="px-4 md:px-6 py-4 whitespace-nowrap">
+                  <td className="px-4 md:px-6 py-4 whitespace-nowrap text-center">
                     <span className="text-sm md:text-base font-semibold text-gray-900">
                       ₹{item.semesterFee.toLocaleString("en-IN")}
                     </span>
                   </td>
-                  <td className="px-4 md:px-6 py-4 whitespace-nowrap">
+                  <td className="px-4 md:px-6 py-4 whitespace-nowrap text-center">
                     {item.yearlyFee ? (
                       <div className="inline-flex items-center bg-gradient-to-r from-slate-400 to-amber-100 px-3 md:px-4 py-2 rounded-lg">
                         <span className="text-sm md:text-base font-bold text-black">
