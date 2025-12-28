@@ -57,6 +57,9 @@ const why_choose = [
 
 const Home = () => {
   const [readmoreAbout, setReadmoreAbout] = useState<boolean>(false);
+  const [readmoreMobile, setReadmoreMobile] = useState(false);
+  const [readmoreDesktop, setReadmoreDesktop] = useState(false);
+
   return (
     <div className="">
       <div>
@@ -85,6 +88,106 @@ const Home = () => {
               GIFD: Shaping the Future of Design
             </h3>
             <div className="mb-5 md:mb-0 whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700 text-left">
+  Glam Institute of Fashion Designing is a premier institute in
+  Jharkhand, dedicated to nurturing creativity and transforming
+  passion into profession. This is located in the heart of
+  Jamshedpur.
+  <br />
+  <br />
+  The institute offers comprehensive education in Fashion
+  Designing, Interior Designing, Modelling, and Beautician
+  courses, empowering students with industry-ready skills and
+  global exposure.
+  <br />
+
+  {/* ================= DESKTOP READ MORE ================= */}
+  <div
+    className={`
+      hidden md:block overflow-hidden transition-[max-height] duration-500 ease-in-out
+      ${readmoreDesktop ? "max-h-[550px]" : "max-h-32"}
+    `}
+  >
+    <span>
+      {"\t"} We offer a wide range of Diploma, Bachelor’s, and
+      Master’s programs in Fashion and Interior Designing, along
+      with Certification Programs in Modelling and Beautician
+      courses. Our programs are designed to meet current industry
+      standards while encouraging innovation, creativity, and
+      practical excellence.
+      <br />
+      <br />
+      Glam Institute believes in learning beyond classrooms.
+      Students regularly interact with industry experts,
+      participate in industrial training programs, and gain
+      real-world exposure that prepares them for successful
+      careers in the fashion and design industry.
+      <br />
+      <br />
+      The institute has proudly joined hands with Sanskaram
+      University as an industry partner, making quality design
+      education more efficient, accessible, and career-oriented.
+      Our strong industry connections ensure students receive
+      valuable mentorship, internships, and placement support.
+      Our alumni are successfully working in reputed companies,
+      fashion houses, design studios, or have launched their own
+      start-ups, showcasing the institute’s commitment to
+      excellence and entrepreneurship.
+    </span>
+  </div>
+
+  <button
+    onClick={() => setReadmoreDesktop(!readmoreDesktop)}
+    className="hidden md:inline mt-3 text-sm text-amber-500"
+  >
+    {readmoreDesktop ? "read less." : "read more..."}
+  </button>
+
+  {/* ================= MOBILE READ MORE ================= */}
+  <div
+    className={`
+      md:hidden overflow-hidden transition-[max-height] duration-1000 ease-in-out
+      ${readmoreMobile ? "max-h-[1000px]" : "max-h-0"}
+    `}
+  >
+    <span>
+      {"\t"} We offer a wide range of Diploma, Bachelor’s, and
+      Master’s programs in Fashion and Interior Designing, along
+      with Certification Programs in Modelling and Beautician
+      courses. Our programs are designed to meet current industry
+      standards while encouraging innovation, creativity, and
+      practical excellence.
+      <br />
+      <br />
+      Glam Institute believes in learning beyond classrooms.
+      Students regularly interact with industry experts,
+      participate in industrial training programs, and gain
+      real-world exposure that prepares them for successful
+      careers in the fashion and design industry.
+      <br />
+      <br />
+      The institute has proudly joined hands with Sanskaram
+      University as an industry partner, making quality design
+      education more efficient, accessible, and career-oriented.
+      Our strong industry connections ensure students receive
+      valuable mentorship, internships, and placement support.
+      Our alumni are successfully working in reputed companies,
+      fashion houses, design studios, or have launched their own
+      start-ups, showcasing the institute’s commitment to
+      excellence and entrepreneurship.
+    </span>
+  </div>
+
+  <button
+    onClick={() => setReadmoreMobile(!readmoreMobile)}
+    className="md:hidden mt-2 text-sm text-amber-500"
+  >
+    {readmoreMobile ? "read less." : "read more..."}
+  </button>
+</div>
+
+
+
+            {/* <div className="mb-5 md:mb-0 whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700 text-left">
               Glam Institute of Fashion Designing is a premier institute in
               Jharkhand, dedicated to nurturing creativity and transforming
               passion into profession. This is located in the heart of
@@ -154,7 +257,7 @@ const Home = () => {
                   </span>
                 </p>
               )}
-            </div>
+            </div> */}
           </div>
           <div className="shrink-0  ">
             <Image
@@ -168,28 +271,32 @@ const Home = () => {
         </div>
         <div
           id="stats"
-          className="md:my-20 md:mx-10 mx-5 flex md:flex-row flex-col justify-around items-center md:border-b-3 pb-10"
+          className="mt-20 md:mt-0 md:my-20 md:mx-10 mx-5 grid grid-cols-2 gap-y-8 justify-items-center md:flex md:flex-row md:justify-around md:items-center md:border-b-3 pb-10"
         >
           <div className="">
-            <h3 className="text-7xl mb-5">98%*</h3>
-            <span className="text-lg">Placements</span>
+            <h3 className="text-4xl md:text-7xl mb-5">98%*</h3>
+            <span className="text-sm md:text-lg">Placements</span>
           </div>
           <div>
-            <h3 className="text-7xl mb-5">20+</h3>
-            <span className="text-lg">Industry Tie-ups</span>
+            <h3 className="text-4xl md:text-7xl mb-5">20+</h3>
+            <span className="text-sm md:text-lg">Industry Tie-ups</span>
           </div>
           <div>
-            <h3 className="text-7xl mb-5">500+</h3>
-            <span className="text-lg">Succesfull alumni</span>
+            <h3 className="text-4xl md:text-7xl mb-5">500+</h3>
+            <span className="text-sm md:text-lg">Succesfull alumni</span>
           </div>
-          <div className="-translate-y-2">
+          <div className="-translate-y-10 md:-translate-y-2">
             <Image
               src={"/icons/infinity.png"}
               alt="Life Time"
               height={10}
               width={120}
+              className="-scale-60 md:scale-100"
             />
-            <span className="text-lg">Lifetime assistance</span>
+            <div className="-translate-y-5 md:-translate-y-2 ">
+
+            <span className="text-sm md:text-lg">Lifetime assistance</span>
+            </div>
           </div>
         </div>
         <div className="">
