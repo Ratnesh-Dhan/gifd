@@ -11,16 +11,16 @@ const ThreeHoverPhotoLinks = ({
   tiles: ThreeHoverPhotoLinksProps[];
 }) => {
   return (
-    <div className="flex flex-col items-center">
-      <div id="fancy" className="flex-col justify-center mb-8">
-        <h3 className="text-4xl my-10">
+    <div className="flex flex-col">
+      <div id="fancy" className="flex-col mb-8">
+        <h3 className="text-4xl my-10 ml-5">
           <span className="font-bold">{tile_title}</span>
         </h3>
-        <div className="flex gap-8 my-4">
+        <div id="cards" className="flex gap-8 py-6 overflow-x-auto no-scrollbar px-6">
           {tiles.map((tile, index) => (
             <div
               key={index}
-              className=" bg-black rounded-3xl w-90 h-130 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-[0px_0px_20px_rgba(0,0,0,0.50)]"
+              className="shrink-0 bg-black rounded-3xl w-70 md:w-90 h-110 md:h-130 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-[0px_0px_20px_rgba(0,0,0,0.50)]"
             >
               <Link href={tile.link}>
                 <div className="relative w-full h-[70%] rounded-t-3xl overflow-hidden">
@@ -31,9 +31,9 @@ const ThreeHoverPhotoLinks = ({
                     className="object-cover"
                   />
                 </div>
-                <div className="px-10 pt-4 font-bold">
+                <div className="px-10 md:pt-4 font-bold">
                   <h3 className="text-xl mt-4 text-amber-400">{tile.title}</h3>
-                  <p className="text-3xl text-white">{tile.desc}</p>
+                  <p className="text-xl md:text-3xl text-white">{tile.desc}</p>
                 </div>
               </Link>
             </div>
