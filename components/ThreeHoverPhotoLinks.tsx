@@ -4,19 +4,22 @@ import Link from "next/link";
 import React from "react";
 
 const ThreeHoverPhotoLinks = ({
-  tile_title,
+  tile_title = "",
   tiles,
 }: {
-  tile_title: string;
+  tile_title?: string;
   tiles: ThreeHoverPhotoLinksProps[];
 }) => {
   return (
     <div className="flex flex-col">
       <div id="fancy" className="flex-col mb-8">
-        <h3 className="text-4xl my-10 ml-5">
+        <h3 className="text-2xl md:text-4xl mt-10 md:my-10 ml-5">
           <span className="font-bold">{tile_title}</span>
         </h3>
-        <div id="cards" className="flex gap-8 py-6 overflow-x-auto no-scrollbar px-6">
+        <div
+          id="cards"
+          className="flex gap-8 py-6 overflow-x-auto no-scrollbar px-6"
+        >
           {tiles.map((tile, index) => (
             <div
               key={index}

@@ -6,7 +6,7 @@ import SmallIconComp from "@/components/SmallIconComp/page";
 import StudentReviews from "@/components/StudentReviews/page";
 import { ThreeHoverPhotoLinksProps } from "@/types";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const fashion_programs: ThreeHoverPhotoLinksProps[] = [
   {
@@ -55,15 +55,31 @@ const why_choose = [
   { image_link: "/icons/show.png", text: "Industries Visit" },
 ];
 
+const images = [
+  "/images/banners/billboard-1.jpg",
+  "/images/banners/billboard-2.jpg",
+];
+
 const Home = () => {
-  const [readmoreAbout, setReadmoreAbout] = useState<boolean>(false);
+  // const [readmoreAbout, setReadmoreAbout] = useState<boolean>(false);
   const [readmoreMobile, setReadmoreMobile] = useState(false);
   const [readmoreDesktop, setReadmoreDesktop] = useState(false);
+  const [index, setIndex] = useState<number>(0);
+
+  useEffect(() => {
+    console.log("timing outside", index);
+
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, 5000); // change every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="">
       <div>
-        <div
+        {/* <div
           id="video"
           className="relative left-1/2 right-1/2 -mx-[50vw] w-screen h-[35vh] md:h-[80vh] overflow-hidden bg-black"
         >
@@ -74,6 +90,12 @@ const Home = () => {
             loop
             muted
             playsInline
+          />
+        </div> */}
+        <div className="relative h-[18vh] md:h-[50vh] xl:h-[70vh]">
+          <div
+            className="absolute w-[100vw] h-[18vh] md:h-[50vh] xl:h-[70vh] left-1/2 -translate-x-1/2 bg-cover bg-center flex items-center"
+            style={{ backgroundImage: `url(${images[index]})` }}
           />
         </div>
         <div
@@ -88,104 +110,97 @@ const Home = () => {
               GIFD: Shaping the Future of Design
             </h3>
             <div className="mb-5 md:mb-0 whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700 text-left">
-  Glam Institute of Fashion Designing is a premier institute in
-  Jharkhand, dedicated to nurturing creativity and transforming
-  passion into profession. This is located in the heart of
-  Jamshedpur.
-  <br />
-  <br />
-  The institute offers comprehensive education in Fashion
-  Designing, Interior Designing, Modelling, and Beautician
-  courses, empowering students with industry-ready skills and
-  global exposure.
-  <br />
-
-  {/* ================= DESKTOP READ MORE ================= */}
-  <div
-    className={`
+              Glam Institute of Fashion Designing is a premier institute in
+              Jharkhand, dedicated to nurturing creativity and transforming
+              passion into profession. This is located in the heart of
+              Jamshedpur.
+              <br />
+              <br />
+              The institute offers comprehensive education in Fashion Designing,
+              Interior Designing, Modelling, and Beautician courses, empowering
+              students with industry-ready skills and global exposure.
+              <br />
+              {/* ================= DESKTOP READ MORE ================= */}
+              <div
+                className={`
       hidden md:block overflow-hidden transition-[max-height] duration-500 ease-in-out
       ${readmoreDesktop ? "max-h-[550px]" : "max-h-32"}
     `}
-  >
-    <span>
-      {"\t"} We offer a wide range of Diploma, Bachelor’s, and
-      Master’s programs in Fashion and Interior Designing, along
-      with Certification Programs in Modelling and Beautician
-      courses. Our programs are designed to meet current industry
-      standards while encouraging innovation, creativity, and
-      practical excellence.
-      <br />
-      <br />
-      Glam Institute believes in learning beyond classrooms.
-      Students regularly interact with industry experts,
-      participate in industrial training programs, and gain
-      real-world exposure that prepares them for successful
-      careers in the fashion and design industry.
-      <br />
-      <br />
-      The institute has proudly joined hands with Sanskaram
-      University as an industry partner, making quality design
-      education more efficient, accessible, and career-oriented.
-      Our strong industry connections ensure students receive
-      valuable mentorship, internships, and placement support.
-      Our alumni are successfully working in reputed companies,
-      fashion houses, design studios, or have launched their own
-      start-ups, showcasing the institute’s commitment to
-      excellence and entrepreneurship.
-    </span>
-  </div>
-
-  <button
-    onClick={() => setReadmoreDesktop(!readmoreDesktop)}
-    className="hidden md:inline mt-3 text-sm text-amber-500"
-  >
-    {readmoreDesktop ? "read less." : "read more..."}
-  </button>
-
-  {/* ================= MOBILE READ MORE ================= */}
-  <div
-    className={`
+              >
+                <span>
+                  {"\t"} We offer a wide range of Diploma, Bachelor’s, and
+                  Master’s programs in Fashion and Interior Designing, along
+                  with Certification Programs in Modelling and Beautician
+                  courses. Our programs are designed to meet current industry
+                  standards while encouraging innovation, creativity, and
+                  practical excellence.
+                  <br />
+                  <br />
+                  Glam Institute believes in learning beyond classrooms.
+                  Students regularly interact with industry experts, participate
+                  in industrial training programs, and gain real-world exposure
+                  that prepares them for successful careers in the fashion and
+                  design industry.
+                  <br />
+                  <br />
+                  The institute has proudly joined hands with Sanskaram
+                  University as an industry partner, making quality design
+                  education more efficient, accessible, and career-oriented. Our
+                  strong industry connections ensure students receive valuable
+                  mentorship, internships, and placement support. Our alumni are
+                  successfully working in reputed companies, fashion houses,
+                  design studios, or have launched their own start-ups,
+                  showcasing the institute’s commitment to excellence and
+                  entrepreneurship.
+                </span>
+              </div>
+              <button
+                onClick={() => setReadmoreDesktop(!readmoreDesktop)}
+                className="hidden md:inline mt-3 text-sm text-amber-500"
+              >
+                {readmoreDesktop ? "read less." : "read more..."}
+              </button>
+              {/* ================= MOBILE READ MORE ================= */}
+              <div
+                className={`
       md:hidden overflow-hidden transition-[max-height] duration-1000 ease-in-out
       ${readmoreMobile ? "max-h-[1000px]" : "max-h-0"}
     `}
-  >
-    <span>
-      {"\t"} We offer a wide range of Diploma, Bachelor’s, and
-      Master’s programs in Fashion and Interior Designing, along
-      with Certification Programs in Modelling and Beautician
-      courses. Our programs are designed to meet current industry
-      standards while encouraging innovation, creativity, and
-      practical excellence.
-      <br />
-      <br />
-      Glam Institute believes in learning beyond classrooms.
-      Students regularly interact with industry experts,
-      participate in industrial training programs, and gain
-      real-world exposure that prepares them for successful
-      careers in the fashion and design industry.
-      <br />
-      <br />
-      The institute has proudly joined hands with Sanskaram
-      University as an industry partner, making quality design
-      education more efficient, accessible, and career-oriented.
-      Our strong industry connections ensure students receive
-      valuable mentorship, internships, and placement support.
-      Our alumni are successfully working in reputed companies,
-      fashion houses, design studios, or have launched their own
-      start-ups, showcasing the institute’s commitment to
-      excellence and entrepreneurship.
-    </span>
-  </div>
-
-  <button
-    onClick={() => setReadmoreMobile(!readmoreMobile)}
-    className="md:hidden mt-2 text-sm text-amber-500"
-  >
-    {readmoreMobile ? "read less." : "read more..."}
-  </button>
-</div>
-
-
+              >
+                <span>
+                  {"\t"} We offer a wide range of Diploma, Bachelor’s, and
+                  Master’s programs in Fashion and Interior Designing, along
+                  with Certification Programs in Modelling and Beautician
+                  courses. Our programs are designed to meet current industry
+                  standards while encouraging innovation, creativity, and
+                  practical excellence.
+                  <br />
+                  <br />
+                  Glam Institute believes in learning beyond classrooms.
+                  Students regularly interact with industry experts, participate
+                  in industrial training programs, and gain real-world exposure
+                  that prepares them for successful careers in the fashion and
+                  design industry.
+                  <br />
+                  <br />
+                  The institute has proudly joined hands with Sanskaram
+                  University as an industry partner, making quality design
+                  education more efficient, accessible, and career-oriented. Our
+                  strong industry connections ensure students receive valuable
+                  mentorship, internships, and placement support. Our alumni are
+                  successfully working in reputed companies, fashion houses,
+                  design studios, or have launched their own start-ups,
+                  showcasing the institute’s commitment to excellence and
+                  entrepreneurship.
+                </span>
+              </div>
+              <button
+                onClick={() => setReadmoreMobile(!readmoreMobile)}
+                className="md:hidden mt-2 text-sm text-amber-500"
+              >
+                {readmoreMobile ? "read less." : "read more..."}
+              </button>
+            </div>
 
             {/* <div className="mb-5 md:mb-0 whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700 text-left">
               Glam Institute of Fashion Designing is a premier institute in
@@ -294,8 +309,7 @@ const Home = () => {
               className="-scale-60 md:scale-100"
             />
             <div className="-translate-y-5 md:-translate-y-2 ">
-
-            <span className="text-sm md:text-lg">Lifetime assistance</span>
+              <span className="text-sm md:text-lg">Lifetime assistance</span>
             </div>
           </div>
         </div>

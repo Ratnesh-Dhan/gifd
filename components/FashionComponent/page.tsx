@@ -37,7 +37,7 @@ const FashionComponent = ({
       <div className="flex justify-center items-center">
         <div className="flex flex-col md:flex-row ">
           <div className="flex-1 text-center border-r-3  md:pr-[10vw] ">
-            <h3 className="md:text-4xl font-bold">It Offers</h3>
+            <h3 className="md:text-4xl text-2xl font-bold">It Offers</h3>
             <div>
               <ul className="text-left space-y-3 mt-4 md:mt-6 pl-[10vw] md:pl-0">
                 {properties.offer_para.map((item, index) => (
@@ -52,8 +52,8 @@ const FashionComponent = ({
               </ul>
             </div>
           </div>
-          <div className="flex-1 text-center">
-            <h3 className="md:text-4xl font-bold">Career</h3>
+          <div className="flex-1 mt-10 md:mt-0 text-center">
+            <h3 className="md:text-4xl text-2xl font-bold">Career</h3>
             <div>
               <ul className="text-left pl-[10vw] space-y-3 mt-4 md:mt-6">
                 {properties.career_para.map((item, index) => (
@@ -77,7 +77,9 @@ const FashionComponent = ({
       />
       <div id="eligibility-criteria" className="">
         <div className="mx-5 md:mx-16">
-          <h3 className="text-4xl font-bold">{properties.c_title}</h3>
+          <h3 className="text-2xl md:text-4xl font-bold">
+            {properties.c_title}
+          </h3>
           {/* <p className="text-lg md:text-xl leading-8 tracking-[0.5px] text-gray-700 my-10">
             {properties.c_content}
           </p> */}
@@ -95,13 +97,13 @@ const FashionComponent = ({
         </div>
       </div>
       <div className="min-h-screen p-4 md:p-8">
-        <h3 className="md:text-4xl font-bold  mb-10">
-          <span className="mx-10">Fee Structure</span>
+        <h3 className="text-2xl md:text-4xl font-bold my-5 md:mb-10">
+          <span className="mx-2 md:mx-10">Fee Structure</span>
         </h3>
         <FeeStructureTable {...table_} />
       </div>
-      <div className="mx-10 mt-20">
-        <h3 className="md:text-4xl font-bold ">Placement Partners</h3>
+      <div className="mx-6 md:mx-10 mt-20">
+        <h3 className="text-2xl md:text-4xl font-bold ">Placement Partners</h3>
       </div>
       <ScrollingShowcase />
     </div>

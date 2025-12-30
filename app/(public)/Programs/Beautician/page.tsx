@@ -5,7 +5,7 @@ import React, { useState } from "react";
 
 const Beautician = () => {
   const [properties] = useState<FashionComponentProps>({
-    top_image: "/images/modeling_cover.jpg",
+    top_image: "/images/banners/8.jpg",
     b_title: "Professional Beautician Certification Course",
     b_para: `Professional beauty services are a skill-driven profession focused on enhancing appearance, confidence, and personal care through precise techniques and industry knowledge. Beauticians play a key role across salons, studios, fashion, wellness, and personal grooming sectors, delivering services that demand accuracy, hygiene, creativity, and consistency—not guesswork.
 
