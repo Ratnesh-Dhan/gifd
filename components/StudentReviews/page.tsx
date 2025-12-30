@@ -9,59 +9,59 @@ export default function StudentReviews() {
   const reviews = [
     {
       id: 1,
-      name: "Emma Rodriguez",
-      program: "Fashion Design Graduate",
+      name: "Nafisa Ahmed",
+      program: "Fashion Designing",
       review:
-        "This school transformed my creative vision into reality. The instructors are industry professionals who genuinely care about your growth. The hands-on experience and networking opportunities opened doors I never imagined.",
-      image: "/images/student-2.jpg",
+        "GIFD provided the perfect blend of creativity and practical knowledge. The faculty were supportive, the learning environment was motivating, and the overall experience helped me grow confidently as a fashion professional.",
+      image: "/images/set1/student-2.jpg",
     },
     {
       id: 2,
-      name: "Marcus Chen",
-      program: "Fashion Merchandising Graduate",
+      name: "Padmawati Sidu",
+      program: "Fashion Designing",
       review:
-        "The curriculum perfectly balances creativity with business acumen. I learned everything from sketching concepts to understanding market trends. Now I'm working at a top fashion house in Milan.",
-      image: "/images/student-1.jpg",
+        "Glam Institute of Fashion Designing & faculties have put in all the efforts to groom us and make us fashionable professionals. It was a wonderful experience at GIFD",
+      image: "/images/set1/student-12.jpg",
     },
     {
       id: 3,
-      name: "Sophia Andersson",
-      program: "Textile Design Graduate",
+      name: "Priyanka Gupta",
+      program: "Interior Designing",
       review:
-        "The facilities are world-class and the mentorship is unparalleled. I discovered my passion for sustainable fashion here and launched my own eco-friendly clothing line before graduation.",
-      image: "/images/student-2.jpg",
+        "Studying at Glam Institute of Fashion Designing has been one of the best decisions I have made. It has been unforgettable. I am growing up as an individual .Enjoyed the caring and friendly environment, great facilities, and the variety of services offered. The standards are very high, which always makes me feel well-supported.",
+      image: "/images/set1/student-33.jpg",
     },
     {
       id: 4,
-      name: "James Mitchell",
-      program: "Pattern Making Graduate",
+      name: "Sumaiya Sayed",
+      program: "Boutique Management",
       review:
-        "The technical skills I gained here are exceptional. From draping to CAD software, I mastered every aspect of garment construction. The portfolio I built helped me land my dream job immediately after graduation.",
-      image: "/images/student-2.jpg",
+        " I had a great time doing this course and everyone involved in glam fashion institute has made it a great experience. I look forward to doing more  with this institute in  future and have been recommending it to everyone I know. Thank you for all the assistance, guidance and providing a such platform to explore ourself  . it has been delightful and very gratifying.Loved every minue studying and gained great knowledge. Looking forward to life as a life coach and being part of changing lives for the better.",
+      image: "/images/set1/student-4.jpg",
     },
     {
       id: 5,
-      name: "Aisha Patel",
-      program: "Fashion Styling Graduate",
+      name: "Dipti Dubey",
+      program: "Fashion Designing",
       review:
-        "This program exceeded all my expectations. The industry connections and real-world projects prepared me perfectly for the fast-paced fashion world. I'm now styling for major editorial shoots.",
-      image: "/images/student-1.jpg",
+        "I had great experience in GIFD. I really admire our trainer and her teaching style, the way she teaches is excellent or beyond that. Loved the helpful faculty, the wonderful atmosphere, the effort they put in and every day of learning here!!",
+      image: "/images/set1/student-52.jpg",
     },
     {
       id: 6,
-      name: "Oliver Hansen",
-      program: "Fashion Business Graduate",
+      name: "Neha Kumari",
+      program: "Fashion Designing Graduate",
       review:
         "The business side of fashion can be challenging, but this school made it accessible and exciting. I learned about brand management, marketing, and entrepreneurship. Now I run my own fashion consultancy.",
-      image: "/images/student-2.jpg",
+      image: "/images/set1/student-66.jpg",
     },
     {
       id: 7,
-      name: "Oliver Hansen",
-      program: "Fashion Business Graduate",
+      name: "Sejal Patel",
+      program: "Fashion Designing",
       review:
-        "The business side of fashion can be challenging, but this school made it accessible and exciting. I learned about brand management, marketing, and entrepreneurship. Now I run my own fashion consultancy.",
-      image: "/images/student-2.jpg",
+        " The course was well organized. Loved every minute of studying here. Special thanks to our trainer, as she was very helpful and her way of teaching was very easy to understand. Every single day, we gained great knowledge. The friendly atmosphere here was also quite enjoyable and not at all boring. I would recommend others to join GIFD and be a part of a wonderful organization.",
+      image: "/images/set1/student-7.jpg",
     },
   ];
 

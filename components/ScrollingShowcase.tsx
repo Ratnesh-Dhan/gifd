@@ -1,26 +1,25 @@
 "use client";
-import {useEffect} from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const images = [
-  "/about/moving_array/1.png",
-  "/about/moving_array/2.png",
-  "/about/moving_array/3.png",
-  "/about/moving_array/4.png",
-  "/about/moving_array/5.png",
-  "/about/moving_array/6.png",
-  "/about/moving_array/7.png",
-  "/about/moving_array/8.png",
-  "/about/moving_array/9.png",
-  "/about/moving_array/10.png",
-  "/about/moving_array/11.jpg",
+  "/images/moving_array/1.jpg",
+  "/images/moving_array/2.jpg",
+  "/images/moving_array/3.jpg",
+  "/images/moving_array/4.jpg",
+  "/images/moving_array/5.png",
+  "/images/moving_array/6.jpg",
+  "/images/moving_array/7.jpg",
+  "/images/moving_array/8.jpg",
+  "/images/moving_array/9.jpg",
+  "/images/moving_array/10.jpg",
+  "/images/moving_array/11.jpg",
+  "/images/moving_array/12.png",
 ];
 
 export default function ScrollingShowcase() {
-  useEffect(() => {
-    
-  }, []);
+  useEffect(() => {}, []);
   return (
     <div className="w-[80%] mx-auto py-10 overflow-hidden bg-transparent">
       <motion.div
@@ -28,7 +27,7 @@ export default function ScrollingShowcase() {
         animate={{ x: ["0%", "-100%"] }}
         transition={{
           repeat: Infinity,
-          duration: 25,
+          duration: 15,
           ease: "linear",
         }}
       >
@@ -42,7 +41,7 @@ export default function ScrollingShowcase() {
             <Image
               src={src}
               alt={`img-${i}`}
-              width={200}   // 2x size bump
+              width={200} // 2x size bump
               height={150}
               className="rounded-xl border border-amber-400 object-cover shadow-lg"
             />
