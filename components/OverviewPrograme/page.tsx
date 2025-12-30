@@ -3,6 +3,7 @@ import { OverviewProgrameProps } from "@/types";
 import React from "react";
 import ThreeHoverPhotoLinks from "../ThreeHoverPhotoLinks";
 import Image from "next/image";
+import ScrollingShowcase from "../ScrollingShowcase";
 
 const OverviewPrograme = (properties: OverviewProgrameProps) => {
   return (
@@ -70,6 +71,16 @@ const OverviewPrograme = (properties: OverviewProgrameProps) => {
           />
         </div>
       </div>
+      <div>
+        <h4 className="text-2xl md:text-4xl font-bold mx-6 md:mx-0">
+          Facilities
+        </h4>
+        <ThreeHoverPhotoLinks tiles={properties.tiles} />
+      </div>
+      <h4 className="text-2xl md:text-4xl font-bold mx-6 md:mx-0">
+        Placement Partners
+      </h4>
+      <ScrollingShowcase />
     </div>
   );
 };

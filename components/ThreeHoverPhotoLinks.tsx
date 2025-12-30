@@ -4,10 +4,10 @@ import Link from "next/link";
 import React from "react";
 
 const ThreeHoverPhotoLinks = ({
-  tile_title,
+  tile_title = "",
   tiles,
 }: {
-  tile_title: string;
+  tile_title?: string;
   tiles: ThreeHoverPhotoLinksProps[];
 }) => {
   return (
