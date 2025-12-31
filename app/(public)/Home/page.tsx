@@ -31,13 +31,13 @@ const fashion_programs: ThreeHoverPhotoLinksProps[] = [
 
 const interior_programs: ThreeHoverPhotoLinksProps[] = [
   {
-    image: "/images/modeling-3.jpg",
+    image: "/images/modeling-4.jpg",
     title: "",
     desc: "Modeling",
     link: "/Programs/Overview/Bachelor",
   },
   {
-    image: "/images/beautician-1.jpg",
+    image: "/images/beautician-2.jpg",
     title: "",
     desc: "Beautician",
     link: "/Programs/Overview/Master",

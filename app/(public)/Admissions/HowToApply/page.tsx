@@ -4,10 +4,12 @@ import React from "react";
 const HowToApply = () => {
   return (
     <div>
-      <div className="w-[99vw] h-[70vh] bg-[url('/images/additional/21.jpg')] bg-cover bg-center left-1/2 -translate-x-1/2 relative">
-        <h3 className="text-amber-400 absolute bottom-22 md:text-9xl text-4xl md:ml-[10vw] ml-4">
+      <div className="w-[99vw] h-[35vh] md:h-[70vh] bg-[url('/images/banners/HowToApply-banner.jpg')] bg-cover bg-center left-1/2 -translate-x-1/2 relative">
+        <h3 className="text-black absolute bottom-8 md:bottom-22 md:text-9xl text-4xl md:ml-[10vw] ml-4">
           <span className="font-bold">How to</span>{" "}
-          <span className="[text-shadow:5px_5px_0px_rgb(0,0,0)]">Apply</span>
+          <span className="[text-shadow:3px_3px_0px_#FFCA28] md:[text-shadow:5px_5px_0px_#FFCA28]">
+            Apply
+          </span>
         </h3>
       </div>
       <h4 className="m-4 md:m-10 whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-black text-left">

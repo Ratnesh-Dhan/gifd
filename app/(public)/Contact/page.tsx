@@ -4,10 +4,19 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen">
+    <div className="max-w-[1260px]">
       <div className="relative w-screen left-1/2 -translate-x-1/2 h-[70vh] bg-[url('/extra_images/connecting3.jpg')] bg-cover bg-center flex items-center"></div>
-      <div className="flex justify-center mt-20">
-        <div className="w-[20vw] h-[40vh] border">Map area</div>
+      <div className="flex flex-col md:flex-row justify-center mt-20">
+        {/* <div className="w-[20vw] h-[40vh] border">Map area</div> */}
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3677.959790825079!2d86.20640545646698!3d22.803953757747106!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e31dea81ca0b%3A0xafa77b568fdfb7c1!2sGlam%20Institute%20of%20Fashion%20Designing!5e0!3m2!1sen!2sin!4v1767185699258!5m2!1sen!2sin"
+            width="550"
+            height="450"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
         <div className="ml-10 mb-10">
           <span>Contact us ------</span>
           <h3 className="text-4xl my-4">
@@ -49,9 +58,9 @@ const Contact = () => {
       <div className="relative w-full p-1">
         <div className="absolute inset-0 bg-lienar-to-b from-white to-transparent"></div>
         <div className="w-full bg-[url('/world-map.jpg')] bg-cover bg-center p-6 relative z-10">
-          <div className="flex my-20">
+          <div className="flex items-center my-20">
             <div
-              className="mask-b-from-50% mask-b-to-90%"
+              className="mask-b-from-70% mask-b-to-90%"
               // style={{
               //   WebkitMaskImage:
               //     "linear-gradient(to top, transparent 0%, white 90%)",
