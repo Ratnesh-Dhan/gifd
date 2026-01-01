@@ -1,4 +1,5 @@
 "use client";
+import { useDevice } from "@/app/provideres/Devicecontext";
 import FourParts from "@/components/FourParts";
 import HomeHovers from "@/components/HomeHovers/page";
 import ImageShowcase from "@/components/ImageShowcase/page";
@@ -61,14 +62,13 @@ const images = [
 ];
 
 const Home = () => {
+  const { isMobile } = useDevice();
   // const [readmoreAbout, setReadmoreAbout] = useState<boolean>(false);
   const [readmoreMobile, setReadmoreMobile] = useState(false);
   const [readmoreDesktop, setReadmoreDesktop] = useState(false);
   const [index, setIndex] = useState<number>(0);
 
   useEffect(() => {
-    console.log("timing outside", index);
-
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
     }, 5000); // change every 5 seconds
@@ -313,10 +313,15 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="">
+        <div className={`${isMobile ? "hidden" : ""}`}>
           <h3 className="text-4xl mb-5 font-bold mx-10 ">Courses</h3>
           <HomeHovers tiles={fashion_programs} />
           <HomeHovers tiles={interior_programs} />
+        </div>
+        <div className={`${isMobile ? "block" : "hidden"}`}>
+          <h3 className="text-4xl mb-5 font-bold mx-10 ">Courses</h3>
+
+          <HomeHovers tiles={[...fashion_programs, ...interior_programs]} />
         </div>
         <div className="relative left-1/2 -translate-x-1/2 w-screen mb-20">
           <div className="flex flex-col md:flex-row">

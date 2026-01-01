@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { useDevice } from "@/app/provideres/Devicecontext";
 
 export default function StudentReviews() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -64,20 +65,21 @@ export default function StudentReviews() {
       image: "/images/set1/student-7.jpg",
     },
   ];
-
-  const currentReviews = reviews.slice(currentIndex, currentIndex + 3);
-  const totalPages = Math.ceil(reviews.length / 3);
-  const currentPage = Math.floor(currentIndex / 3) + 1;
+  const { isMobile } = useDevice();
+  const pageSize = isMobile ? 1 : 3;
+  const currentReviews = reviews.slice(currentIndex, currentIndex + pageSize);
+  const totalPages = Math.ceil(reviews.length / pageSize);
+  const currentPage = Math.floor(currentIndex / pageSize) + 1;
   // Calculate the maximum valid starting index (largest multiple of 3 <= reviews.length)
-  const maxIndex = Math.floor((reviews.length - 1) / 3) * 3;
+  const maxIndex = Math.floor((reviews.length - 1) / pageSize) * pageSize;
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => Math.max(0, prev - 3));
+    setCurrentIndex((prev) => Math.max(0, prev - pageSize));
   };
 
   const handleNext = () => {
     setCurrentIndex((prev) => {
-      const nextIndex = prev + 3;
+      const nextIndex = prev + pageSize;
       return Math.min(maxIndex, nextIndex);
     });
   };

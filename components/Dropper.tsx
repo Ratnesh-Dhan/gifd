@@ -2,7 +2,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { createPortal } from "react-dom";
 import Links from "./Links/page";
 
@@ -37,9 +37,6 @@ const Dropper = ({
     setMakeActive(!makeActive);
   };
 
-  useEffect(() => {
-    console.log(items);
-  }, []);
   return (
     <div
       className={`relative ${size === "" ? "" : `${size}`} hover-text-color`}
