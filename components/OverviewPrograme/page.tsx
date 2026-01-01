@@ -1,11 +1,16 @@
 "use client";
-import { OverviewProgrameProps } from "@/types";
-import React from "react";
+import { OverviewProgrameProps, ThreeHoverPhotoLinksProps } from "@/types";
+import React, { useState } from "react";
 import ThreeHoverPhotoLinks from "../ThreeHoverPhotoLinks";
 import Image from "next/image";
 import ScrollingShowcase from "../ScrollingShowcase";
+import { useDevice } from "@/app/provideres/Devicecontext";
+import FacilitiesBoxes from "../FacilitiesBoxes";
 
 const OverviewPrograme = (properties: OverviewProgrameProps) => {
+  const [showMore, setShowMore] = useState<boolean>(false);
+  const { isMobile } = useDevice();
+
   return (
     <div>
       <div
@@ -18,9 +23,15 @@ const OverviewPrograme = (properties: OverviewProgrameProps) => {
         <h3 className="text-2xl md:text-4xl font-bold my-4">
           {properties.b_title}
         </h3>
-        <p className="whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700">
-          {properties.b_para}
-        </p>
+        {isMobile ? (
+          <p className="whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700">
+            {properties.b_para}
+          </p>
+        ) : (
+          <p className="whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700">
+            {properties.b_para}
+          </p>
+        )}
         {/* <p className="whitespace-pre-line leading-loose tracking-wide md:text-xl text-lg text-gray-700">
           {properties.b_para}
         </p> */}
@@ -71,12 +82,7 @@ const OverviewPrograme = (properties: OverviewProgrameProps) => {
           />
         </div>
       </div>
-      <div>
-        <h4 className="text-2xl md:text-4xl font-bold mx-6 md:mx-0">
-          Facilities
-        </h4>
-        <ThreeHoverPhotoLinks tiles={properties.tiles} />
-      </div>
+      <FacilitiesBoxes />
       <h4 className="text-2xl md:text-4xl font-bold mx-6 md:mx-0">
         Placement Partners
       </h4>

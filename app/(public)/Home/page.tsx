@@ -1,5 +1,6 @@
 "use client";
 import { useDevice } from "@/app/provideres/Devicecontext";
+import FacilitiesBoxes from "@/components/FacilitiesBoxes";
 import FourParts from "@/components/FourParts";
 import HomeHovers from "@/components/HomeHovers/page";
 import ImageShowcase from "@/components/ImageShowcase/page";
@@ -17,7 +18,7 @@ const fashion_programs: ThreeHoverPhotoLinksProps[] = [
     link: "/Programs/Overview/Bachelor",
   },
   {
-    image: "/images/interior-3.jpg",
+    image: "/images/interior-11.jpg",
     title: "",
     desc: "Interior Design",
     link: "/Programs/Overview/Master",
@@ -323,6 +324,7 @@ const Home = () => {
 
           <HomeHovers tiles={[...fashion_programs, ...interior_programs]} />
         </div>
+        <FacilitiesBoxes />
         <div className="relative left-1/2 -translate-x-1/2 w-screen mb-20">
           <div className="flex flex-col md:flex-row">
             <div className="text-center py-5 md:py-40 bg-[#f59e0b] md:w-1/2 w-full text-white">
