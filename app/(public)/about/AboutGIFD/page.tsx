@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -27,7 +27,9 @@ const AboutGIFD = () => {
                     />
                   </div>
                   <div className="px-10 pt-5 font-bold">
-                    <h3 className="text-lg mt-4 md:mt-0 text-amber-400">Founder</h3>
+                    <h3 className="text-lg mt-4 md:mt-0 text-amber-400">
+                      Founder
+                    </h3>
                     <p className="text-xl text-white">Mr. Prabhakar Kumar</p>
                   </div>
                 </div>
@@ -112,7 +114,9 @@ const AboutGIFD = () => {
                     />
                   </div>
                   <div className="px-10 pt-5 font-bold">
-                    <h3 className="text-lg mt-4 md:mt-0 text-amber-400">Co Founder</h3>
+                    <h3 className="text-lg mt-4 md:mt-0 text-amber-400">
+                      Co Founder
+                    </h3>
                     <p className="text-xl text-white">Dr. Prabhakar</p>
                   </div>
                 </div>
@@ -121,91 +125,101 @@ const AboutGIFD = () => {
           </div>
         </section>
       </div>
-      
 
       <section className="relative w-full px-6 md:px-16 py-4 md:py-20 overflow-hidden">
-      {/* Background logo */}
-      <div className="absolute inset-0 -z-10 flex justify-center items-center opacity-20">
-        <Image
-          src="/main-logo.png"
-          alt="GIFD Logo"
-          width={900}
-          height={900}
-          className="object-contain"
-        />
-      </div>
+        {/* Background logo */}
+        <div className="absolute inset-0 -z-10 flex justify-center items-center opacity-20">
+          <Image
+            src="/main-logo.png"
+            alt="GIFD Logo"
+            width={900}
+            height={900}
+            className="object-contain"
+          />
+        </div>
 
-      {/* Content */}
-      <div className="max-w-6xl mx-auto">
-        <span className="text-amber-500 font-bold text-sm md:text-base">
-          About Glam Institute of Fashion Designing
-        </span>
+        {/* Content */}
+        <div className="max-w-6xl mx-auto">
+          <span className="text-amber-500 font-bold text-sm md:text-base">
+            About Glam Institute of Fashion Designing
+          </span>
 
-        <h3 className="text-3xl md:text-4xl font-bold mt-4 mb-6">
-          A Best Platform To Learn <br className="hidden md:block" />
-          Fashion Designing Courses
-        </h3>
+          <h3 className="text-3xl md:text-4xl font-bold mt-4 mb-6">
+            A Best Platform To Learn <br className="hidden md:block" />
+            Fashion Designing Courses
+          </h3>
 
-        {/* TEXT BLOCK */}
-        <div className="relative">
-          <p
-            className={`
+          {/* TEXT BLOCK */}
+          <div className="relative">
+            <p
+              className={`
               text-gray-700 leading-relaxed tracking-wide md:text-xl text-lg
               overflow-hidden transition-all duration-500 ease-in-out
               ${expanded ? "max-h-[1000px]" : "max-h-40"}
               md:max-h-none
             `}
+            >
+              A progressive institute redefining design education in Jharkhand,
+              Glam Institute of Fashion Designing (GIFD), Jamshedpur is
+              committed to bridging the gap between academic learning and
+              industry expectations. The institute is driven by a strong belief
+              that India’s youth possess immense creativity, passion,
+              innovation, and untapped potential, which, when guided in the
+              right direction, can shape the future of the design industry.
+              <br /> <br /> At GIFD Jamshedpur, quality education has delivered
+              through high academic standards combined with intensive hands-on
+              training. The institute emphasizes practical exposure,
+              industry-oriented curriculum, and skill-based learning to ensure
+              students are prepared to meet real-world challenges with
+              confidence. From concept development to execution, students gain
+              in-depth knowledge that reflects current market trends and
+              professional practices.
+              <br /> <br /> GIFD offers a wide range of programs in Fashion
+              Designing, Interior Designing, Modelling, and Beautician studies,
+              designed to support both employment and entrepreneurship. Special
+              focus is given to start-up culture and self-employment, where
+              students are mentored and guided to build their own brands,
+              studios, or businesses during the course of their studies. The
+              <br /> <br /> institute has built strong collaborations with
+              industry professionals, fashion houses, design studios, and
+              creative organizations, providing students with valuable exposure
+              through workshops, events, live projects, internships, and
+              industry interactions. As an industry partner of Sanskaram
+              University, GIFD ensures its academic framework remains credible,
+              career-focused, and aligned with evolving industry demands.
+              <br /> <br /> Since its establishment in 2022, GIFD Jamshedpur has
+              steadily grown as a trusted platform for aspiring designers. With
+              dedicated faculty, modern infrastructure, and a student-centric
+              learning approach, the institute continues to prioritize
+              education, innovation, and career success.
+              <br /> <br />
+            </p>
+            <p className="text-gray-700 leading-relaxed tracking-wide md:text-xl text-lg text-center font-bold">
+              Take your first step with GIFD Jamshedpur
+              <br />
+              where your passion meets profession and your future takes shape.
+            </p>
+
+            {/* Fade effect when collapsed (mobile only) */}
+            {!expanded && (
+              <div className="md:hidden pointer-events-none absolute bottom-0 left-0 h-16 w-full bg-gradient-to-t from-white to-transparent" />
+            )}
+          </div>
+
+          {/* Read more button (mobile only) */}
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="md:hidden mt-4 text-amber-500 font-semibold"
           >
-            A passionate impulse, determinacy of purpose and the knowledge are
-            the basic traits which one must own to be a Winner. If you promise
-            to invest with passion, perseverance and passion, we promise to
-            convert your potential into a highly rewarding career.
-
-            <br /><br />
-
-            It is our intense dream to make Glam Institute of Fashion Designing
-            a leader in the Fashion fraternity and this will be achieved by
-            inspiring arty expression and skilled exchange of encounters which
-            magnifies creation and newness in the industry and enables trend to
-            shine forth.
-
-            <br /><br />
-
-            With the spirit of managing volatile changes in the world of Fashion
-            Technology, our well prepared and trained faculty invite you
-            wholeheartedly to join the GIFD fraternity and make our journey
-            still beautiful and prosperous.
-
-            <br /><br />
-
-            Managing Director of Glam Institute of Fashion Designing is here
-            with a vision of taking Education and Fashion to another level,
-            exposing students to handicraft and handloom patrimony while
-            blending conventional values with modern thought processes.
-          </p>
-
-          {/* Fade effect when collapsed (mobile only) */}
-          {!expanded && (
-            <div className="md:hidden pointer-events-none absolute bottom-0 left-0 h-16 w-full bg-gradient-to-t from-white to-transparent" />
-          )}
+            {expanded ? "Read less" : "Read more"}
+          </button>
         </div>
-
-        {/* Read more button (mobile only) */}
-        <button
-          onClick={() => setExpanded(!expanded)}
-          className="md:hidden mt-4 text-amber-500 font-semibold"
-        >
-          {expanded ? "Read less" : "Read more"}
-        </button>
-      </div>
-    </section>
+      </section>
     </div>
   );
 };
 
 export default AboutGIFD;
-
-
 
 // <div className="flex justify-center md:mt-20 pb-20 ">
 //         {/* <div className=" bg-[url('/main-logo.png')] bg-cover bg-center opacity-70"> */}
