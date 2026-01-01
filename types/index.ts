@@ -35,7 +35,7 @@ export interface OverviewProgrameProps {
 export interface ThreeHoverPhotoLinksProps {
   image: string;
   title: string;
-  desc: string;
+  desc?: string;
   link: string;
 }
 

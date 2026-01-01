@@ -3,7 +3,6 @@ import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
-  console.log("Ek saal kum gaya");
   console.log(process.env.GODADDY_EMAIL);
   const { name, email, phone, subject, message } = await req.json();
 

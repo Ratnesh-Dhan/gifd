@@ -35,8 +35,20 @@ const ThreeHoverPhotoLinks = ({
                   />
                 </div>
                 <div className="px-10 md:pt-4 font-bold">
-                  <h3 className="text-xl mt-4 text-amber-400">{tile.title}</h3>
-                  <p className="text-xl md:text-3xl text-white">{tile.desc}</p>
+                  <h3
+                    className={`text-xl mt-4 text-amber-400 ${
+                      tile.title ? "block" : "hidden"
+                    }`}
+                  >
+                    {tile.title}
+                  </h3>
+                  <p
+                    className={`text-xl md:text-3xl text-white ${
+                      tile.desc ? "block" : "hidden"
+                    }`}
+                  >
+                    {tile.desc}
+                  </p>
                 </div>
               </Link>
             </div>
