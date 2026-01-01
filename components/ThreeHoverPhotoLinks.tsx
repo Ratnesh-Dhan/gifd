@@ -29,7 +29,7 @@ const ThreeHoverPhotoLinks = ({
                 <div className="relative w-full h-[70%] rounded-t-3xl overflow-hidden">
                   <Image
                     src={tile.image}
-                    alt={tile.desc || ""}
+                    alt={tile.title}
                     fill
                     className="object-cover"
                   />
