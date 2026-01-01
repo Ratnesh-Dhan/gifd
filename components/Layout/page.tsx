@@ -11,7 +11,9 @@ async function getData() {
 }
 const Layout = async ({ children }: { children: ReactNode }) => {
   const { device } = userAgent({ headers: await headers() });
-  const isMobile = device.type === "mobile";
+  // const isMobile = device.type === "mobile";
+  const isMobile = device.type === "mobile" || device.type === "tablet";
+
   await getData();
   return (
     <div>
