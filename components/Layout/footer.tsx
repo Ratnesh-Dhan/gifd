@@ -50,7 +50,7 @@ export default function Footer() {
       {/* Main Footer Content */}
       <div className="flex justify-center">
         <div className="text-white py-4 md:py-8 text-xl md:text-3xl border-[#f59e0b] border-b-1 w-[90vw] flex justify-center text-center">
-          Admissions Open — Call Now and Secure Your Seat.
+          Admissions Open — Call Now and Book Your Seat.
           <br /> @ +91-810 261 1868
         </div>
       </div>
@@ -155,7 +155,7 @@ export default function Footer() {
                 <span className="text-gray-400 text-sm">
                   2nd Floor, Birenu Trade Center,
                   <br />
-                  Pennar Road, Avove ICIC Bank,
+                  Pennar Road, Above ICICI Bank,
                   <br />
                   Sakchi, Jamshedpur
                 </span>
@@ -203,7 +203,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row max-w-[1200px] justify-between items-center space-y-4 md:space-y-0">
             <p className="text-[#f59e0b] text-sm">
-              © 2022 Gifd Fashion Institute. All rights reserved.
+              © 2026 Gifd Fashion Institute. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a

@@ -6,102 +6,106 @@ import React, { useState } from "react";
 const Diploma = () => {
   const [properties] = useState<FashionComponentProps>({
     top_image: "/about/banner.png",
-    b_title: "Bachelor in Fashion Design",
-    b_para: `The Fashion Design program provides an extensive and well-structured foundation in design development skills, ensuring that students understand every stage of the creative process from concept to creation. This course uniquely combines the scientific aspects of apparel studies with the expressive elements of art and aesthetics, giving learners a holistic perspective of the fashion industry.
+    b_title: "Diploma in Fashion Design",
+    b_para: `The Diploma in Fashion Design is a focused, industry-oriented program that builds a strong foundation in design development and practical fashion skills. It guides students through the complete creative journey—from concept ideation to finished garments—ensuring they understand how ideas are transformed into wearable designs.
 
-It trains students to translate abstract ideas into tangible designs with precision, creativity, and purpose. Throughout the program, learners gain exposure to garment construction, textile knowledge, illustration, trend research, and digital design tools, so they can professionally execute their concepts in a competitive industry environment.
+The course blends the technical and scientific aspects of apparel studies with the artistic side of fashion, including aesthetics, color theory, and design principles. Students gain hands-on experience in garment construction, pattern making, textile studies, fashion illustration, and basic digital design tools, allowing them to execute their ideas with clarity and confidence.
 
-The curriculum also emphasizes understanding consumer behavior and market demands. Whether the goal is to create prêt-à-porter collections for everyday wear or venture into the exclusive world of haute couture, students are guided to develop a strong sense of style, commercial awareness, and adaptability to industry trends.
+Alongside design skills, the program introduces students to market awareness and consumer preferences, helping them create fashion that is both creative and commercially relevant. Whether designing everyday prêt-à-porter wear or exploring higher-end fashion concepts, students learn to balance creativity with practicality.
 
-In short, it prepares students to think, design, and produce like actual fashion professionals instead of hobbyists playing with fabric.`,
+Overall, the diploma prepares learners to enter the fashion industry with real skills, professional discipline, and the mindset of working designers—not amateurs experimenting without direction.
+`,
+
     offer_para: [
-      "Study of fashion trends & history",
-      "Regional crafts and specialities of India",
-      "Garment drafting, draping & construction",
-      "Fashion forecasting & Design process",
-      "Study of National and International Brands",
-      "Technical and aesthetic aspect of fabric studies",
-      "Computer aided designing",
-      "Merchandising in Fashion",
-      "National & International Marketing",
-      "Innovation with Draping",
+      "Study of fashion trends and fashion history",
+      "Indian regional crafts and textile specialities",
+      "Garment drafting, draping, and construction techniques",
+      "Fashion forecasting and the design development process",
+      "Study of national and international fashion brands",
+      "Technical and aesthetic aspects of fabric and textile studies",
+      "Computer-aided fashion designing (CAD)",
+      "Fundamentals of fashion merchandising",
+      "National and international fashion marketing",
+      "Creative innovation through advanced draping techniques",
     ],
+
     career_para: [
-      "Designer /Assistant designer",
-      "Fashion stylist",
+      "Fashion Designer / Assistant Designer",
+      "Fashion Stylist",
       "Fashion Entrepreneur",
-      "Fashion consultant",
-      "Costume designer",
-      "Designer in export houses.",
-      "Fashion illustrator",
-      "Fashion coordinator",
+      "Fashion Consultant",
+      "Costume Designer",
+      "Designer in export houses and apparel brands",
+      "Fashion Illustrator",
+      "Fashion Coordinator",
     ],
     tiles: [
       {
-        title: "Bachelor's",
-        desc: "Fashion",
-        link: "/Programs/Overview/Bachelor",
+        title: "Diploma",
+        desc: "Fashion Design",
+        link: "#",
         image: "/images/fashion_design-1.jpg",
       },
       {
-        title: "Bachelor's",
+        title: "Diploma",
         desc: "Interior Design",
-        link: "/Programs/Interior/Bachelor",
+        link: "/Programs/Interior/Diploma",
         image: "/images/interior-8.jpg",
       },
       {
         title: "Bachelor's",
-        desc: "Textile",
-        link: "/Programs/Textile/Bachelor",
+        desc: "Textile Design",
+        link: "/Programs/Textile/Diploma",
         image: "/images/textile.jpg",
       },
     ],
-    tile_title: "Bachelor's programe",
+    tile_title: "Diploma programmes",
     c_title: "Eligibility Criteria & Duration ",
     c_content: [
-      `The Fashion Design program is open to individuals who have successfully completed their higher secondary education (10+2) or an equivalent qualification from a recognized board. Applicants should possess a basic interest in art, fashion, trends, or creative expression. Prior design experience isn’t mandatory, but curiosity, visual imagination, and willingness to learn are strongly expected.
-
-The duration of the program typically spans 3 to 4 years, depending on the institution and academic structure. This time includes classroom instruction, practical sessions, workshops, studio work, internships, and project-based assessments. The final year often includes a major design project or portfolio submission, preparing students for professional entry into the fashion industry.`,
+      `
+Applicants must have completed 10+2 (or equivalent) from a recognized board, preferably with an interest in design, art, architecture, or creative studies. No prior design background is required, a basic aptitude for creativity and spatial understanding is sufficient.
+`,
+      "Duration: 1 / 2 Years.",
     ],
   });
   const [table] = useState<TableContent>({
-    registrationFee: 8500,
-    table_title: "Bachelor in Fashion Design",
-    course_duration: "3 years (6 sem)",
+    registrationFee: 6500,
+    table_title: "Diploma in Fashion Design",
+    course_duration: "1 / 2 years (2 / 4 sem)",
     feeData: [
       {
         semester: 1,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 1,
-        yearlyFee: 68000,
+        yearlyFee: 66000,
       },
       {
         semester: 2,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 1,
         yearlyFee: null,
       },
       {
         semester: 3,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 2,
-        yearlyFee: 68000,
+        yearlyFee: 66000,
       },
       {
         semester: 4,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 2,
         yearlyFee: null,
       },
       {
         semester: 5,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 3,
-        yearlyFee: 68000,
+        yearlyFee: 66000,
       },
       {
         semester: 6,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 3,
         yearlyFee: null,
       },

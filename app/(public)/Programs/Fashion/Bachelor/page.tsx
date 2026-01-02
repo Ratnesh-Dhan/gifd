@@ -39,7 +39,7 @@ In short, it prepares students to think, design, and produce like actual fashion
     tiles: [
       {
         title: "Bachelor's",
-        desc: "Fashion",
+        desc: "Fashion Design",
         link: "/Programs/Overview/Bachelor",
         image: "/images/fashion_design-1.jpg",
       },
@@ -51,7 +51,7 @@ In short, it prepares students to think, design, and produce like actual fashion
       },
       {
         title: "Bachelor's",
-        desc: "Textile",
+        desc: "Textile Design",
         link: "/Programs/Textile/Bachelor",
         image: "/images/textile.jpg",
       },
@@ -59,49 +59,48 @@ In short, it prepares students to think, design, and produce like actual fashion
     tile_title: "Bachelor's programe",
     c_title: "Eligibility Criteria & Duration ",
     c_content: [
-      `The Fashion Design program is open to individuals who have successfully completed their higher secondary education (10+2) or an equivalent qualification from a recognized board. Applicants should possess a basic interest in art, fashion, trends, or creative expression. Prior design experience isn’t mandatory, but curiosity, visual imagination, and willingness to learn are strongly expected.
-
-The duration of the program typically spans 3 to 4 years, depending on the institution and academic structure. This time includes classroom instruction, practical sessions, workshops, studio work, internships, and project-based assessments. The final year often includes a major design project or portfolio submission, preparing students for professional entry into the fashion industry.`,
+      `Applicants must have completed 10+2 (or equivalent) from a recognized board, preferably with an interest in design, art, architecture, or creative studies. No prior design background is required; a basic aptitude for creativity and spatial understanding is sufficient.`,
+      "Duration: 2 Years.",
     ],
   });
   const [table] = useState<TableContent>({
-    registrationFee: 8500,
+    registrationFee: 6500,
     table_title: "Bachelor in Fashion Design",
     course_duration: "3 years (6 sem)",
     feeData: [
       {
         semester: 1,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 1,
-        yearlyFee: 68000,
+        yearlyFee: 66000,
       },
       {
         semester: 2,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 1,
         yearlyFee: null,
       },
       {
         semester: 3,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 2,
-        yearlyFee: 68000,
+        yearlyFee: 66000,
       },
       {
         semester: 4,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 2,
         yearlyFee: null,
       },
       {
         semester: 5,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 3,
-        yearlyFee: 68000,
+        yearlyFee: 66000,
       },
       {
         semester: 6,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 3,
         yearlyFee: null,
       },
