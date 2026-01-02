@@ -107,17 +107,17 @@ const AboutGIFD = () => {
                 <div className="shrink-0 bg-black rounded-3xl w-70 h-110 md:w-60 md:h-100 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-[0px_0px_20px_rgba(0,0,0,0.50)]">
                   <div className="relative w-full h-[70%] rounded-t-3xl overflow-hidden ">
                     <Image
-                      src="/images/founder.jpg"
-                      alt="Founder Image"
+                      src="/images/co-founder-1.png"
+                      alt="Co-Founder Image"
                       fill
-                      className="object-cover scale-150 translate-x-5"
+                      className="object-cover scale-130 "
                     />
                   </div>
                   <div className="px-10 pt-5 font-bold">
                     <h3 className="text-lg mt-4 md:mt-0 text-amber-400">
                       Co Founder
                     </h3>
-                    <p className="text-xl text-white">Dr. Prabhakar</p>
+                    <p className="text-xl text-white">Ms. Hena Meraj</p>
                   </div>
                 </div>
               </div>

@@ -104,7 +104,7 @@ export default function Enquiry() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-[30vw] p-6 bg-white rounded-2xl shadow"
+      className="md:w-[30vw] p-6 bg-white rounded-2xl shadow"
     >
       <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
 
