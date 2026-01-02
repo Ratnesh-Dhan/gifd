@@ -5,52 +5,57 @@ import React, { useState } from "react";
 
 const Diploma = () => {
   const [properties] = useState<FashionComponentProps>({
-    top_image: "/images/interior-6.jpg",
-    b_title: "Bachelor in Interior Design",
-    b_para: `A Bachelor in Interior Design is crafted for individuals who think differently—those who notice details, question space, and imagine better possibilities. This program blends creativity with technical precision, transforming students into confident design thinkers capable of shaping meaningful and inspiring environments. Through immersive studio work, material exploration, space planning, and hands-on design exercises, learners master the art of balancing aesthetics, comfort, and functionality.
+    top_image: "/images/interior-12.jpg",
+    b_title: "Diploma in Interior Design",
+    b_para: `The Diploma in Interior Design is designed for individuals who are curious about spaces and passionate about creating functional, well-planned interiors. This program focuses on building strong practical skills and design fundamentals, enabling students to understand how interior spaces are planned, designed, and executed in real-world settings.
 
-Students gain exposure to residential, commercial, retail, and hospitality interiors while learning advanced digital tools such as CAD, 3D visualization, and rendering software. With industry-driven projects, workshops, and real-world experience, the program nurtures originality, innovation, and professional readiness. By graduation, students develop a strong design identity and a polished portfolio that reflects their vision, creativity, and mastery of spatial design.`,
+The course combines creativity with technical training through hands-on studio work, space planning, material studies, and basic design principles. Students gain exposure to residential, commercial, and retail interiors while learning essential tools such as CAD drafting and basic 3D visualization. Emphasis is placed on understanding layouts, lighting, finishes, furniture selection, and ergonomics.
+
+With project-based learning, workshops, and practical assignments, the diploma prepares students for entry-level roles in the interior design industry. By the end of the program, learners develop practical knowledge, professional discipline, and a foundational portfolio that reflects their skills and readiness to work under professional designers or design firms.
+`,
     offer_para: [
-      "Strong foundation in space planning, interior styling, and design principles",
-      "Hands-on learning through model-making, drafting, rendering, and visual presentation",
-      "Exploration of materials, textures, finishes, lighting concepts, and furniture design",
-      "Training in industry software such as AutoCAD, SketchUp, Revit, and 3D visualization tools",
-      "Exposure to residential, commercial, retail, office, and hospitality interior concepts",
-      "Live design studios, workshops, and real-world problem-solving experience",
-      "Guidance from industry professionals, architects, and design mentors",
-      "Focus on sustainable design, modern aesthetics, and future-driven interior solutions",
+      "Strong foundation in space planning, interior styling, and basic design principles",
+      "Hands-on training in drafting, rendering, model-making, and visual presentation",
+      "Introduction to materials, textures, finishes, lighting concepts, and furniture basics",
+      "Training in essential industry tools such as AutoCAD, SketchUp, and basic 3D visualization",
+      "Exposure to residential, commercial, retail, and office interior concepts",
+      "Studio-based learning with practical assignments and real-world design problems",
+      "Guidance from experienced faculty and industry professionals",
+      "Understanding of sustainable practices and contemporary interior design trends",
     ],
+
     career_para: [
-      "Interior Designer for residential, commercial, or hospitality spaces",
-      "Furniture Designer or Modular Furniture Specialist",
-      "Interior Stylist for homes, retail showrooms, or décor brands",
-      "Space Planner or Layout Consultant",
-      "Exhibition, Retail, and Visual Display Designer",
-      "Set Designer for film, television, and events",
-      "Design Entrepreneur or Freelance Interior Consultant",
-      "Fashion Educator, Lecturer, or Academic Researcher",
+      "Junior Interior Designer",
+      "Interior Design Assistant",
+      "Interior Stylist",
+      "Space Planning Assistant",
+      "Furniture Design Assistant or Modular Furniture Executive",
+      "Retail Display or Visual Merchandising Assistant",
+      "Set Design Assistant for events or media projects",
+      "Freelance Interior Design Support Professional",
     ],
+
     tiles: [
       {
-        title: "Bachelor's",
-        desc: "Interior",
-        link: "/Overview/Bachelor",
+        title: "Diploma",
+        desc: "Interior Design",
+        link: "#",
         image: "/images/interior-9.jpg",
       },
       {
-        title: "Bachelor's",
-        desc: "Fashion",
-        link: "/Programs/Fashion/Bachelor",
+        title: "Diploma",
+        desc: "Fashion Design",
+        link: "/Programs/Fashion/Diploma",
         image: "/images/fashion_design-3.jpg",
       },
       {
-        title: "Bachelor's",
-        desc: "Textile",
-        link: "/Programs/Textile/Bachelor",
+        title: "Diploma",
+        desc: "Textile Design",
+        link: "/Programs/Textile/Diploma",
         image: "/images/textile-2.jpg",
       },
     ],
-    tile_title: "Bachelor's programe",
+    tile_title: "Diploma programe",
     c_title: "Eligibility Criteria & Duration ",
     c_content: [
       `Applicants must have completed 10+2 (or equivalent) from a recognized board, preferably with an interest in design, art, architecture, or creative studies. No prior design background is required; a basic aptitude for creativity and spatial understanding is sufficient.`,
@@ -58,9 +63,9 @@ Students gain exposure to residential, commercial, retail, and hospitality inter
     ],
   });
   const [table] = useState<TableContent>({
-    registrationFee: 8500,
-    table_title: "Bachelor's in Interior Design",
-    course_duration: "2 years (4 sem)",
+    registrationFee: 6500,
+    table_title: "Diploma in Interior Design",
+    course_duration: "1 / 2 years (2 / 4 sem)",
     feeData: [
       {
         semester: 1,
@@ -84,6 +89,18 @@ Students gain exposure to residential, commercial, retail, and hospitality inter
         semester: 4,
         semesterFee: 33000,
         year: 2,
+        yearlyFee: null,
+      },
+      {
+        semester: 5,
+        semesterFee: 33000,
+        year: 3,
+        yearlyFee: 66000,
+      },
+      {
+        semester: 6,
+        semesterFee: 33000,
+        year: 3,
         yearlyFee: null,
       },
     ],

@@ -7,8 +7,6 @@ import { items } from "@/types";
 // import { useDevice } from "@/app/provideres/Devicecontext";
 // import AboutGIFD from "@/app/about/AboutGIFD";
 
-
-
 const Navbar = () => {
   // const { isMobile } = useDevice();
   const aboutItems: items[] = [
@@ -147,19 +145,21 @@ const Navbar = () => {
   return (
     <React.Fragment>
       <div className="bg-amber-400  flex">
-        <div className="md:w-[75vw]  flex justify-between pl-[10vw] pr-5 py-3 text-xs md:text-sm">
-          <span className=" text-sm hidden md:inline">
+        <div className="md:w-[75vw]  flex justify-between pl-[10vw] md:pr-5 py-3 text-xs md:text-sm">
+          <span className="text-sm hidden md:inline">
             Best Design institute in Jharkhand
           </span>
-          <div className="flex items-center">
+          <div className="flex items-center ">
             <Image
               src="/extra_images/phone.png"
               alt="Phone"
               width={20}
               height={20}
+              className="mr-2"
             />
-            <h3 className="flex flex-col md:flex-row">
-              <span className=" ml-3 ">Phone</span> : +91-810 261 1868
+            <h3 className="flex hidden md:block">Phone : +91-810 261 1868</h3>
+            <h3 className="flex flex-col md:hidden block">
+              Phone :<br /> +91-810 261 1868
             </h3>
           </div>
         </div>
@@ -169,9 +169,13 @@ const Navbar = () => {
             alt="Mail"
             width={20}
             height={20}
+            className="mr-2"
           />
-          <h3 className="flex flex-col md:flex-row md:text-sm text-xs">
-            <span className=" ml-3">Email</span> : info@gifdintitute.com
+          <h3 className="flex flex-col md:flex-row md:text-sm text-xs hidden md:block">
+            Email : info@gifdinstitute.com
+          </h3>
+          <h3 className="flex flex-col md:flex-row md:text-sm text-xs block md:hidden">
+            Email :<br /> info@gifdinstitute.com
           </h3>
         </div>
       </div>
@@ -200,7 +204,15 @@ const Navbar = () => {
           <Links href="/Contact" size="text-lg" title="Contact" />
         </div>
         <div id="Mobile view" className="md:hidden">
-          <MobileMenu about={aboutItems} programs={programsItems} admissions={admissionsItems} life={"/campus/Campus"} jds={"/jds"} facilities={"/Facilities"} contact={"/Contact"} />
+          <MobileMenu
+            about={aboutItems}
+            programs={programsItems}
+            admissions={admissionsItems}
+            life={"/campus/Campus"}
+            jds={"/jds"}
+            facilities={"/Facilities"}
+            contact={"/Contact"}
+          />
         </div>
         <div className="hidden md:inline border text-black rounded-sm p-3 font-bold shadow-[3px_3px_10px_rgba(0,0,0,0.70)] bg-amber-400 hover:bg-emerald-400">
           Registration

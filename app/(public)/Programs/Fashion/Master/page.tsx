@@ -38,22 +38,22 @@ const Master = () => {
     ],
     tiles: [
       {
-        title: "bachelor",
-        desc: "testing the texts",
-        link: "/Overview/Bachelor",
-        image: "/extra_images/woman-with-tablet-phone.jpg",
+        title: "Master's",
+        desc: "Fashion Design",
+        link: "/Programs/Overview/Master",
+        image: "/images/fashion_design-2.jpg",
       },
       {
-        title: "master",
-        desc: "testing the texts",
-        link: "/Overview/Master",
-        image: "/extra_images/woman-with-tablet-phone.jpg",
+        title: "Master's",
+        desc: "Interior Design",
+        link: "/Programs/Interior/Master",
+        image: "/images/interior-7.jpg",
       },
       {
-        title: "master",
-        desc: "testing the texts",
-        link: "/Overview/Master",
-        image: "/extra_images/woman-with-tablet-phone.jpg",
+        title: "Master's",
+        desc: "Textile Design",
+        link: "/Programs/Textile/Master",
+        image: "/images/textile-2.jpg",
       },
     ],
     tile_title: "Master's programe",
@@ -66,7 +66,7 @@ const Master = () => {
     ],
   });
   const [table] = useState<TableContent>({
-    registrationFee: 8500,
+    registrationFee: 6500,
     table_title: "Master in Fashion Design",
     course_duration: "2 years (4 sem)",
     feeData: [
