@@ -1,38 +1,40 @@
-"use server";
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
-  console.log(process.env.GODADDY_EMAIL);
-  const { name, email, phone, subject, message } = await req.json();
-
-  const transporter = nodemailer.createTransport({
-    host: "smtpout.secureserver.net",
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.GODADDY_EMAIL,
-      pass: process.env.GODADDY_PASSWORD,
-    },
-  });
-
   try {
+    const { name, email, phone, subject, message } = await req.json();
+
+    if (!email || !message) {
+      return NextResponse.json({ error: "Missing fields" }, { status: 400 });
+    }
+
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASSWORD,
+      },
+    });
+
     await transporter.sendMail({
-      from: `"Website" <${process.env.GODADDY_EMAIL}>`,
-      to: process.env.GODADDY_EMAIL,
-      replyTo: "gifdjsr@gmail@gmail.com",
-      subject: "New Enquiry",
-      text: `
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-Subject: ${subject}
-Message: ${message}
+      from: `"Website Contact" <${process.env.GMAIL_USER}>`,
+      to: process.env.GMAIL_USER,
+      replyTo: "info@gifdinstitute.com",
+      subject: `New Contact Enquiry: ${subject}`,
+      html: `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Subject:</strong> ${subject}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
       `,
     });
 
     return NextResponse.json({ success: true });
   } catch (err) {
-    return NextResponse.json({ success: false }, { status: 500 });
+    console.error(err);
+    return NextResponse.json({ error: "Mail failed" }, { status: 500 });
   }
 }
