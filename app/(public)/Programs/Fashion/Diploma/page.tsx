@@ -5,7 +5,7 @@ import React, { useState } from "react";
 
 const Diploma = () => {
   const [properties] = useState<FashionComponentProps>({
-    top_image: "/about/banner.png",
+    top_image: "/images/banners/diploma-in-fashion-banner.jpg",
     b_title: "Diploma in Fashion Design",
     b_para: `The Diploma in Fashion Design is a focused, industry-oriented program that builds a strong foundation in design development and practical fashion skills. It guides students through the complete creative journey—from concept ideation to finished garments—ensuring they understand how ideas are transformed into wearable designs.
 
@@ -71,7 +71,7 @@ Applicants must have completed 10+2 (or equivalent) from a recognized board, pre
   const [table] = useState<TableContent>({
     registrationFee: 6500,
     table_title: "Diploma in Fashion Design",
-    course_duration: "1 / 2 years (2 / 4 sem)",
+    course_duration: "1 and 2 years (2 / 4 sem)",
     feeData: [
       {
         semester: 1,
@@ -95,18 +95,6 @@ Applicants must have completed 10+2 (or equivalent) from a recognized board, pre
         semester: 4,
         semesterFee: 33000,
         year: 2,
-        yearlyFee: null,
-      },
-      {
-        semester: 5,
-        semesterFee: 33000,
-        year: 3,
-        yearlyFee: 66000,
-      },
-      {
-        semester: 6,
-        semesterFee: 33000,
-        year: 3,
         yearlyFee: null,
       },
     ],

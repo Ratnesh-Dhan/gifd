@@ -60,7 +60,7 @@ In short, it prepares students to think, design, and produce like actual fashion
     c_title: "Eligibility Criteria & Duration ",
     c_content: [
       `Applicants must have completed 10+2 (or equivalent) from a recognized board, preferably with an interest in design, art, architecture, or creative studies. No prior design background is required; a basic aptitude for creativity and spatial understanding is sufficient.`,
-      "Duration: 2 Years.",
+      "Duration: 3 Years.",
     ],
   });
   const [table] = useState<TableContent>({

@@ -61,7 +61,7 @@ The goal is simple: to develop highly skilled interior designers who can concept
     ],
   });
   const [table] = useState<TableContent>({
-    registrationFee: 8500,
+    registrationFee: 6500,
     table_title: "Masters in Interior Design",
     course_duration: "2 years (4 sem)",
     feeData: [

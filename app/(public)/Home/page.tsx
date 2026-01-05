@@ -7,7 +7,9 @@ import ImageShowcase from "@/components/ImageShowcase/page";
 import SmallIconComp from "@/components/SmallIconComp/page";
 import StudentReviews from "@/components/StudentReviews/page";
 import { ThreeHoverPhotoLinksProps } from "@/types";
+import { div } from "framer-motion/client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const fashion_programs: ThreeHoverPhotoLinksProps[] = [
@@ -58,8 +60,10 @@ const why_choose = [
 ];
 
 const images = [
-  "/images/banners/billboard-1.jpg",
-  "/images/banners/billboard-2.jpg",
+  // "/images/banners/billboard-1.jpg",
+  // "/images/banners/billboard-2.jpg",
+  "images/banners/front-banner-1.jpg",
+  "images/banners/front-banner-2.jpg",
 ];
 
 const Home = () => {
@@ -93,21 +97,74 @@ const Home = () => {
             playsInline
           />
         </div> */}
-        <div className="relative h-[18vh] md:h-[50vh] xl:h-[70vh]">
+        <div className="relative h-[28vh] md:h-[53vh] xl:h-[70vh]">
           <div
-            className="absolute w-[100vw] h-[18vh] md:h-[50vh] xl:h-[70vh] left-1/2 -translate-x-1/2 bg-cover bg-center flex items-center"
+            className="absolute w-[100vw] h-[28vh] md:h-[53vh] xl:h-[70vh] left-1/2 -translate-x-1/2 bg-cover bg-left flex items-center"
             style={{ backgroundImage: `url(${images[index]})` }}
           />
+          {index === 1 ? (
+            <div>
+              <div className="relative">
+                <div className="absolute left-6 md:left-30 top-10 md:top-40 xl:top-40">
+                  <h3>
+                    <span className="font-bold text-amber-400 text-2xl md:text-7xl xl:text-8xl">
+                      2026
+                    </span>
+                    <br />
+                    <span className="font-bold text-black text-xl/4 md:text-5xl/15 xl:text-7xl/20">
+                      Admission Open !
+                    </span>
+                  </h3>
+                </div>
+                <div className="relative left-1/2 -translate-x-1/2 w-screen">
+                  <div className="absolute right-0 bg-amber-400 text-white font-bold text-base md:text-2xl xl:text-3xl p-3 md:p-5 ">
+                    <h1>
+                      Glam Institute of
+                      <br />
+                      Fashion Desigining
+                    </h1>
+                  </div>
+                  {/* <button className="absolute right-3 md:right-10 top-32 md:top-80 xl:top-110 bg-amber-400 text-white font-bold py-[2px] px-2 md:px-4 md:py-3 text-lg md:text-3xl xl:text-4xl rounded-2xl">
+                    Apply now
+                  </button> */}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="absolute left-30 top-5 md:left-75 md:top-20 font-bold">
+              <span className="text-amber-400 text-2xl md:text-6xl xl:text-8xl">
+                15+
+              </span>
+              <h4 className="text-xl mb-1 md:mb-5 md:text-5xl/15 xl:text-7xl/20">
+                Programmes
+              </h4>
+              <p className="text-sm md:text-2xl/8 xl-text-3xl/20 md:tracking-wider">
+                B. Des Fashion / Interior
+                <br />
+                M. Des Fashion / Interior
+                <br />
+                Diploma Courses
+              </p>
+            </div>
+          )}
+          <div className="relative w-screen left-1/2 -translate-x-1/2">
+            <Link
+              href="/Contact"
+              className="absolute right-3 md:right-10 top-32 md:top-80 xl:top-110 bg-amber-400 text-white font-bold py-[2px] px-2 md:px-4 md:py-3 text-lg md:text-3xl xl:text-4xl rounded-2x hover:bg-amber-200 rounded-2xl"
+            >
+              Apply now
+            </Link>
+          </div>
         </div>
         <div
           id="about"
           className="flex md:flex-row flex-col mx-10 pt-10 md:gap-8 items-center"
         >
           <div className="flex-1">
-            <span className="text-amber-400 text-xl">
+            <span className="text-amber-400 text-lg md:text-xl">
               About Glam Institute of Fashion Designing...
             </span>
-            <h3 className="text-4xl my-3 font-bold">
+            <h3 className="text-2xl md:text-4xl my-3 font-bold">
               GIFD: Shaping the Future of Design
             </h3>
             <div className="mb-5 md:mb-0 whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700 text-left">
@@ -202,78 +259,6 @@ const Home = () => {
                 {readmoreMobile ? "read less." : "read more..."}
               </button>
             </div>
-
-            {/* <div className="mb-5 md:mb-0 whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700 text-left">
-              Glam Institute of Fashion Designing is a premier institute in
-              Jharkhand, dedicated to nurturing creativity and transforming
-              passion into profession. This is located in the heart of
-              Jamshedpur.
-              <br />
-              <br /> The institute offers comprehensive education in Fashion
-              Designing, Interior Designing, Modelling, and Beautician courses,
-              empowering students with industry-ready skills and global
-              exposure. <br />
-              <span className="hidden md:inline">
-                {"\t"} We offer a wide range of Diploma, Bachelor’s, and
-                Master’s programs in Fashion and Interior Designing, along with
-                Certification Programs in Modelling and Beautician courses. Our
-                programs are designed to meet current industry standards while
-                encouraging innovation, creativity, and practical excellence.
-                <br />
-                <br />
-                Glam Institute believes in learning beyond classrooms. Students
-                regularly interact with industry experts, participate in
-                industrial training programs, and gain real-world exposure that
-                prepares them for successful careers in the fashion and design
-                industry.
-                <br />
-              </span>
-              {!readmoreAbout ? (
-                <button
-                  onClick={() => setReadmoreAbout(true)}
-                  className="text-sm text-amber-500"
-                >
-                  read more...
-                </button>
-              ) : (
-                <p>
-                  <span className="inline md:hidden">
-                    {"\t"} We offer a wide range of Diploma, Bachelor’s, and
-                    Master’s programs in Fashion and Interior Designing, along
-                    with Certification Programs in Modelling and Beautician
-                    courses. Our programs are designed to meet current industry
-                    standards while encouraging innovation, creativity, and
-                    practical excellence.
-                    <br />
-                    <br />
-                    Glam Institute believes in learning beyond classrooms.
-                    Students regularly interact with industry experts,
-                    participate in industrial training programs, and gain
-                    real-world exposure that prepares them for successful
-                    careers in the fashion and design industry.
-                    <br />
-                  </span>
-                  <span>
-                    <br />
-                    The institute has proudly joined hands with Sanskaram
-                    University as an industry partner, making quality design
-                    education more efficient, accessible, and career-oriented.
-                    Our strong industry connections ensure students receive
-                    valuable mentorship, internships, and placement support. Our
-                    alumni are successfully working in reputed companies,
-                    fashion houses, design studios, or have launched their own
-                    start-ups, showcasing the institute’s commitment to
-                    excellence and entrepreneurship.
-                    <button
-                      onClick={() => setReadmoreAbout(false)}
-                      className="text-sm text-amber-500 ml-2"
-                    >
-                      read less.
-                    </button>
-                  </span>
-                </p>
-              )}
-            </div> */}
           </div>
           <div className="shrink-0  ">
             <Image
@@ -287,7 +272,7 @@ const Home = () => {
         </div>
         <div
           id="stats"
-          className="mt-20 md:mt-0 md:my-20 md:mx-10 mx-5 grid grid-cols-2 gap-y-8 justify-items-center md:flex md:flex-row md:justify-around md:items-center md:border-b-3 pb-10"
+          className="mt-20 md:mt-0 md:my-20 md:mx-10 mx-5 grid grid-cols-2 gap-y-8 justify-items-center md:flex md:flex-row md:justify-around md:items-center mb-5 md:mb-0 border-b-3 md:pb-10"
         >
           <div className="">
             <h3 className="text-4xl md:text-7xl mb-5">98%*</h3>
@@ -315,7 +300,9 @@ const Home = () => {
           </div>
         </div>
         <div className={`${isMobile ? "hidden" : ""}`}>
-          <h3 className="text-4xl mb-5 font-bold mx-10 ">Courses</h3>
+          <h3 className="text-2xl md:text-4xl mb-5 font-bold mx-10 ">
+            Courses
+          </h3>
           <HomeHovers tiles={fashion_programs} />
           <HomeHovers tiles={interior_programs} />
         </div>

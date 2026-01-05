@@ -4,6 +4,7 @@ import Dropper from "../Dropper";
 import Image from "next/image";
 import MobileMenu from "../MobileMenu";
 import { items } from "@/types";
+import Link from "next/link";
 // import { useDevice } from "@/app/provideres/Devicecontext";
 // import AboutGIFD from "@/app/about/AboutGIFD";
 
@@ -214,9 +215,11 @@ const Navbar = () => {
             contact={"/Contact"}
           />
         </div>
-        <div className="hidden md:inline border text-black rounded-sm p-3 font-bold shadow-[3px_3px_10px_rgba(0,0,0,0.70)] bg-amber-400 hover:bg-emerald-400">
-          Registration
-        </div>
+        <Link href="/Contact">
+          <div className="hidden md:inline border text-black rounded-sm p-3 font-bold shadow-[3px_3px_10px_rgba(0,0,0,0.70)] bg-amber-400 hover:bg-emerald-400">
+            Registration
+          </div>
+        </Link>
       </div>
     </React.Fragment>
   );
