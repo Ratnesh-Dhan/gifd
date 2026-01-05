@@ -5,52 +5,53 @@ import React, { useState } from "react";
 
 const FeeStructure = () => {
   const [BachelorOfFashion] = useState<TableContent>({
-    registrationFee: 8500,
+    registrationFee: 6500,
     table_title: "Bachelor in Fashion Design",
     course_duration: "3 years (6 sem)",
     feeData: [
       {
         semester: 1,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 1,
-        yearlyFee: 68000,
+        yearlyFee: 66000,
       },
       {
         semester: 2,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 1,
         yearlyFee: null,
       },
       {
         semester: 3,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 2,
-        yearlyFee: 68000,
+        yearlyFee: 66000,
       },
       {
         semester: 4,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 2,
         yearlyFee: null,
       },
       {
         semester: 5,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 3,
-        yearlyFee: 68000,
+        yearlyFee: 66000,
       },
       {
         semester: 6,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 3,
         yearlyFee: null,
       },
     ],
   });
+
   const [BachelorOfInterior] = useState<TableContent>({
-    registrationFee: 8500,
+    registrationFee: 6500,
     table_title: "Bachelor's in Interior Design",
-    course_duration: "2 years (4 sem)",
+    course_duration: "3 years (6 sem)",
     feeData: [
       {
         semester: 1,
@@ -79,19 +80,19 @@ const FeeStructure = () => {
       {
         semester: 5,
         semesterFee: 33000,
-        year: 2,
+        year: 3,
         yearlyFee: 66000,
       },
       {
         semester: 6,
         semesterFee: 33000,
-        year: 2,
+        year: 3,
         yearlyFee: null,
       },
     ],
   });
   const [MasterOfFashion] = useState<TableContent>({
-    registrationFee: 8500,
+    registrationFee: 6500,
     table_title: "Master in Fashion Design",
     course_duration: "2 years (4 sem)",
     feeData: [
@@ -122,7 +123,7 @@ const FeeStructure = () => {
     ],
   });
   const [MasterOfInterior] = useState<TableContent>({
-    registrationFee: 8500,
+    registrationFee: 6500,
     table_title: "Masters in Interior Design",
     course_duration: "2 years (4 sem)",
     feeData: [
@@ -152,88 +153,176 @@ const FeeStructure = () => {
       },
     ],
   });
-  const [ProfessionalFashion] = useState<TableContent>({
-    registrationFee: 8500,
-    table_title: "Master in Fashion Design",
-    course_duration: "3 years (6 sem)",
+  const [DiplomaOfFashion] = useState<TableContent>({
+    registrationFee: 6500,
+    table_title: "Diploma in Fashion Design",
+    course_duration: "1 and 2 years (2 / 4 sem)",
     feeData: [
       {
         semester: 1,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 1,
-        yearlyFee: 68000,
+        yearlyFee: 66000,
       },
       {
         semester: 2,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 1,
         yearlyFee: null,
       },
       {
         semester: 3,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 2,
-        yearlyFee: 68000,
+        yearlyFee: 66000,
       },
       {
         semester: 4,
-        semesterFee: 34000,
+        semesterFee: 33000,
         year: 2,
+        yearlyFee: null,
+      },
+    ],
+  });
+  const [DiplomaOfInterior] = useState<TableContent>({
+    registrationFee: 6500,
+    table_title: "Diploma in Interior Design",
+    course_duration: "1 and 2 years (2 / 4 sem)",
+    feeData: [
+      {
+        semester: 1,
+        semesterFee: 33000,
+        year: 1,
+        yearlyFee: 66000,
+      },
+      {
+        semester: 2,
+        semesterFee: 33000,
+        year: 1,
+        yearlyFee: null,
+      },
+      {
+        semester: 3,
+        semesterFee: 33000,
+        year: 2,
+        yearlyFee: 66000,
+      },
+      {
+        semester: 4,
+        semesterFee: 33000,
+        year: 2,
+        yearlyFee: null,
+      },
+    ],
+  });
+  const [ProfessionalFashion] = useState<TableContent>({
+    registrationFee: 1000,
+    table_title: "Professional Certificate in Fashion Design",
+    course_duration: "3 & 6 months",
+    feeData: [
+      {
+        semester: 1,
+        semesterFee: 5000,
+        year: 0,
+        yearlyFee: null,
+      },
+      {
+        semester: 2,
+        semesterFee: 5000,
+        year: 0,
+        yearlyFee: null,
+      },
+      {
+        semester: 3,
+        semesterFee: 5000,
+        year: 0,
+        yearlyFee: null,
+      },
+      {
+        semester: 4,
+        semesterFee: 5000,
+        year: 0,
         yearlyFee: null,
       },
       {
         semester: 5,
-        semesterFee: 34000,
-        year: 3,
-        yearlyFee: 68000,
+        semesterFee: 5000,
+        year: 0,
+        yearlyFee: null,
       },
       {
         semester: 6,
-        semesterFee: 34000,
-        year: 3,
+        semesterFee: 5000,
+        year: 0,
         yearlyFee: null,
       },
     ],
   });
   const [ProfessionalModeling] = useState<TableContent>({
-    registrationFee: 8500,
-    table_title: "Master in Fashion Design",
-    course_duration: "3 years (6 sem)",
+    registrationFee: 1000,
+    table_title: "Certification in Modeling",
+    course_duration: "3 months",
     feeData: [
       {
         semester: 1,
-        semesterFee: 34000,
-        year: 1,
-        yearlyFee: 68000,
+        semesterFee: 5000,
+        year: 0,
+        yearlyFee: null,
       },
       {
         semester: 2,
-        semesterFee: 34000,
+        semesterFee: 5000,
+        year: 0,
+        yearlyFee: null,
+      },
+      {
+        semester: 3,
+        semesterFee: 5000,
+        year: 0,
+        yearlyFee: null,
+      },
+    ],
+  });
+
+  const [Beautician] = useState<TableContent>({
+    registrationFee: 1000,
+    table_title: "Certification in Beautician",
+    course_duration: "3 / 4 / 5 / 6 months",
+    feeData: [
+      {
+        semester: 1,
+        semesterFee: 7000,
+        year: 1,
+        yearlyFee: null,
+      },
+      {
+        semester: 2,
+        semesterFee: 7000,
         year: 1,
         yearlyFee: null,
       },
       {
         semester: 3,
-        semesterFee: 34000,
-        year: 2,
-        yearlyFee: 68000,
+        semesterFee: 7000,
+        year: 1,
+        yearlyFee: null,
       },
       {
         semester: 4,
-        semesterFee: 34000,
-        year: 2,
+        semesterFee: 7000,
+        year: 1,
         yearlyFee: null,
       },
       {
         semester: 5,
-        semesterFee: 34000,
-        year: 3,
-        yearlyFee: 68000,
+        semesterFee: 7000,
+        year: 1,
+        yearlyFee: null,
       },
       {
         semester: 6,
-        semesterFee: 34000,
-        year: 3,
+        semesterFee: 7000,
+        year: 1,
         yearlyFee: null,
       },
     ],
@@ -282,6 +371,20 @@ const FeeStructure = () => {
             <FeeStructureTable {...MasterOfInterior} />
           </div>
         </div>
+        <div className="flex mb-16 gap-6" id="second">
+          <div className="flex-1">
+            <h3 className="text-3xl text-center mb-8">
+              <span className="font-bold">Diploma</span> in Fashion Design
+            </h3>
+            <FeeStructureTable {...DiplomaOfFashion} />
+          </div>
+          <div className="flex-1">
+            <h3 className="text-3xl text-center mb-8">
+              <span className="font-bold">Diploma</span> in Interior Design
+            </h3>
+            <FeeStructureTable {...DiplomaOfInterior} />
+          </div>
+        </div>
         <div className="flex mb-16 gap-6" id="third">
           <div className="flex-1">
             <h3 className="text-3xl text-center mb-8">
@@ -300,6 +403,14 @@ const FeeStructure = () => {
               in Modeling
             </h3>
             <FeeStructureTable {...ProfessionalModeling} />
+          </div>
+        </div>
+        <div className="flex mb-16 gap-6" id="third">
+          <div className="flex-1">
+            <h3 className="text-3xl text-center mb-8">
+              <span className="font-bold">Certification</span> in Beautician
+            </h3>
+            <FeeStructureTable {...Beautician} />
           </div>
         </div>
       </div>

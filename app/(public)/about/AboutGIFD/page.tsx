@@ -104,7 +104,7 @@ const AboutGIFD = () => {
                   height={600}
                   className="rounded-[50] object-cover border-2 border-amber-500 bg-white shadow hover:shadow-xl transition duration-300"
                 /> */}
-                <div className="shrink-0 bg-black rounded-3xl w-70 h-110 md:w-60 md:h-100 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-[0px_0px_20px_rgba(0,0,0,0.50)]">
+                <div className="border shrink-0 bg-black rounded-3xl w-70 h-110 md:w-60 md:h-100 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-[0px_0px_20px_rgba(0,0,0,0.50)]">
                   <div className="relative w-full h-[70%] rounded-t-3xl overflow-hidden ">
                     <Image
                       src="/images/co-founder-1.png"
@@ -155,7 +155,7 @@ const AboutGIFD = () => {
               className={`
               text-gray-700 leading-relaxed tracking-wide md:text-xl text-lg
               overflow-hidden transition-all duration-500 ease-in-out
-              ${expanded ? "max-h-[1000px]" : "max-h-40"}
+              ${expanded ? "max-h-[2000px]" : "max-h-40"}
               md:max-h-none
             `}
             >

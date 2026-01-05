@@ -136,7 +136,7 @@ export default function Enquiry() {
         <label className="block mb-3">
           <span className="text-sm">Phone*</span>
           <input
-            name="phone*"
+            name="phone"
             type="tel"
             value={form.phone}
             onChange={handleChange}

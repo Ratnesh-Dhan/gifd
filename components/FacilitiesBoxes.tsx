@@ -53,7 +53,7 @@ const FacilitiesBoxes = () => {
       <h4 className="text-2xl md:text-4xl font-bold mx-6 mb-4 md:mx-0">
         Facilities
       </h4>
-      <p className="whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700 mb-6 md:mb-10">
+      <p className="ml-5 md:ml-0 whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700 md:mb-10">
         Our facilities include a modern pattern making lab, classroom, computer
         lab, beauty studio, modeling ramp, and interior design studio—offering a
         comprehensive and hands-on learning experience.

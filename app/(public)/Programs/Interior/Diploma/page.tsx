@@ -59,13 +59,13 @@ With project-based learning, workshops, and practical assignments, the diploma p
     c_title: "Eligibility Criteria & Duration ",
     c_content: [
       `Applicants must have completed 10+2 (or equivalent) from a recognized board, preferably with an interest in design, art, architecture, or creative studies. No prior design background is required; a basic aptitude for creativity and spatial understanding is sufficient.`,
-      "Duration: 2 Years.",
+      "Duration: 1 and 2 Years.",
     ],
   });
   const [table] = useState<TableContent>({
     registrationFee: 6500,
     table_title: "Diploma in Interior Design",
-    course_duration: "1 / 2 years (2 / 4 sem)",
+    course_duration: "1 and 2 years (2 / 4 sem)",
     feeData: [
       {
         semester: 1,
@@ -89,18 +89,6 @@ With project-based learning, workshops, and practical assignments, the diploma p
         semester: 4,
         semesterFee: 33000,
         year: 2,
-        yearlyFee: null,
-      },
-      {
-        semester: 5,
-        semesterFee: 33000,
-        year: 3,
-        yearlyFee: 66000,
-      },
-      {
-        semester: 6,
-        semesterFee: 33000,
-        year: 3,
         yearlyFee: null,
       },
     ],

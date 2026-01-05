@@ -57,9 +57,18 @@ const Facilities = () => {
         <div
           className="absolute w-[100vw] h-[35vh] md:h-[70vh] left-1/2 -translate-x-1/2 bg-cover bg-center flex items-center"
           style={{
-            backgroundImage: `url("/images/banners/billboard-2.jpg")`,
+            backgroundImage: `url("/images/banners/facilities-1.jpg")`,
           }}
-        ></div>
+        >
+          <h3 className="absolute bottom-22 md:text-9xl text-4xl md:ml-[10vw] ml-4">
+            <span className="font-bold text-amber-400 [text-shadow:5px_5px_0px_rgb(0,0,0)]">
+              Student
+            </span>{" "}
+            <span className="[text-shadow:5px_5px_0px_#FFCA28]">
+              Facilities
+            </span>
+          </h3>
+        </div>
       </div>
       <h4 className="text-2xl md:text-4xl font-bold mx-6 mb-4">Facilities</h4>
       <p className="mx-6 whitespace-pre-line leading-relaxed tracking-wide md:text-xl text-lg text-gray-700 mb-4 md:mb-10">
