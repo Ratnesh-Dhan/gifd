@@ -33,7 +33,7 @@ const HomeHovers = ({ tiles }: { tiles: ThreeHoverPhotoLinksProps[] }) => {
            hover:opacity-100 hover:translate-x-20
            text-amber-500 text-2xl font-semibold"
                 >
-                  ⟶ fuck
+                  ⟶
                 </span>
               </Link>
             </div>
