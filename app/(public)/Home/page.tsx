@@ -300,14 +300,12 @@ const Home = () => {
           </div>
         </div>
         <div className={`${isMobile ? "hidden" : ""}`}>
-          <h3 className="text-2xl md:text-4xl mb-5 font-bold mx-10 ">
-            Courses
-          </h3>
+          <h3 className="text-4xl mt-10 mb-5 font-bold mx-10 ">Courses</h3>
           <HomeHovers tiles={fashion_programs} />
           <HomeHovers tiles={interior_programs} />
         </div>
         <div className={`${isMobile ? "block" : "hidden"}`}>
-          <h3 className="text-4xl mb-5 font-bold mx-10 ">Courses</h3>
+          <h3 className="text-2xl mb-5 font-bold mx-10 ">Courses</h3>
 
           <HomeHovers tiles={[...fashion_programs, ...interior_programs]} />
         </div>
