@@ -16,7 +16,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Glam Institute of Fashion Designing",
   description:
-    "Glam Institute of Fashion Designing offering Fashion, Interior, and Diploma courses.",
+    "Glam Institute of Fashion Designing (GIFD) is a premier design institute dedicated to nurturing creative talent through industry-driven education, hands-on training, and professional mentorship, preparing students for real-world careers in fashion and design.",
+
   verification: {
     google: "8CwJQS7VWUC2m77Xy0cimRW-zUKtPlB71qVQDL5XmhY",
   },
