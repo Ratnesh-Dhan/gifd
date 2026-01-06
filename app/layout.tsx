@@ -17,10 +17,13 @@ export const metadata: Metadata = {
   title: "Glam Institute of Fashion Designing",
   description:
     "Glam Institute of Fashion Designing offering Fashion, Interior, and Diploma courses.",
+  verification: {
+    google: "8CwJQS7VWUC2m77Xy0cimRW-zUKtPlB71qVQDL5XmhY",
+  },
   icons: {
-    icon: "/icons/main-logo.ico",
-    shortcut: "/icons/main-logo.ico",
-    apple: "/icons/main-logo.ico",
+    icon: "/icons/main-icon-ico-2.ico",
+    shortcut: "/icons/main-icon-ico-2.ico",
+    apple: "/icons/main-icon-ico-2.ico",
   },
 };
 
