@@ -7,7 +7,6 @@ import ImageShowcase from "@/components/ImageShowcase/page";
 import SmallIconComp from "@/components/SmallIconComp/page";
 import StudentReviews from "@/components/StudentReviews/page";
 import { ThreeHoverPhotoLinksProps } from "@/types";
-import { div } from "framer-motion/client";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -60,8 +59,6 @@ const why_choose = [
 ];
 
 const images = [
-  // "/images/banners/billboard-1.jpg",
-  // "/images/banners/billboard-2.jpg",
   "images/banners/front-banner-1.jpg",
   "images/banners/front-banner-2.jpg",
 ];
@@ -105,13 +102,13 @@ const Home = () => {
           {index === 1 ? (
             <div>
               <div className="relative">
-                <div className="absolute left-6 md:left-30 top-10 md:top-40 xl:top-40">
+                <div className="absolute left-6 md:left-30 top-30 md:top-40 xl:top-40">
                   <h3>
-                    <span className="font-bold text-amber-400 text-2xl md:text-7xl xl:text-8xl">
+                    <span className="font-bold text-amber-400 text-3xl md:text-7xl xl:text-8xl">
                       2026
                     </span>
                     <br />
-                    <span className="font-bold text-black text-xl/4 md:text-5xl/15 xl:text-7xl/20">
+                    <span className="font-bold text-black text-2xl/8 md:text-5xl/15 xl:text-7xl/20">
                       Admission Open !
                     </span>
                   </h3>
@@ -131,11 +128,11 @@ const Home = () => {
               </div>
             </div>
           ) : (
-            <div className="absolute left-30 top-5 md:left-75 md:top-20 font-bold">
-              <span className="text-amber-400 text-2xl md:text-6xl xl:text-8xl">
+            <div className="absolute left-43 top-10 md:left-75 md:top-20 font-bold">
+              <span className="text-amber-400 text-3xl md:text-6xl xl:text-8xl">
                 15+
               </span>
-              <h4 className="text-xl mb-1 md:mb-5 md:text-5xl/15 xl:text-7xl/20">
+              <h4 className="text-2xl mb-1 md:mb-5 md:text-5xl/15 xl:text-7xl/20">
                 Programmes
               </h4>
               <p className="text-sm md:text-2xl/8 xl-text-3xl/20 md:tracking-wider">
@@ -150,7 +147,7 @@ const Home = () => {
           <div className="relative w-screen left-1/2 -translate-x-1/2">
             <Link
               href="/Contact"
-              className="absolute right-3 md:right-10 top-32 md:top-80 xl:top-110 bg-amber-400 text-white font-bold py-[2px] px-2 md:px-4 md:py-3 text-lg md:text-3xl xl:text-4xl rounded-2x hover:bg-amber-200 rounded-2xl"
+              className="absolute right-3 md:right-10 top-50 md:top-80 xl:top-110 bg-amber-400 text-white font-bold py-[4px] px-3 md:px-4 md:py-3 text-lg md:text-3xl xl:text-4xl rounded-2x hover:bg-amber-200 rounded-2xl"
             >
               Apply now
             </Link>

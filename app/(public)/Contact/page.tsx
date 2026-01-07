@@ -4,8 +4,8 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="max-w-[1260px]">
-      <div className="relative w-screen left-1/2 -translate-x-1/2 h-[70vh] bg-[url('/extra_images/connecting3.jpg')] bg-cover bg-center flex items-center"></div>
+    <div className="">
+      <div className="relative w-screen left-1/2 -translate-x-1/2 h-[31vh] md:h-[70vh] bg-[url('/extra_images/connecting3.jpg')] bg-cover bg-center flex items-center"></div>
       <div className="md:border py-5 my-5 md:my-10 flex flex-col-reverse md:flex-row justify-start md:justify-center items-center md:mt-20">
         <div>
           <iframe

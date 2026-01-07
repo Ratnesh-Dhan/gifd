@@ -54,7 +54,7 @@ const Dropper = ({
               {makeActive && (
                 <motion.div
                   id="dropper-menu"
-                  className="absolute border flex left-0 items-wrap justify-center w-screen bg-slate-900 h-full md:h-[600px] top-32 z-50"
+                  className="fixed border flex left-0 items-wrap justify-center w-screen bg-slate-900 h-full md:h-[600px] top-30 z-50"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
@@ -62,7 +62,7 @@ const Dropper = ({
                 >
                   <div className="text-white text-2xl flex flex-wrap justify-center gap-5 mx-auto py-10">
                     {items.map((items, index) => (
-                      <div key={index}>
+                      <motion.div key={index}>
                         {items.sublinks === undefined ? (
                           <Link
                             href={items.href}
@@ -128,7 +128,7 @@ const Dropper = ({
                             </div>
                           </div>
                         )}
-                      </div>
+                      </motion.div>
                     ))}
                   </div>
                 </motion.div>
