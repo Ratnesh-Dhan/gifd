@@ -48,8 +48,13 @@ const MobileMenu = ({
   `}
       >
         {/* Menu items */}
-        <nav className="mt-20 flex flex-col gap-6 pl-10 text-lg">
-          <Links href="/" size="text-lg" title="Home" onClick={()=>setIsOpen(false)}/>
+        <nav className="mt-20 flex flex-col gap-6 pl-10 text-lgs">
+          <Links
+            href="/"
+            size="text-lg"
+            title="Home"
+            onClick={() => setIsOpen(false)}
+          />
           <MobileMenuChildrens
             size="text-lg"
             title="About"
@@ -77,10 +82,30 @@ const MobileMenu = ({
             myIndex={2}
             setIsOpen={setIsOpen}
           />
-          <Links href={life} size="text-lg" title="Life@GIFD" onClick={()=>setIsOpen(false)}/>
-          <Links href={jds} size="text-lg" title="JDS" onClick={()=>setIsOpen(false)}/>
-          <Links href={facilities} size="text-lg" title="Facilities" onClick={()=>setIsOpen(false)}/>
-          <Links href={contact} size="text-lg" title="Contact" onClick={()=>setIsOpen(false)}/>
+          <Links
+            href={life}
+            size="text-lg"
+            title="Life@GIFD"
+            onClick={() => setIsOpen(false)}
+          />
+          <Links
+            href={jds}
+            size="text-lg"
+            title="JDS"
+            onClick={() => setIsOpen(false)}
+          />
+          <Links
+            href={facilities}
+            size="text-lg"
+            title="Facilities"
+            onClick={() => setIsOpen(false)}
+          />
+          <Links
+            href={contact}
+            size="text-lg"
+            title="Contact"
+            onClick={() => setIsOpen(false)}
+          />
         </nav>
       </div>
     </div>

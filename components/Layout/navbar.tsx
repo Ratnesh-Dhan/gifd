@@ -143,10 +143,11 @@ const Navbar = () => {
       photo: "/images/Faq.jpg",
     },
   ];
+
   return (
-    <React.Fragment>
-      <div className="bg-amber-400  flex">
-        <div className="md:w-[75vw]  flex justify-between pl-[10vw] md:pr-5 py-3 text-xs md:text-sm">
+    <div className="fixed z-20 w-full">
+      <div className="w-full z-20 bg-amber-400  flex">
+        <div className="md:w-[75vw] flex justify-between pl-[10vw] md:pr-5 py-2 text-xs md:text-sm">
           <span className="text-sm hidden md:inline">
             Best Design institute in Jharkhand
           </span>
@@ -180,8 +181,8 @@ const Navbar = () => {
           </h3>
         </div>
       </div>
-      <div className="w-full z-10  flex justify-around  items-center h-20 md:h-22 bg-black text-white py-2">
-        <div className="flex items-center">
+      <div className="w-full z-20 top-14  flex justify-around  items-center h-20 md:h-22 bg-black text-white py-2">
+        <div className="flex items-center mr-10 md:mr-10">
           <Image
             src="/main-logo.png"
             alt="GIFD Logo"
@@ -221,7 +222,7 @@ const Navbar = () => {
           </div>
         </Link>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 

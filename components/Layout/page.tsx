@@ -20,7 +20,9 @@ const Layout = async ({ children }: { children: ReactNode }) => {
     <div>
       <DeviceProvider isMobile={isMobile}>
         <Toaster position="top-center" reverseOrder={false} />
-        <Navbar />
+        <div className="h-[14vh]">
+          <Navbar />
+        </div>
         <Socials />
         <div className="max-w-[1300px] mx-auto">{children}</div>
         <Footer />
