@@ -23,7 +23,7 @@ const HowToApply = () => {
         Applicant seeking admission to Glam Institute of Fashion Designing
         academy are required to fill out an{" "}
         <Link
-          href={"/"}
+          href="/Register"
           className="text-blue-600 hover:cursor hover:text-blue-400"
         >
           online form
@@ -44,7 +44,7 @@ const HowToApply = () => {
           Take the <span className="font-bold">next step</span>
         </h4>
         <Link
-          href={"/"}
+          href="/Register"
           className="bg-amber-500 text-white rounded px-4 md:px-8"
         >
           Apply Now
@@ -105,9 +105,12 @@ const HowToApply = () => {
           interior design. Students gain real-world exposure, hands-on learning,
           and the perfect environment to unlock their creative potential.
         </p>
-        <button className="font-bold rounded-xl p-5 bg-amber-400 hover:shadow-[inset_0px_0px_10px_rgb(0,0,0)] text-white">
+        <Link
+          href="/Register"
+          className="font-bold rounded-xl p-5 bg-amber-400 hover:shadow-[inset_0px_0px_10px_rgb(0,0,0)] text-white"
+        >
           Join GIFD Jamshedpur
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -146,7 +146,7 @@ const Home = () => {
           )}
           <div className="relative w-screen left-1/2 -translate-x-1/2">
             <Link
-              href="/Contact"
+              href="/Register"
               className="absolute right-3 md:right-10 top-50 md:top-80 xl:top-110 bg-amber-400 text-white font-bold py-[4px] px-3 md:px-4 md:py-3 text-lg md:text-3xl xl:text-4xl rounded-2x hover:bg-amber-200 rounded-2xl"
             >
               Apply now
