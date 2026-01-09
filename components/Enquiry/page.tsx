@@ -1,19 +1,7 @@
 "use client";
 import React, { ChangeEvent, FormEvent, useState, useEffect } from "react";
 import toast from "react-hot-toast";
-
-interface Form {
-  name: string;
-  email: string;
-  phone: string;
-  subject: string;
-  course: string;
-  message: string;
-}
-interface Status {
-  type: "success" | "error" | "sending";
-  message?: string;
-}
+import { Form, Status } from "@/types";
 
 const COURSES = [
   "Fashion Design",
@@ -42,7 +30,7 @@ export default function Enquiry() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         name: form.name,
-        email: "gifdjsr@gmail.com",
+        email: form.email,
         phone: form.phone,
         subject: form.subject,
         message: form.message,

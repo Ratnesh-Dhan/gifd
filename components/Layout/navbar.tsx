@@ -216,7 +216,7 @@ const Navbar = () => {
             contact={"/Contact"}
           />
         </div>
-        <Link href="/Contact">
+        <Link href="/Register">
           <div className="hidden md:inline border text-black rounded-sm p-3 font-bold shadow-[3px_3px_10px_rgba(0,0,0,0.70)] bg-amber-400 hover:bg-emerald-400">
             Registration
           </div>
