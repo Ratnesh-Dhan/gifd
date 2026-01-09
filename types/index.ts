@@ -63,3 +63,36 @@ export interface items {
   photo?: string;
   sublinks?: subLinks[];
 }
+
+export interface registerForm {
+  gender: string;
+  firstName: string;
+  middleName: string;
+  lastName: string;
+  countryCode: string;
+  mobileNumber: string;
+  parentMobile: string;
+  emailId: string;
+  dateOfBirth: string;
+  courseType: string;
+  choiceOfCourse: string;
+  country: string;
+  state: string;
+  city: string;
+  address: string;
+  agreedToTerms: boolean;
+}
+
+export interface Form {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  course: string;
+  message: string;
+}
+
+export interface Status {
+  type: "success" | "error" | "sending";
+  message?: string;
+}
