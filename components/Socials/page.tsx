@@ -6,7 +6,7 @@ const Socials = () => {
     <div className="reative">
       <div className="fixed top-[50%] flex-col z-50">
         <Buttons
-          href="https://www.whatsapp.com/?lang=en"
+          href="https://wa.me/918102611868"
           image="/whatsapp.png"
           alt="whatsapp"
         />
