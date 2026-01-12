@@ -1,10 +1,26 @@
 "use client";
 import { registerForm } from "@/types";
+import { generateReceiptPDF } from "@/utils/generateReceipts";
 import Error from "next/error";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const phoneRegexByCountry: Record<string, RegExp> = {
+  "India [+91]": /^[6-9]\d{9}$/, // 10 digits, starts 6–9
+  "Nepal [+977]": /^9[6-9]\d{8}$/, // 10 digits, starts 96–99
+  "Bhutan [+975]": /^[17]\d{7}$/, // 8 digits, starts 1 or 7
+  "Sri Lanka [+94]": /^7\d{8}$/, // 9 digits, starts 7
+  "USA [+1]": /^[2-9]\d{2}[2-9]\d{6}$/, // NANP, 10 digits
+  "UK [+44]": /^7\d{9}$/, // Mobile only, 10 digits
+  "Australia [+61]": /^4\d{8}$/, // Mobile, 9 digits
+  "Bangladesh [+880]": /^1[3-9]\d{8}$/, // 11 digits
+  "Pakistan [+92]": /^3\d{9}$/, // 10 digits
+  "Myanmar [+95]": /^9\d{7,9}$/, // 8–10 digits
+};
+
 const Register = () => {
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const [formData, setFormData] = useState<registerForm>({
     gender: "",
     firstName: "",
@@ -23,6 +39,28 @@ const Register = () => {
     address: "",
     agreedToTerms: false,
   });
+
+  useEffect(() => {
+    let error = "";
+    const kid_mobile = formData.mobileNumber;
+
+    if (kid_mobile !== "") {
+      if (!/^\d*$/.test(kid_mobile)) {
+        error = "Only digits allowed";
+      }
+
+      const regex = phoneRegexByCountry[formData.countryCode];
+
+      if (kid_mobile && regex && !regex.test(kid_mobile)) {
+        error = "Invalid mobile number for selected country";
+      }
+    }
+
+    setErrors((prev) => ({
+      ...prev,
+      ["mobileNumber"]: error,
+    }));
+  }, [formData.countryCode]);
 
   const courseOptions = {
     "Master's Programmes": [
@@ -55,21 +93,106 @@ const Register = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value, type } = e.target;
+
+    // checkbox logic stays as-is
     if (type === "checkbox") {
       const checked = (e.target as HTMLInputElement).checked;
       setFormData((prev) => ({ ...prev, [name]: checked }));
-    } else {
-      setFormData((prev) => ({
-        ...prev,
-        [name]: value,
-        ...(name === "courseType" && { choiceOfCourse: "" }),
-      }));
+      return;
     }
+
+    // --- VALIDATION ---
+    let error = "";
+
+    if (name === "mobileNumber" || name === "parentMobile") {
+      // digits only while typing
+      if (!/^\d*$/.test(value)) return;
+
+      const regex = phoneRegexByCountry[formData.countryCode];
+
+      if (value && regex && !regex.test(value)) {
+        error = "Invalid mobile number for selected country";
+      }
+    }
+
+    if (name === "emailId") {
+      if (value && !emailRegex.test(value)) {
+        error = "Enter a valid email address";
+      }
+    }
+
+    setErrors((prev) => ({
+      ...prev,
+      [name]: error,
+    }));
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+      ...(name === "courseType" && { choiceOfCourse: "" }),
+    }));
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = () => {
+    // Check all required fields
+    if (formData.gender.trim() === "") {
+      toast.error("select Gender");
+      return;
+    }
+    if (formData.firstName.trim() === "") {
+      toast.error("First name cannot be empty");
+      return;
+    }
+    if (formData.lastName.trim() === "") {
+      toast.error("Last name cannot be empty");
+      return;
+    }
+    if (formData.countryCode.trim() === "") {
+      toast.error("Country code is required");
+      return;
+    }
+    if (formData.mobileNumber.trim() === "") {
+      toast.error("Mobile number cannot be empty");
+      return;
+    }
+    if (formData.emailId.trim() === "") {
+      toast.error("Email ID cannot be empty");
+      return;
+    }
+    if (formData.dateOfBirth.trim() === "") {
+      toast.error("Date of Birth is required");
+      return;
+    }
+    if (formData.courseType.trim() === "") {
+      toast.error("Course type selection is required");
+      return;
+    }
+    if (formData.choiceOfCourse.trim() === "") {
+      toast.error("Please select your choice of course");
+      return;
+    }
+    if (formData.country.trim() === "") {
+      toast.error("Country cannot be empty");
+      return;
+    }
+    if (formData.state.trim() === "") {
+      toast.error("State cannot be empty");
+      return;
+    }
+    if (formData.city.trim() === "") {
+      toast.error("City cannot be empty");
+      return;
+    }
+    if (formData.address.trim() === "") {
+      toast.error("Address cannot be empty");
+      return;
+    }
+    if (!formData.agreedToTerms) {
+      toast.error("You must agree to the terms and conditions");
+      return;
+    }
     console.log("Form submitted:", formData);
-    await registerNow({ form: formData });
+    registerNow({ form: formData });
   };
 
   const registerNow = async ({ form }: { form: registerForm }) => {
@@ -105,6 +228,7 @@ const Register = () => {
       }
 
       toast.success("Registration successful!", { id: toastId });
+      generateReceiptPDF(formData);
       setFormData({
         gender: "",
         firstName: "",
@@ -240,8 +364,20 @@ const Register = () => {
                 value={formData.mobileNumber}
                 onChange={handleInputChange}
                 placeholder="Mobile No.*"
-                className="w-full px-4 py-2 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition"
+                // className="w-full px-4 py-2 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition"
+                className={`w-full px-4 py-2 border-2 rounded-md outline-none transition
+                  ${
+                    errors.mobileNumber
+                      ? "border-red-500 focus:ring-red-400 focus:border-red-400"
+                      : "border-gray-300 focus:ring-amber-400 focus:border-amber-400"
+                  }`}
               />
+              {/* error message */}
+              {errors.mobileNumber && (
+                <p className="mt-1 text-sm text-red-500">
+                  {errors.mobileNumber}
+                </p>
+              )}
             </div>
           </div>
 
@@ -257,8 +393,20 @@ const Register = () => {
                 value={formData.parentMobile}
                 onChange={handleInputChange}
                 placeholder="Parent Mob"
-                className="w-full px-4 py-2 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition"
+                // className="w-full px-4 py-2 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition"
+                className={`w-full px-4 py-2 border-2 rounded-md outline-none transition
+                  ${
+                    errors.parentMobile
+                      ? "border-red-500 focus:ring-red-400 focus:border-red-400"
+                      : "border-gray-300 focus:ring-amber-400 focus:border-amber-400"
+                  }`}
               />
+              {/* error message */}
+              {errors.parentMobile && (
+                <p className="mt-1 text-sm text-red-500">
+                  {errors.parentMobile}
+                </p>
+              )}
             </div>
             <div>
               <label className="block text-sm font-semibold text-black mb-2">
@@ -270,8 +418,18 @@ const Register = () => {
                 value={formData.emailId}
                 onChange={handleInputChange}
                 placeholder="Email ID*"
-                className="w-full px-4 py-2 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition"
+                // className="w-full px-4 py-2 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition"
+                className={`w-full px-4 py-2 border-2 rounded-md outline-none transition
+                  ${
+                    errors.emailId
+                      ? "border-red-500 focus:ring-red-400 focus:border-red-400"
+                      : "border-gray-300 focus:ring-amber-400 focus:border-amber-400"
+                  }`}
               />
+              {/* error message */}
+              {errors.emailId && (
+                <p className="mt-1 text-sm text-red-500">{errors.emailId}</p>
+              )}
             </div>
           </div>
 
